@@ -1,0 +1,180 @@
+---
+title: mb-article custom HTML Format
+subtitle: A custom format for Quarto
+date: last-modified
+date-modified: last-modified
+draft: false
+freeze: false
+license: My license tag
+author:
+  - name: Author-1
+    email: author-1@mail.com
+    orcid: 0000-0003-1810-6820
+    affiliation: My Affiliation
+  - name: Author-2
+    email: author-2@mail.com
+    orcid: 0000-0003-1810-6819
+    affiliation: My Affiliation
+categories:
+  - cat1
+  - cat2
+  - cat3
+funding: Project or client funding
+thanks: Special acknowledgments
+
+abstract: |
+  Abstract text -- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+  It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+description: |
+  Description text -- orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+
+format: mb-article-html
+---
+
+
+# Introduction
+
+::: {.aside .bg-secondary-subtle .h6 .p-2}
+Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+:::
+
+This document is an example that demonstrates the formatting and features of the current HTML format extension for Quarto.
+
+**More Information**
+
+You can learn more about controlling the appearance of HTML output at <https://quarto.org/docs/output-formats/html-basics.html>.
+
+::: {.aside .bg-warning-subtle .h6 .p-2 .text-warning}
+Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+:::
+
+
+# Typography
+
+::: {.aside .pt-2}
+![](logo.png){.rounded-circle}
+
+A rounded image placed to the margin.
+:::
+
+Bootstrap default line-height and font sizing typically work, but this format enforces a strict vertical rhythm whenever possible[^7]. I made sure to define all vertical spacing and padding as multiples of a standard line height of `$spacer`.
+
+[^7]: About **vertical rhythm** and why it matters for content readability, see [Klaas Leussink](https://hnldesign.hashnode.dev/setting-a-flexible-baseline-grid-in-css) article on his personal blog.
+
+No additional changes to font definitions aside from using `Crimson Pro` and `M+ Code` fonts[^8].
+
+Here are **bold**, *italic*, and <small>smaller</small> text spans. Here is ^superscript^ and ~subscript~ text, and ~~strikethrough~~ notes. Semantic colors with e.g. [.text-info]{.text-info} provide accented text. I have added 2 background classes for my own use, a semi-transparent and blurred [`.bg-shaded`]{.bg-shaded} and a [`.bg-striped`]{.bg-striped}. This theme uses [.text-muted]{.text-muted} to de-emphasize content such as post metadata, margin notes, and captioning.
+
+[^8]: M+ font system was designed by Japanese artist [Coji Morishita](https://mplusfonts.github.io/) with extended support for Latin, Japanese, Cyrillic. It is an excellent monospace font for smaller display sizes.
+
+## Heading 2
+
+Fonts and colors are used as expected. Further, using my own `mb-tools` R package below, I can customize additional plot elements.
+
+```{r}
+library(ggplot2)
+
+ggplot(mtcars, aes(factor(carb), mpg, fill = factor(carb))) +
+  geom_col() +
+  guides(fill = guide_legend(nrow = 1)) +
+  labs(
+    title = "Custom ggplot with Bootstrap brand",
+    subtitle = "Theme provided by R package `mblabs`",
+    caption = "A long plot caption with many references
+    over multiples lines."
+  )
+```
+
+### Heading 3
+
+Sample paragraph content with list of items:
+
+-   List 1
+    - List 1.1
+    - List 1.2
+-   List 2
+-   List 3
+
+Ordered list:
+
+1.  List 1
+2.  List 2
+3.  List 3
+
+Finally a normal rule `hr` element.
+
+------------------------------------------------------------------------
+
+And a paragraph after the rule.
+
+#### Heading 4
+
+Sample paragraph content.
+
+##### Heading 5
+
+Here is a long footnote reference[^10]. Caption and footnote placement can be controlled in the config files `_quarto_yml` and/or `_metadata.yml`, or directly in the YAML front matter.
+
+[^10]: Here's a margin note with multiple paragraph blocks and a fancy section header.
+
+    ##### Heading 5
+  
+    With subsequent paragraphs indented to show that they belong to the previous footnote.
+
+###### Section 6
+
+Finally, headers at level 6 are used as section dividers.
+
+
+# Tables
+
+I prefer my tables to resemble LaTeX typesetting, so a few simple changes here.
+
+|        |      |
+|--------|------|
+| apple  | 2.05 |
+| pear   | 1.37 |
+| orange | 3.09 |
+
+: Caption: my default table spacing
+
+| fruit  | price |
+|--------|-------|
+| apple  | 2.05  |
+| pear   | 1.37  |
+| orange | 3.09  |
+
+: Caption: smaller spacing borderless hover sm {.borderless .hover .sm}
+
+| fruit  | price |
+|--------|-------|
+| apple  | 2.05  |
+| pear   | 1.37  |
+| orange | 3.09  |
+
+: Caption: striped hover sm {.striped .hover .sm}
+
+| fruit  | price |
+|--------|-------|
+| apple  | 2.05  |
+| pear   | 1.37  |
+| orange | 3.09  |
+
+: Caption: striped hover sm secondary {.striped .hover .sm .secondary}
+
+| fruit  | price |
+|--------|-------|
+| apple  | 2.05  |
+| pear   | 1.37  |
+| orange | 3.09  |
+
+: Caption: sm primary {.striped .sm .primary}
+
+```{r}
+#| column: page
+#| tbl-cap: A full-width table to increase content space
+
+knitr::kable(mtcars[1:6, 1:10])
+```
+

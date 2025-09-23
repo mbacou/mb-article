@@ -1,0 +1,38 @@
+project:
+  title: mb-article
+  type: website
+  execute-dir: file
+  output-dir: _site
+  preview:
+    port: 5555
+
+highlight-style: tango 
+
+website:
+  title: mb-article
+  favicon: logo.png
+  image: logo.png
+  twitter-card: false
+  description: Quarto extension
+  open-graph: true
+  site-url: https://mbacou.github.io/mb-article
+  repo-url: https://github.com/mbacou/mb-article
+  repo-branch: main
+  repo-actions: [edit, issue]
+  back-to-top-navigation: false
+  page-navigation: true
+  bread-crumbs: false
+
+  sidebar:
+    style: docked
+    pinned: false
+    search: true
+    border: false
+
+  search:
+    type: textbox
+    location: sidebar
+    show-item-context: true
+
+
+
