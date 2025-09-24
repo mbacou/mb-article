@@ -4,23 +4,24 @@ subtitle: A custom format for Quarto
 date: last-modified
 date-modified: last-modified
 draft: false
-freeze: false
+freeze: true
 license: My license tag
+funding: Project or client funding
+thanks: Special acknowledgments
 author:
   - name: Author-1
+    linkedin: mbacou 
     email: author-1@mail.com
     orcid: 0000-0003-1810-6820
-    affiliation: My Affiliation
+    affiliation: My Affiliation 1
   - name: Author-2
     email: author-2@mail.com
     orcid: 0000-0003-1810-6819
-    affiliation: My Affiliation
+    affiliation: My Affiliation 2
 categories:
-  - cat1
-  - cat2
-  - cat3
-funding: Project or client funding
-thanks: Special acknowledgments
+  - cat-1
+  - cat-2
+  - cat-3
 
 abstract: |
   Abstract text -- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
@@ -29,13 +30,14 @@ abstract: |
 description: |
   Description text -- orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
 
+title-block-banner: logo.png
 format: mb-article-html
 ---
 
 
 # Introduction
 
-::: {.aside .bg-secondary-subtle .h6 .p-2}
+::: {.aside .bg-secondary-subtle .h6 .mt-2 .p-2}
 Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 :::
 
