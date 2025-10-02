@@ -1,0 +1,65 @@
+<!-- mb-navbar / fixed bottom navbar -->
+<div class="column-page-right">
+  <nav id="mb-navbar" class="d-flex bg-shaded align-items-end">
+
+    <!-- logo -->
+    $if(logo)$
+    <div class="d-lg-none m-0">
+      <a href="$logo-href$"><img src="$logo$" alt="logo"
+          class="mb-logo img-fluid mb-1"></a>
+    </div>
+    $endif$
+
+    <!-- links -->
+    <ul class="navbar-nav d-none d-md-flex flex-row w-100">
+
+      $for(links)$
+      <li class="nav-item flex-fill">
+        <a class="nav-link" href="$it.href$">
+          <span class="menu-text">$it.text$</span></a>
+      </li>
+      $endfor$
+    </ul>
+
+    <!-- icons -->
+    <ul class="navbar-nav d-flex d-md-none flex-row w-100">
+
+      $for(links)$
+      <li class="nav-item flex-fill">
+        <a class="nav-link" href="$it.href$">
+          <i class="bi bi-$it.icon$"></i></a>
+      </li>
+      $endfor$
+    </ul>
+
+    <!-- tools -->
+    <ul class="navbar-nav d-none d-md-flex flex-row justify-content-end">
+
+      $for(tools)$
+      <li class="nav-item">
+        <a class="nav-link px-1" href="$it.href$">
+          <i class="bi bi-$it.icon$" role="img"></i></a>
+      </li>
+      $endfor$
+    </ul>
+
+    <!-- Quarto buttons -->
+    <ul class="navbar-nav flex-row ms-2 justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link px-1" role="button" data-bs-toggle="collapse"
+          data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-layout-text-sidebar-reverse"></i>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link px-1" role="button" aria-label="Search"
+          onclick="window.quartoOpenSearch();">
+          <i class="bi bi-search"></i>
+        </a>
+      </li>
+    </ul>
+
+  </nav>
+</div>
