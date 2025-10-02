@@ -21,18 +21,40 @@ website:
   repo-actions: [edit, issue]
   back-to-top-navigation: false
   page-navigation: true
-  bread-crumbs: false
-
-  sidebar:
-    style: docked
-    pinned: false
-    search: true
-    border: false
+  bread-crumbs: true
 
   search:
-    type: textbox
-    location: sidebar
     show-item-context: true
+
+  navbar: false
+  sidebar:
+    style: floating
+    border: false
+    search: false
+    alignment: right
+    logo: logo.png
+    logo-href: ./
+    header: |
+      **Mel B. Labs** -- a personal blog about statistics and spatial econometrics.  
+      BACOU, Melanie © 2024 under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)
+    footer: |
+      <a class="icon-link icon-link-hover text-info text-decoration-none label" href="#mb-title-block">Back to top
+      <i class="bi bi-arrow-up-square-fill"></i></a>
+    contents:
+      - section: Contents
+        contents:
+        - text: Link 1
+          icon: link
+          href: ./
+        - text: Link 2
+          icon: link
+          href: ./
+        - text: Link 3
+          icon: link
+          href: ./      
+
+
+ 
 
 
 

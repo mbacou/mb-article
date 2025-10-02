@@ -1,11 +1,13 @@
 ---
-title: mb-article custom HTML Format
-subtitle: A custom format for Quarto
+title: mb-article HTML Format for Quarto
+subtitle: A journalistic format for Quarto posts and articles
 date: last-modified
 date-modified: last-modified
 draft: false
 freeze: true
-license: My license tag
+bibliography: references.bib
+copyright: Melanie BACOU 2025
+license: CC BY-NC 4.0
 funding: Project or client funding
 thanks: Special acknowledgments
 author:
@@ -22,42 +24,56 @@ categories:
   - cat-1
   - cat-2
   - cat-3
+keywords: 
+  - keyword 1
+  - keyword 2
+  - keyword 3  
+
 
 abstract: |
   Abstract text -- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
 description: |
-  Description text -- orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+  **mb-article** is a Quarto extension for HTML formats with an opinionated journalistic design and simplified navigational elements, optimized for textual content on smaller display sizes. This custom format makes use of standard Quarto **Project** and **HTML Article** variables, such as branding, navigation links, and page banners, but changes the default layout and behaviors.
 
-title-block-banner: logo.png
+title-block-banner: transparent url(contour.avif) 0 0 / cover no-repeat
+title-block-banner-color: shaded
+
 format: mb-article-html
 ---
 
 
 # Introduction
 
+This document is an example that demonstrates the formatting and features of the current HTML format extension for Quarto.
+
+Here is a sample margin note to the right column, and a sidebar note below on the left.
+
 ::: {.aside .bg-secondary-subtle .h6 .mt-2 .p-2}
-Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+aside -- A note placed in the page margin with CSS class `aside`.
 :::
 
-This document is an example that demonstrates the formatting and features of the current HTML format extension for Quarto.
+ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+
+::: {.column-sidebar .bg-info-subtle .h6 .p-2 .text-info}
+column-sidebar -- A note placed in the page sidebar with CSS classes `column-sidebar`.
+:::
+
+ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+
 
 **More Information**
 
 You can learn more about controlling the appearance of HTML output at <https://quarto.org/docs/output-formats/html-basics.html>.
 
-::: {.aside .bg-warning-subtle .h6 .p-2 .text-warning}
-Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-:::
-
 
 # Typography
 
 ::: {.aside .pt-2}
-![](logo.png){.rounded-circle}
+![](logo.png){.rounded-circle .img-fluid}
 
-A rounded image placed to the margin.
+A rounded image moved to the margin.
 :::
 
 Bootstrap default line-height and font sizing typically work, but this format enforces a strict vertical rhythm whenever possible[^7]. I made sure to define all vertical spacing and padding as multiples of a standard line height of `$spacer`.
@@ -72,7 +88,7 @@ Here are **bold**, *italic*, and <small>smaller</small> text spans. Here is ^sup
 
 ## Heading 2
 
-Fonts and colors are used as expected. Further, using my own `mb-tools` R package below, I can customize additional plot elements.
+Fonts and colors are used as expected. Further, using my own `mb-tools` R package, I can customize additional plot elements.
 
 ```{r}
 library(ggplot2)
@@ -108,11 +124,11 @@ Finally a normal rule `hr` element.
 
 ------------------------------------------------------------------------
 
-And a paragraph after the rule.
+And a paragraph of content after the rule.
 
 #### Heading 4
 
-Sample paragraph content.
+By default cittaions (and cross-references) are read in from an external `references.bib` file, but this may be edited in the YAML front matter as usual. Each citation must have a key, composed of ‘@’ + the citation identifier from the database. Here is a margin reference to [@xie2015].
 
 ##### Heading 5
 
@@ -126,7 +142,7 @@ Here is a long footnote reference[^10]. Caption and footnote placement can be co
 
 ###### Section 6
 
-Finally, headers at level 6 are used as section dividers.
+Headers at level 6 are used as section dividers.
 
 
 # Tables
