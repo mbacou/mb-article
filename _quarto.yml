@@ -2,7 +2,7 @@ project:
   title: mb-article
   type: website
   execute-dir: file
-  output-dir: _site
+  output-dir: docs
   preview:
     port: 5555
 
