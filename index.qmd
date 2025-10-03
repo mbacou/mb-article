@@ -4,8 +4,7 @@ subtitle: A journalistic format for Quarto posts and articles
 date: last-modified
 date-modified: last-modified
 draft: false
-freeze: true
-bibliography: references.bib
+freeze: false
 copyright: Melanie BACOU 2025
 license: CC BY-NC 4.0
 funding: Project or client funding
@@ -38,7 +37,7 @@ description: |
   **mb-article** is a Quarto extension for HTML formats with an opinionated journalistic design and simplified navigational elements, optimized for textual content on smaller display sizes. This custom format makes use of standard Quarto **Project** and **HTML Article** variables, such as branding, navigation links, and page banners, but changes the default layout and behaviors.
 
 title-block-banner: transparent url(contour.avif) 0 0 / cover no-repeat
-title-block-banner-color: shaded
+title-block-banner-color: info-subtle
 
 format: mb-article-html
 ---
@@ -50,13 +49,13 @@ This document is an example that demonstrates the formatting and features of the
 
 Here is a sample margin note to the right column, and a sidebar note below on the left.
 
-::: {.aside .bg-secondary-subtle .h6 .mt-2 .p-2}
+::: {.aside .bg-secondary-subtle .text-serif .mt-2 .p-2}
 aside -- A note placed in the page margin with CSS class `aside`.
 :::
 
  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
 
-::: {.column-sidebar .bg-info-subtle .h6 .p-2 .text-info}
+::: {.column-sidebar .bg-info-subtle .text-serif .p-2 .text-info}
 column-sidebar -- A note placed in the page sidebar with CSS classes `column-sidebar`.
 :::
 
@@ -91,6 +90,9 @@ Here are **bold**, *italic*, and <small>smaller</small> text spans. Here is ^sup
 Fonts and colors are used as expected. Further, using my own `mb-tools` R package, I can customize additional plot elements.
 
 ```{r}
+#| column: page-right
+#| fig-cap: A sample dynamic graph
+
 library(ggplot2)
 
 ggplot(mtcars, aes(factor(carb), mpg, fill = factor(carb))) +
@@ -190,7 +192,7 @@ I prefer my tables to resemble LaTeX typesetting, so a few simple changes here.
 : Caption: sm primary {.striped .sm .primary}
 
 ```{r}
-#| column: page
+#| column: page-right
 #| tbl-cap: A full-width table to increase content space
 
 knitr::kable(mtcars[1:6, 1:10])

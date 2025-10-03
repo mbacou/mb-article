@@ -1,10 +1,11 @@
 <!-- mb-sidebar -->
-<div id="quarto-sidebar" class="">
+<div class="column-sidebar">
+  <div id="mb-sidebar" class="d-flex flex-column justify-content-around h-100">
 
-  $if(links)$
-  <div>
-    <label class="label text-primary">Links</label>
-    <ul class="navbar-nav d-flex flex-column">
+    $if(links)$
+    <label class="label form-label text-primary">Sections</label>
+
+    <ul>
       $for(links)$
       <li class="nav-link">
         <a class="nav-item" href="$it.href$">
@@ -13,29 +14,24 @@
       </li>
       $endfor$
     </ul>
+    $endif$
+
+    <div><a class="icon-link icon-link-hover text-info text-decoration-none label"
+        href="#mb-header">Back to top <i class="bi bi-arrow-up-square-fill"
+          role="img"></i></a>
+    </div>
+
+    $if(footer)$
+    <div class="mb-footer" class="mt-2 pt-2 border-top">
+      $footer$
+    </div>
+    $endif$
+
+    $if(logo)$
+    <div class="mb-logo mt-2">
+      <a href="$logo.url$"><img src="$logo$" alt="Logo" class="img-fluid"></a>
+    </div>
+    $endif$
+
   </div>
-  $endif$
-
-  $if(toc)$
-  $toc.html()$
-  $endif$
-
-  <div class="mt-auto"><a
-      class="icon-link icon-link-hover text-info text-decoration-none label"
-      href="#mb-title-block">Back to top <i class="bi bi-arrow-up-square-fill"
-        role="img"></i></a>
-  </div>
-
-  $if(footer)$
-  <div class="mb-footer" class="mt-2 pt-2 border-top">
-    $footer$
-  </div>
-  $endif$
-
-  $if(logo)$
-  <div class="mb-logo mt-2">
-    <a href="$logo.url$"><img src="$logo$" alt="Logo" class="img-fluid"></a>
-  </div>
-  $endif$
-
 </div>

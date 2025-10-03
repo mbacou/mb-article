@@ -1,7 +1,7 @@
 /*-- scss:rules --*/
 
 /* Navigation */
-nav .nav-item .nav-link, 
+nav .nav-item .nav-link,
 .nav-tabs .nav-item .nav-link {
   font-family: $nav-link-font-family;
   font-size: $nav-link-font-size;
@@ -11,14 +11,17 @@ nav .nav-item .nav-link,
   line-height: 3rem;
   padding: $nav-link-padding-y $nav-link-padding-x;
 }
+
 nav .nav-item .nav-link.active,
 .nav-tabs .nav-item .nav-link.active {
   color: $nav-link-active-color;
 }
+
 nav .nav-item .nav-link:hover,
 .nav-tabs .nav-item .nav-link:hover {
   background-color: rgba($nav-link-hover-color, 10%);
 }
+
 nav .nav-item .bi {
   font-size: $font-size-base;
 }
@@ -31,7 +34,9 @@ nav .nav-item .bi {
 
 // Sidebar
 .mb-footer p {
+  color: $text-muted;
   font-size: $code-font-size;
+  line-height: 1.5rem;
 }
 .mb-logo img {
   max-height: 11vh;

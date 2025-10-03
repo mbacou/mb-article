@@ -21,8 +21,8 @@ $yellow: $brand-yellow;
 $gray: $brand-gray;
 $darkgray: $brand-darkgray;
 
-$light: $brand-light !default;
-$dark: $brand-dark !default;
+$light: $brand-light;
+$dark: $brand-dark;
 
 // use brand variables?
 $font-family-base: "Crimson Text";
@@ -123,7 +123,7 @@ $component-active-bg: rgba($primary, 12%);
 $form-label-margin-top: 0rem;
 $form-label-margin-bottom: 0.5rem;
 $form-label-color: $border-color;
-$form-label-font-size: calc($code-font-size - 3px);
+$form-label-font-size: calc($code-font-size - 2px);
 $form-label-font-weight: 500;
 $list-group-bg: $input-bg;
 $list-group-border-color: $input-border-color;
@@ -185,27 +185,18 @@ $sidebar-font-size-section-collapse: $small-font-size;
 
 
 /*-- scss:rules --*/
-
-// Spacing
 body {
-  font-size: $font-size-base;
-  line-height: $line-height-base;
+  line-height: 2rem;
 }
-
-p,
-ol,
-ul {
-  margin-bottom: 1rem;
+p, ol, ul {
+  margin: 0 0 1rem 0;
 }
-
 hr {
   border-top: double .25rem $hr-border-color;
   margin: .5rem 0 2.25rem;
 }
 
-label,
-.label,
-.form-label {
+label, .label {
   display: block;
   font-size: $form-label-font-size;
   font-family: $font-family-sans-serif;
@@ -213,106 +204,68 @@ label,
   letter-spacing: 1px;
   line-height: 1.75rem;
 }
-
 .form-label {
   text-align: end;
 }
-
-mark,
-.mark {
+mark, .mark {
   color: inherit;
   font-weight: $font-weight-bold;
   padding: 0 .25rem;
   background-color: rgba($primary, 10%);
   border-radius: $border-radius;
 }
-
-small,
-.small {
-  font-size: calc($font-size-base - 2px);
+small, .small {
+  font-size: $small-font-size;
   line-height: 1.75rem;
 }
 
 // Headings
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-weight: $headings-font-weight;
   line-height: 3rem;
   padding: 0;
-  margin-top: 2rem;
+  margin: 2rem 0;
 }
-
 h1.title {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin: 2rem 0 1rem 0 !important;
 }
-
 h1.quarto-secondary-nav-title {
   font-size: 2rem;
   line-height: 2rem;
   margin: 1rem 0 1rem;
   padding: 0;
 }
-
-h2,
-.h2 {
+h2, .h2 {
   color: $primary;
   border-bottom: none;
 }
-
-h4,
-.h4 {
+h4, .h4 {
   color: $gray-500;
 }
-
-h3,
-.h3 {
+h3, .h3 {
   line-height: 2.5rem;
 }
-
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
+h4, .h4, h5, .h5, h6, .h6 {
   line-height: 2rem;
 }
-
-h5,
-.h5 {
+h5, .h5 {
   color: $primary;
 }
-
-h6,
-.h6 {
+h6, .h6 {
   color: $secondary;
   font-family: $font-family-serif;
   margin: 0 0 1rem 0;
   transform: rotate(-.6deg);
 }
-
-.lead,
-.lead p {
+.lead, .lead p {
   font-family: $font-family-base;
   font-size: 2rem;
   font-weight: 300;
   color: $text-muted;
   font-style: normal;
-  line-height: 2.75rem;
-  margin-bottom: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 3rem;
 }
-
 p.subtitle {
   color: $gray-500;
   margin-top: 1rem;
@@ -320,23 +273,18 @@ p.subtitle {
 }
 
 // Code blocks
-pre,
-code,
-pre code {
+pre, code, pre code {
   color: $code-color;
   font-family: $font-monospace;
   font-size: $code-font-size;
   background-color: none;
   padding: 0;
 }
-
-code span.fu,
-code span.sc {
+code span.fu, code span.sc {
   font-weight: 400;
 }
 
-p code:not(.sourceCode),
-li code:not(.sourceCode),
+p code:not(.sourceCode), li code:not(.sourceCode), 
 td code:not(.sourceCode) {
   color: inherit;
   font-family: $font-monospace;
@@ -345,34 +293,26 @@ td code:not(.sourceCode) {
   background-color: $shaded;
   padding: 0 .25rem !important;
 }
-
 .code-with-filename .code-with-filename-file {
   background-color: $table-striped-bg;
   padding: 0 1rem;
   border: 1px solid $table-striped-bg;
   border-radius: $border-radius $border-radius 0 0;
 }
-
 .code-with-filename pre {
   color: $code-color;
   font-size: $code-font-size;
   line-height: calc(2rem - 2px);
 }
-
-div.sourceCode,
-details,
-.cell {
+div.sourceCode, details, .cell {
   margin: 0 0 2rem 0;
 }
-
 div.sourceCode {
   background-color: $shaded !important;
   border: none;
   padding: 1rem 1rem .5rem;
 }
-
-pre.sourceCode,
-pre>code.sourceCode>span {
+pre.sourceCode, pre>code.sourceCode>span {
   font-size: $code-font-size;
   line-height: 1.5rem;
   background: none;
@@ -380,19 +320,16 @@ pre>code.sourceCode>span {
 }
 
 // Tables
-table,
-.table {
+table, .table {
   margin: .5rem 0;
   border: none;
   border-top: 1px solid $border-color;
   background-color: $shaded;
   backdrop-filter: blur(3px);
 }
-
 .table>:not(caption)>*>* {
   padding: 0 .5rem;
 }
-
 .table th {
   color: $headings-font-color;
   font-family: $font-family-sans-serif;
@@ -401,18 +338,15 @@ table,
   line-height: calc(2rem - 1px);
   border: none;
 }
-
 .table tbody {
   border-top: 1px solid $border-color;
   border-bottom: 2px solid $border-color;
 }
-
 .table td {
   line-height: calc(2rem - 1px);
   border: none;
   border-bottom: 1px solid $darkgray;
 }
-
 .table-borderless td,
 .table tr:last-of-type td,
 .table-striped td {
@@ -420,14 +354,9 @@ table,
 }
 
 // Margin notes and captions
-caption,
-.panel-caption,
-.figure-caption,
-.subfigure-caption,
-.table-caption,
-figcaption,
-.column-margin figcaption,
-.margin-caption {
+caption, .panel-caption, .figure-caption, .subfigure-caption, 
+.table-caption, 
+figcaption, .column-margin figcaption, .margin-caption {
   font-family: $font-family-sans-serif;
   font-size: $code-font-size;
   color: $text-muted;
@@ -435,19 +364,14 @@ figcaption,
   padding: 0;
   margin: .5rem 0 1rem 0;
 }
-
-.aside,
-.column-margin {
+.aside, .column-margin {
   font-family: $font-family-base;
   font-size: $small-font-size;
   color: $text-muted;
   line-height: 1.75rem;
   margin: 0;
 }
-
-.aside p,
-.column-margin p,
-.column-margin.column-container p {
+.aside p, .column-margin p, .column-margin.column-container p {
   margin-bottom: 1rem;
   line-height: inherit;
   font-size: inherit;
@@ -458,25 +382,18 @@ figcaption,
 .figure {
   margin: 0;
 }
-
 .figure-img {
   background-color: $shaded;
   padding: 0;
   margin-bottom: 1rem;
 }
-
 .img-thumbnail {
   padding: 0;
   margin-bottom: 1rem;
   border-radius: $border-radius;
 }
-
 .img-fluid {
   border-radius: $border-radius;
-}
-
-.rounded-circle {
-  max-width: 10rem;
 }
 
 
@@ -484,16 +401,10 @@ figcaption,
 /* Quarto page layout fixes                                                         */
 /* -------------------------------------------------------------------------------- */
 
-// Hide default navbar and sidebar contents since this format overrides them
-#quarto-header,
-#title-block-header {
-  display: none;
+#quarto-content>* {
+  padding: 0;
+  margin: 0;
 }
-
-// body {
-//   background: $body-bg url(logo.png) 0 0 / 100vw 80vh no-repeat;  
-// }
-
 #quarto-content {
   border-top: solid 1px $darkgray;
   background-image:
@@ -504,89 +415,41 @@ figcaption,
   background-repeat: repeat;
   //backdrop-filter: blur(3px);
 }
-
-// Reorder flex blocks in sidebar
-#quarto-sidebar>* {
-  padding: 0;
-}
-
-#quarto-sidebar,
-#quarto-sidebar-toc-left {
-  justify-content: space-between !important;
-  align-items: end;
-  padding: 1rem;
-  background-color: transparent;
-  background-image:
-    linear-gradient(to right, $body-bg 65%, transparent);
-  backdrop-filter: blur(3px);
-}
-
-// Quarto bug ?
-.sidebar-menu-container {
-  order: 1;
-  text-align: end;
-}
-
-nav#TOC {
-  order: 2
-}
-
-.quarto-sidebar-footer {
-  order: 3;
-  margin-top: auto;
-  color: $text-muted;
-  text-align: end;
-  font-size: calc($font-size-base - 3px);
-  line-height: 1.5rem;
-}
-
-.quarto-sidebar-header {
-  order: 4;
-  width: 100%;
-  text-align: end;
-  border-top: 1px solid $darkgray;
-  padding: 1rem 0 0 0 !important;
-}
-
-.sidebar-header {
-  // logo and tools
-  order: 5;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-.sidebar-header-item p {
-  text-align: end;
-  font-size: calc($font-size-base - 3px);
-  line-height: 1.5rem;
-}
-
-.sidebar-footer-item p {
-  margin: 0 !important;
-}
-
-.sidebar-logo {
-  max-width: 100%;
-  max-height: 11vh;
-}
-
 #quarto-announcement {
   font-family: $font-family-sans-serif;
   font-size: 1.25rem;
   border: none;
+}
+main {
+  background-image:
+  linear-gradient(to right, $body-bg, transparent, $body-bg);
+}
+#quarto-header, #title-block-header,
+#quarto-sidebarnav-toggle, .toc-actions {
+  display: none;
+}
+#mb-header {
+  z-index: 1400;
+}
+
+// Reorder flex blocks in sidebar
+#quarto-sidebar>* {
+  text-align: end;
+  padding: 0;
+  margin: 0;
+}
+#quarto-sidebar {
+  padding: 4rem 1rem 1rem 1rem;
 }
 
 /* Quarto TOC on the left */
 .sidebar.sidebar-navigation:not(.rollup) {
   background-color: transparent;
 }
-
 .sidebar nav[role=doc-toc]>ul {
+  border-right: 1px solid $primary;
   padding: 0;
-  border-right: solid 1px rgba($primary, .85);
 }
-
-.sidebar .toc-actions ul li a,
 .sidebar nav[role=doc-toc]>ul li a {
   color: $nav-link-color;
   text-align: end;
@@ -594,45 +457,34 @@ nav#TOC {
   font-family: $nav-link-font-family;
   font-size: $code-font-size;
   border: none;
-  border-right: solid 3px transparent;
-  padding-right: 1rem;
+  border-right: solid 4px transparent;
+  padding: 0.25rem 1rem 0.25rem 0;
 }
-
 .sidebar nav[role=doc-toc]>ul li a.nav-link,
 .sidebar nav[role=doc-toc] ul>li>ul>li>a.nav-link {
   border: none;
-  border-right: solid 3px transparent;
+  border-right: solid 4px transparent;
 }
-
 .sidebar nav[role=doc-toc] ul>li>a.nav-link.active,
 .sidebar nav[role=doc-toc] ul>li>ul>li>a.nav-link.active {
   border: none;
-  border-right: solid 3px $primary;
+  border-right: solid 4px $primary;
 }
-
 .sidebar nav[role=doc-toc] ul>li>a.nav-link:hover,
 .sidebar nav[role=doc-toc] ul>li>ul>li>a.nav-link:hover {
   border: none;
-  border-right: solid 3px $border-color;
+  border-right: solid 4px $border-color;
 }
-
-.sidebar .toc-actions ul li a {
-  font-family: $font-family-base;
+.sidebar nav[role=doc-toc] ul>li>ul {
+  margin-bottom: .25rem;
 }
-
 .sidebar nav[role=doc-toc] ul>li>ul a {
   padding-right: 1.5rem;
-}
-
-.toc-action i.bi {
-  font-size: $code-font-size;
-  padding-right: .5rem;
 }
 
 #quarto-search {
   margin: 0;
 }
-
 #quarto-search input {
   font-size: unset;
 }

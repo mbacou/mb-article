@@ -36,10 +36,13 @@ typography:
     - family: Caveat
       source: google
       weight: [400]
-  
+
   base: Crimson Text
-  headings: M PLUS Code Latin
+  headings: Caveat
   monospace: M PLUS Code Latin
+  
+  
+  
   
 
   
