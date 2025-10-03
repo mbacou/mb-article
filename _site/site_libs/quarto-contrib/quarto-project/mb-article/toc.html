@@ -1,0 +1,48 @@
+<nav id="$idprefix$TOC" role="doc-toc"
+  class="d-flex flex-column justify-content-around h-100">
+
+  <!-- Optional sidebar menu -->
+  $if(links)$
+  <div class="mb-links">
+    <ul>
+      $for(links)$
+      <li class="nav-link">
+        <a class="nav-item" href="$it.href$">
+          <i class="bi bi-$it.icon$" role="img"></i>
+          <span class="menu-text">$it.text$</span></a>
+      </li>
+      $endfor$
+    </ul>
+  </div>
+  $endif$
+
+  <!-- Quarto TOC -->
+  $if(toc-title)$
+  <label id="$idprefix$toc-title"
+    class="label form-label text-primary">$toc-title$</label>
+  $endif$
+  $table-of-contents$
+
+
+  <!-- Back to top -->
+  <div class="order-3 mt-auto"><a
+      class="icon-link icon-link-hover text-info text-decoration-none label"
+      href="#mb-header">Back to top <i class="bi bi-arrow-up-square-fill"
+        role="img"></i></a>
+  </div>
+
+  <!-- Optional sidebar footer -->
+  $if(footer)$
+  <div class="mb-footer order-4 mt-1 pt-2 border-top">
+    $footer$
+  </div>
+  $endif$
+
+  <!-- Optional sidebar logo -->
+  $if(logo)$
+  <div class="mb-logo order-5">
+    <a href="$logo.url$"><img src="$logo$" alt="Logo" class="img-fluid"></a>
+  </div>
+  $endif$
+
+</nav>

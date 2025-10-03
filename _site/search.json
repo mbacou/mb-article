@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "mb-article HTML Format for Quarto",
+    "section": "",
+    "text": "Link 1\n      \n          \n        \n          Link 2\n      \n          \n        \n          Link 3"
+  },
+  {
+    "objectID": "index.html#heading-2",
+    "href": "index.html#heading-2",
+    "title": "mb-article HTML Format for Quarto",
+    "section": "Heading 2",
+    "text": "Heading 2\nFonts and colors are used as expected. Further, using my own mb-tools R package, I can customize additional plot elements.\n\nlibrary(ggplot2)\n\nggplot(mtcars, aes(factor(carb), mpg, fill = factor(carb))) +\n  geom_col() +\n  guides(fill = guide_legend(nrow = 1)) +\n  labs(\n    title = \"Custom ggplot with Bootstrap brand\",\n    subtitle = \"Theme provided by R package `mblabs`\",\n    caption = \"A long plot caption with many references\n    over multiples lines.\"\n  )\n\n\n\n\nA sample dynamic graph\n\n\n\n\n\nHeading 3\nSample paragraph content with list of items:\n\nList 1\n\nList 1.1\nList 1.2\n\nList 2\nList 3\n\nOrdered list:\n\nList 1\nList 2\nList 3\n\nFinally a normal rule hr element.\n\nAnd a paragraph of content after the rule.\n\nHeading 4\nBy default cittaions (and cross-references) are read in from an external references.bib file, but this may be edited in the YAML front matter as usual. Each citation must have a key, composed of ‘@’ + the citation identifier from the database. Here is a margin reference to (Xie 2015).\n\nXie, Yihui. 2015. Dynamic Documents with R and Knitr. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. https://yihui.name/knitr/.\n\nHeading 5\nHere is a long footnote reference3. Caption and footnote placement can be controlled in the config files _quarto_yml and/or _metadata.yml, or directly in the YAML front matter.\n3 Here’s a margin note with multiple paragraph blocks and a fancy section header.\nHeading 5\nWith subsequent paragraphs indented to show that they belong to the previous footnote.\nSection 6\nHeaders at level 6 are used as section dividers."
+  }
+]

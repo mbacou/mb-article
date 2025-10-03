@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.2">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Author-1">
+<meta name="author" content="Author-2">
+<meta name="keywords" content="keyword 1, keyword 2, keyword 3">
+<meta name="description" content="mb-article is a Quarto extension for HTML formats with an opinionated journalistic design and simplified navigational elements, optimized for textual content on smaller display sizes. This custom format makes use of standard Quarto Project and HTML Article variables, such as branding, navigation links, and page banners, but changes the default layout and behaviors.">
+
+<title>mb-article HTML Format for Quarto – mb-article</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./logo.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet" class="quarto-color-scheme-extra">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-bf4a14655fbbecdc72df8f7b966dcb71.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-8dacb52da701465f16efcf602d55dd1b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bf4a14655fbbecdc72df8f7b966dcb71.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": true,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+
+      .quarto-title-block .quarto-title-banner h1,
+      .quarto-title-block .quarto-title-banner h2,
+      .quarto-title-block .quarto-title-banner h3,
+      .quarto-title-block .quarto-title-banner h4,
+      .quarto-title-block .quarto-title-banner h5,
+      .quarto-title-block .quarto-title-banner h6
+      {
+        color: info-subtle;
+      }
+
+      .quarto-title-block .quarto-title-banner {
+        color: info-subtle;
+background: transparent url(contour.avif) 0 0 / cover no-repeat;
+      }
+</style>
+
+
+<meta property="og:title" content="mb-article HTML Format for Quarto – mb-article">
+<meta property="og:description" content="mb-article is a Quarto extension for HTML formats with an opinionated journalistic design and simplified navigational elements, optimized for textual content on smaller display sizes. This custom format makes use of standard Quarto Project and HTML Article variables, such as branding, navigation links, and page banners, but changes the default layout and behaviors.">
+<meta property="og:image" content="https://mbacou.github.io/mb-article/logo.png">
+<meta property="og:site_name" content="mb-article">
+<meta property="og:image:alt" content="logo">
+<meta property="og:image:height" content="574">
+<meta property="og:image:width" content="574">
+</head>
+
+<body class="nav-sidebar floating slimcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">mb-article HTML Format for Quarto</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block"></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-end sidebar-header">
+      <a href="./index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+    <nav id="TOC" role="doc-toc" class="d-flex flex-column justify-content-around h-100 toc-active">
+
+  <!-- Optional sidebar menu -->
+    <div class="mb-links">
+    <ul>
+            <li class="nav-link">
+        <a class="nav-item" href="site_libs/quarto-contrib/quarto-project/mb-article">
+          <i class="bi bi-link" role="img"></i>
+          <span class="menu-text">Link 1</span></a>
+      </li>
+            <li class="nav-link">
+        <a class="nav-item" href="site_libs/quarto-contrib/quarto-project/mb-article">
+          <i class="bi bi-link" role="img"></i>
+          <span class="menu-text">Link 2</span></a>
+      </li>
+            <li class="nav-link">
+        <a class="nav-item" href="site_libs/quarto-contrib/quarto-project/mb-article">
+          <i class="bi bi-link" role="img"></i>
+          <span class="menu-text">Link 3</span></a>
+      </li>
+          </ul>
+  </div>
+  
+  <!-- Quarto TOC -->
+    <label id="toc-title" class="label form-label text-primary">On this page</label>
+    <ul>
+    <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+    <li><a href="#typography" id="toc-typography" class="nav-link" data-scroll-target="#typography">Typography</a>
+    <ul class="collapse">
+    <li><a href="#heading-2" id="toc-heading-2" class="nav-link" data-scroll-target="#heading-2">Heading 2</a>
+    <ul class="collapse">
+    <li><a href="#heading-3" id="toc-heading-3" class="nav-link" data-scroll-target="#heading-3">Heading 3</a></li>
+    </ul></li>
+    </ul></li>
+    <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables">Tables</a></li>
+    </ul>
+
+
+  <!-- Back to top -->
+  <div class="order-3 mt-auto"><a class="icon-link icon-link-hover text-info text-decoration-none label" href="#mb-header">Back to top <i class="bi bi-arrow-up-square-fill" role="img"></i></a>
+  </div>
+
+  <!-- Optional sidebar footer -->
+    <div class="mb-footer order-4 mt-1 pt-2 border-top">
+    <p><strong>Mel B. Labs</strong> – a personal blog about statistics and spatial econometrics.<br>
+    BACOU, Melanie © 2024 under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">CC BY-NC 4.0</a></p>
+  </div>
+  
+  <!-- Optional sidebar logo -->
+    <div class="mb-logo order-5">
+    <a href=""><img src="logo.png" alt="Logo" class="img-fluid"></a>
+  </div>
+  
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block page-columns page-full column-body" id="quarto-document-content">
+
+<!-- article title header -->
+
+<header id="mb-header" class="column-page-right sticky-top 
+   bg-info-subtle  ">
+
+  <!-- mb-navbar -->
+  <nav id="mb-navbar" class="d-flex bg-shaded align-items-end">
+
+    <!-- logo -->
+      <div class="d-lg-none m-0">
+      <a href="site_libs/quarto-contrib/quarto-project/mb-article"><img src="logo.png" alt="logo" class="mb-logo img-fluid mb-1"></a>
+    </div>
+    
+    <!-- links -->
+    <ul class="navbar-nav d-none d-md-flex flex-row w-100">
+
+          <li class="nav-item flex-fill">
+        <a class="nav-link" href="site_libs/quarto-contrib/quarto-project/mb-article">
+          <span class="menu-text">Link 1</span></a>
+      </li>
+          <li class="nav-item flex-fill">
+        <a class="nav-link" href="site_libs/quarto-contrib/quarto-project/mb-article">
+          <span class="menu-text">Link 2</span></a>
+      </li>
+          <li class="nav-item flex-fill">
+        <a class="nav-link" href="site_libs/quarto-contrib/quarto-project/mb-article">
+          <span class="menu-text">Link 3</span></a>
+      </li>
+        </ul>
+
+    <!-- icons -->
+    <ul class="navbar-nav d-flex d-md-none flex-row w-100">
+
+          <li class="nav-item flex-fill">
+        <a class="nav-link" href="site_libs/quarto-contrib/quarto-project/mb-article">
+          <i class="bi bi-link"></i></a>
+      </li>
+          <li class="nav-item flex-fill">
+        <a class="nav-link" href="site_libs/quarto-contrib/quarto-project/mb-article">
+          <i class="bi bi-link"></i></a>
+      </li>
+          <li class="nav-item flex-fill">
+        <a class="nav-link" href="site_libs/quarto-contrib/quarto-project/mb-article">
+          <i class="bi bi-link"></i></a>
+      </li>
+        </ul>
+
+    <!-- tools -->
+    <ul class="navbar-nav d-none d-md-flex flex-row justify-content-end">
+
+          <li class="nav-item">
+        <a class="nav-link px-1" href="https://github.com/mbacou/mb-article">
+          <i class="bi bi-github" role="img"></i></a>
+      </li>
+          <li class="nav-item">
+        <a class="nav-link px-1" href="https://t.me/mbacou">
+          <i class="bi bi-telegram" role="img"></i></a>
+      </li>
+          <li class="nav-item">
+        <a class="nav-link px-1" href="https://linkedin.com/in/mbacou">
+          <i class="bi bi-linkedin" role="img"></i></a>
+      </li>
+        </ul>
+
+    <!-- Quarto buttons -->
+    <ul class="navbar-nav flex-row ms-2 justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link px-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-layout-text-sidebar-reverse"></i>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link px-1" role="button" aria-label="Search" onclick="window.quartoOpenSearch();">
+          <i class="bi bi-search"></i>
+        </a>
+      </li>
+    </ul>
+
+  </nav>
+    <div class="mb-banner border-top py-2" style="background: transparent url(contour.avif) 0 0 / cover no-repeat;">
+  </div>
+  
+   <h1 class="title bg-shaded display-7">mb-article HTML Format for Quarto</h1> 
+</header>
+
+<div class="column-page-right">
+
+   <p class="lead">A journalistic format for Quarto posts and articles</p> 
+
+  <div class="grid border-top border-bottom border-2">
+
+    <div class="g-col-md-7 g-col-12">
+
+      <div class="grid" style="row-gap: .5rem;">
+        <div class="g-col-12 px-2 border-top">
+          <label class="form-label"></label>
+          <div class="description small">
+            <p><strong>mb-article</strong> is a Quarto extension for HTML formats with an opinionated journalistic design and simplified navigational elements, optimized for textual content on smaller display sizes. This custom format makes use of standard Quarto <strong>Project</strong> and <strong>HTML Article</strong> variables, such as branding, navigation links, and page banners, but changes the default layout and behaviors.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="g-col-12 px-2 border-top">
+        <label class="form-label">Citation</label>
+      </div>
+    </div>
+
+    <div class="g-col-md-5 g-col-12">
+
+      <div class="grid">
+
+        <div class="g-col-6 px-2 border-top border-md-start mb-1">
+          <label class="form-label">Published on</label>
+          <p>Oct 4, 2025</p>
+        </div>
+        <div class="g-col-6 px-2 border-top border-start mb-1">
+          <label class="form-label">Last modified</label>
+          <p>Oct 4, 2025</p>
+        </div>
+
+        <div class="g-col-12 px-2 border-top border-md-start mb-1">
+          <label class="form-label">Author-1Author-2</label>
+          <p>
+                        
+  Author-1
+  
+
+<a href="mailto:author-1@mail.com">
+  <i class="bi bi-envelope ms-1"></i></a>
+<a href="https://orcid.org/0000-0003-1810-6820">
+  <i class="bi bi-mortarboard ms-1"></i></a>
+<br>
+                        
+  Author-2
+  
+
+<a href="mailto:author-2@mail.com">
+  <i class="bi bi-envelope ms-1"></i></a>
+<a href="https://orcid.org/0000-0003-1810-6819">
+  <i class="bi bi-mortarboard ms-1"></i></a>
+<br>
+                      </p>
+        </div>
+
+        <div class="g-col-6 px-2 border-top border-md-start mb-1">
+          <label class="form-label">Status</label>
+          <p><i class="me-1 bi bi-square"></i>
+            Draft<br>
+            <i class="me-1 bi bi-square"></i>
+            Frozen
+          </p>
+        </div>
+
+        <div class="g-col-6 px-2 border-top border-start mb-1">
+          <label class="form-label">Keywords</label>
+          <ul>
+             <li>cat-1</li>  <li>cat-2</li>  <li>cat-3</li> 
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="g-col-12 px-2 border-top">
+      <label class="form-label">Abstract</label>
+      <div class="abstract small"><p>Abstract text – Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>
+    </div>
+
+    <div class="g-col-md-2 g-col-4 px-2 border-top mb-1">
+      <label class="form-label">License</label>
+      <p class="small">true</p>
+    </div>
+    <div class="g-col-md-3 g-col-4 px-2 border-top border-start mb-1">
+      <label class="form-label">Project / Funding</label>
+      <p class="small">true</p>
+    </div>
+    <div class="g-col-md-4 g-col-4 px-2 border-top border-start mb-1">
+      <label class="form-label">Affiliation</label>
+      <p class="small">
+                <br>
+                <br>
+              </p>
+    </div>
+    <div class="g-col-md-3 g-col-12 px-2 border-top border-md-start mb-1">
+      <label class="form-label">Credits</label>
+      <p class="small">Special acknowledgments</p>
+    </div>
+
+  </div>
+</div>
+
+
+<section id="introduction" class="level1 page-columns page-full">
+<h1>Introduction</h1>
+<p>This document is an example that demonstrates the formatting and features of the current HTML format extension for Quarto.</p>
+<p>Here is a sample margin note to the right column, and a sidebar note below on the left.</p>
+
+<div class="no-row-height column-margin column-container"><div class="bg-secondary-subtle text-serif mt-2 p-2 margin-aside">
+<p>aside – A note placed in the page margin with CSS class <code>aside</code>.</p>
+</div></div><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+<div class="column-sidebar bg-info-subtle text-serif p-2 text-info">
+<p>column-sidebar – A note placed in the page sidebar with CSS classes <code>column-sidebar</code>.</p>
+</div>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+<p><strong>More Information</strong></p>
+<p>You can learn more about controlling the appearance of HTML output at <a href="https://quarto.org/docs/output-formats/html-basics.html" class="uri">https://quarto.org/docs/output-formats/html-basics.html</a>.</p>
+</section>
+<section id="typography" class="level1 page-columns page-full">
+<h1>Typography</h1>
+
+<div class="no-row-height column-margin column-container"><div class="pt-2 margin-aside">
+<p><img src="logo.png" class="rounded-circle img-fluid"></p>
+<p>A rounded image moved to the margin.</p>
+</div><div id="fn1"><p><sup>1</sup>&nbsp;About <strong>vertical rhythm</strong> and why it matters for content readability, see <a href="https://hnldesign.hashnode.dev/setting-a-flexible-baseline-grid-in-css">Klaas Leussink</a> article on his personal blog.</p></div></div><p>Bootstrap default line-height and font sizing typically work, but this format enforces a strict vertical rhythm whenever possible<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. I made sure to define all vertical spacing and padding as multiples of a standard line height of <code>$spacer</code>.</p>
+<p>No additional changes to font definitions aside from using <code>Crimson Pro</code> and <code>M+ Code</code> fonts<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;M+ font system was designed by Japanese artist <a href="https://mplusfonts.github.io/">Coji Morishita</a> with extended support for Latin, Japanese, Cyrillic. It is an excellent monospace font for smaller display sizes.</p></div></div><p>Here are <strong>bold</strong>, <em>italic</em>, and <small>smaller</small> text spans. Here is <sup>superscript</sup> and <sub>subscript</sub> text, and <del>strikethrough</del> notes. Semantic colors with e.g.&nbsp;<span class="text-info">.text-info</span> provide accented text. I have added 2 background classes for my own use, a semi-transparent and blurred <span class="bg-shaded"><code>.bg-shaded</code></span> and a <span class="bg-striped"><code>.bg-striped</code></span>. This theme uses <span class="text-muted">.text-muted</span> to de-emphasize content such as post metadata, margin notes, and captioning.</p>
+<section id="heading-2" class="level2 page-columns page-full">
+<h2 data-anchor-id="heading-2">Heading 2</h2>
+<p>Fonts and colors are used as expected. Further, using my own <code>mb-tools</code> R package, I can customize additional plot elements.</p>
+<div class="cell page-columns page-full">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="fu">factor</span>(carb), mpg, <span class="at">fill =</span> <span class="fu">factor</span>(carb))) <span class="sc">+</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="at">nrow =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Custom ggplot with Bootstrap brand"</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Theme provided by R package `mblabs`"</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"A long plot caption with many references</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="st">    over multiples lines."</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
+<div class="cell-output-display page-columns page-full">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="figure-img column-page-right"></p>
+<figcaption>A sample dynamic graph</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="heading-3" class="level3 page-columns page-full">
+<h3 data-anchor-id="heading-3">Heading 3</h3>
+<p>Sample paragraph content with list of items:</p>
+<ul>
+<li>List 1
+<ul>
+<li>List 1.1</li>
+<li>List 1.2</li>
+</ul></li>
+<li>List 2</li>
+<li>List 3</li>
+</ul>
+<p>Ordered list:</p>
+<ol type="1">
+<li>List 1</li>
+<li>List 2</li>
+<li>List 3</li>
+</ol>
+<p>Finally a normal rule <code>hr</code> element.</p>
+<hr>
+<p>And a paragraph of content after the rule.</p>
+<section id="heading-4" class="level4 page-columns page-full">
+<h4 data-anchor-id="heading-4">Heading 4</h4>
+<p>By default cittaions (and cross-references) are read in from an external <code>references.bib</code> file, but this may be edited in the YAML front matter as usual. Each citation must have a key, composed of ‘@’ + the citation identifier from the database. Here is a margin reference to <span class="citation" data-cites="xie2015">(<a href="#ref-xie2015" role="doc-biblioref">Xie 2015</a>)</span>.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-xie2015" class="csl-entry" role="listitem">
+Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://yihui.name/knitr/">https://yihui.name/knitr/</a>.
+</div></div><section id="heading-5" class="level5 page-columns page-full">
+<h5 data-anchor-id="heading-5">Heading 5</h5>
+<p>Here is a long footnote reference<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. Caption and footnote placement can be controlled in the config files <code>_quarto_yml</code> and/or <code>_metadata.yml</code>, or directly in the YAML front matter.</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;Here’s a margin note with multiple paragraph blocks and a fancy section header.</p>
+<h5 id="heading-5-1">Heading 5</h5>
+<p>With subsequent paragraphs indented to show that they belong to the previous footnote.</p></div></div><section id="section-6" class="level6">
+<h6 data-anchor-id="section-6">Section 6</h6>
+<p>Headers at level 6 are used as section dividers.</p>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+<section id="tables" class="level1 page-columns page-full">
+<h1>Tables</h1>
+<p>I prefer my tables to resemble LaTeX typesetting, so a few simple changes here.</p>
+<table class="table">
+<caption>Caption: my default table spacing</caption>
+<tbody>
+<tr class="odd">
+<td>apple</td>
+<td>2.05</td>
+</tr>
+<tr class="even">
+<td>pear</td>
+<td>1.37</td>
+</tr>
+<tr class="odd">
+<td>orange</td>
+<td>3.09</td>
+</tr>
+</tbody>
+</table>
+<table class="table-borderless table-hover table-sm small table">
+<caption>Caption: smaller spacing borderless hover sm</caption>
+<thead>
+<tr class="header">
+<th>fruit</th>
+<th>price</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>apple</td>
+<td>2.05</td>
+</tr>
+<tr class="even">
+<td>pear</td>
+<td>1.37</td>
+</tr>
+<tr class="odd">
+<td>orange</td>
+<td>3.09</td>
+</tr>
+</tbody>
+</table>
+<table class="table-striped table-hover table-sm small table">
+<caption>Caption: striped hover sm</caption>
+<thead>
+<tr class="header">
+<th>fruit</th>
+<th>price</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>apple</td>
+<td>2.05</td>
+</tr>
+<tr class="even">
+<td>pear</td>
+<td>1.37</td>
+</tr>
+<tr class="odd">
+<td>orange</td>
+<td>3.09</td>
+</tr>
+</tbody>
+</table>
+<table class="table-striped table-hover table-sm table-secondary small table">
+<caption>Caption: striped hover sm secondary</caption>
+<thead>
+<tr class="header">
+<th>fruit</th>
+<th>price</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>apple</td>
+<td>2.05</td>
+</tr>
+<tr class="even">
+<td>pear</td>
+<td>1.37</td>
+</tr>
+<tr class="odd">
+<td>orange</td>
+<td>3.09</td>
+</tr>
+</tbody>
+</table>
+<table class="table-striped table-sm table-primary small table">
+<caption>Caption: sm primary</caption>
+<thead>
+<tr class="header">
+<th>fruit</th>
+<th>price</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>apple</td>
+<td>2.05</td>
+</tr>
+<tr class="even">
+<td>pear</td>
+<td>1.37</td>
+</tr>
+<tr class="odd">
+<td>orange</td>
+<td>3.09</td>
+</tr>
+</tbody>
+</table>
+<div class="cell page-columns page-full" data-tbl-cap="A full-width table to increase content space">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(mtcars[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>])</span></code></pre></div>
+<div class="cell-output-display column-page-right">
+<table class="table table-sm table-striped small">
+<caption>A full-width table to increase content space</caption>
+<colgroup>
+<col style="width: 28%">
+<col style="width: 7%">
+<col style="width: 6%">
+<col style="width: 7%">
+<col style="width: 6%">
+<col style="width: 7%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">mpg</th>
+<th style="text-align: right;">cyl</th>
+<th style="text-align: right;">disp</th>
+<th style="text-align: right;">hp</th>
+<th style="text-align: right;">drat</th>
+<th style="text-align: right;">wt</th>
+<th style="text-align: right;">qsec</th>
+<th style="text-align: right;">vs</th>
+<th style="text-align: right;">am</th>
+<th style="text-align: right;">gear</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Mazda RX4</td>
+<td style="text-align: right;">21.0</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">160</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">3.90</td>
+<td style="text-align: right;">2.620</td>
+<td style="text-align: right;">16.46</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Mazda RX4 Wag</td>
+<td style="text-align: right;">21.0</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">160</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">3.90</td>
+<td style="text-align: right;">2.875</td>
+<td style="text-align: right;">17.02</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Datsun 710</td>
+<td style="text-align: right;">22.8</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">108</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">3.85</td>
+<td style="text-align: right;">2.320</td>
+<td style="text-align: right;">18.61</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hornet 4 Drive</td>
+<td style="text-align: right;">21.4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">258</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">3.08</td>
+<td style="text-align: right;">3.215</td>
+<td style="text-align: right;">19.44</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Hornet Sportabout</td>
+<td style="text-align: right;">18.7</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">360</td>
+<td style="text-align: right;">175</td>
+<td style="text-align: right;">3.15</td>
+<td style="text-align: right;">3.440</td>
+<td style="text-align: right;">17.02</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Valiant</td>
+<td style="text-align: right;">18.1</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">225</td>
+<td style="text-align: right;">105</td>
+<td style="text-align: right;">2.76</td>
+<td style="text-align: right;">3.460</td>
+<td style="text-align: right;">20.22</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>Melanie BACOU 2025</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/mbacou\.github\.io\/mb-article");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
