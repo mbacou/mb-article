@@ -1,4 +1,4 @@
-# mb-article Format
+# mb-article Format (DRAFT)
 
 ## Installing
 
