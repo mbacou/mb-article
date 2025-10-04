@@ -123,7 +123,7 @@ $component-active-bg: rgba($primary, 12%);
 $form-label-margin-top: 0rem;
 $form-label-margin-bottom: 0.5rem;
 $form-label-color: $border-color;
-$form-label-font-size: calc($code-font-size - 2px);
+$form-label-font-size: calc($code-font-size - 3px);
 $form-label-font-weight: 500;
 $list-group-bg: $input-bg;
 $list-group-border-color: $input-border-color;
@@ -200,9 +200,11 @@ label, .label {
   display: block;
   font-size: $form-label-font-size;
   font-family: $font-family-sans-serif;
+  font-weight: $form-label-font-weight;
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 1.75rem;
+  padding-bottom: .25rem;
 }
 .form-label {
   text-align: end;
@@ -413,7 +415,6 @@ figcaption, .column-margin figcaption, .margin-caption {
   background-size: 2rem 2rem;
   background-position: 0 calc(-.5rem + 1px);
   background-repeat: repeat;
-  //backdrop-filter: blur(3px);
 }
 #quarto-announcement {
   font-family: $font-family-sans-serif;
@@ -429,7 +430,8 @@ main {
   display: none;
 }
 #mb-header {
-  z-index: 1400;
+  z-index: 1300;
+  backdrop-filter: blur(3px);  
 }
 
 // Reorder flex blocks in sidebar

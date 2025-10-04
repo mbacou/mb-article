@@ -26,7 +26,7 @@ categories:
 keywords: 
   - keyword 1
   - keyword 2
-  - keyword 3  
+  - keyword 3
 
 
 abstract: |
@@ -37,7 +37,7 @@ description: |
   **mb-article** is a Quarto extension for HTML formats with an opinionated journalistic design and simplified navigational elements, optimized for textual content on smaller display sizes. This custom format makes use of standard Quarto **Project** and **HTML Article** variables, such as branding, navigation links, and page banners, but changes the default layout and behaviors.
 
 title-block-banner: transparent url(contour.avif) 0 0 / cover no-repeat
-title-block-banner-color: info-subtle
+title-block-banner-color: light
 
 format: mb-article-html
 ---

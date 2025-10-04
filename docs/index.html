@@ -99,9 +99,9 @@ div.csl-indent {
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet" class="quarto-color-scheme-extra">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bf4a14655fbbecdc72df8f7b966dcb71.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-8dacb52da701465f16efcf602d55dd1b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-bf4a14655fbbecdc72df8f7b966dcb71.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a539028af377ee833dba4ccfb044a4a8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-fca64194640a38294f04d9e68b929aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a539028af377ee833dba4ccfb044a4a8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -114,7 +114,7 @@ div.csl-indent {
     "/",
     "s"
   ],
-  "show-item-context": true,
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -139,11 +139,11 @@ div.csl-indent {
       .quarto-title-block .quarto-title-banner h5,
       .quarto-title-block .quarto-title-banner h6
       {
-        color: info-subtle;
+        color: light;
       }
 
       .quarto-title-block .quarto-title-banner {
-        color: info-subtle;
+        color: light;
 background: transparent url(contour.avif) 0 0 / cover no-repeat;
       }
 </style>
@@ -220,11 +220,14 @@ background: transparent url(contour.avif) 0 0 / cover no-repeat;
 
 
   <!-- Back to top -->
-  <div class="order-3 mt-auto"><a class="icon-link icon-link-hover text-info text-decoration-none label" href="#mb-header">Back to top <i class="bi bi-arrow-up-square-fill" role="img"></i></a>
+  <div class="order-3 border-top text-sans small py-2">
+    <a class="icon-link icon-link-hover text-decoration-none" href="#quarto-appendix">Appendix <i class="bi bi-arrow-up-square-fill" role="img"></i></a><br>
+    <a class="icon-link icon-link-hover text-decoration-none" href="#mb-title-block">Back
+      to top <i class="bi bi-arrow-up-square-fill" role="img"></i></a>
   </div>
 
   <!-- Optional sidebar footer -->
-    <div class="mb-footer order-4 mt-1 pt-2 border-top">
+    <div class="mb-footer order-4 mt-auto pt-2">
     <p><strong>Mel B. Labs</strong> – a personal blog about statistics and spatial econometrics.<br>
     BACOU, Melanie © 2024 under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">CC BY-NC 4.0</a></p>
   </div>
@@ -245,11 +248,11 @@ background: transparent url(contour.avif) 0 0 / cover no-repeat;
 
 <!-- article title header -->
 
-<header id="mb-header" class="column-page-right sticky-top 
-   bg-info-subtle  ">
+<header id="mb-header" class="column-page-right sticky-top">
 
   <!-- mb-navbar -->
-  <nav id="mb-navbar" class="d-flex bg-shaded align-items-end">
+  <nav id="mb-navbar" class="d-flex align-items-end 
+   bg-light ">
 
     <!-- logo -->
       <div class="d-lg-none m-0">
@@ -326,48 +329,31 @@ background: transparent url(contour.avif) 0 0 / cover no-repeat;
     <div class="mb-banner border-top py-2" style="background: transparent url(contour.avif) 0 0 / cover no-repeat;">
   </div>
   
-   <h1 class="title bg-shaded display-7">mb-article HTML Format for Quarto</h1> 
+   <h1 class="title display-7">mb-article HTML Format for Quarto</h1> 
 </header>
 
-<div class="column-page-right">
-
+<header id="mb-title-block" class="page-columns page-full">
    <p class="lead">A journalistic format for Quarto posts and articles</p> 
 
-  <div class="grid border-top border-bottom border-2">
+  
 
-    <div class="g-col-md-7 g-col-12">
+    <div class="no-row-height column-margin column-container"><div class="">
 
-      <div class="grid" style="row-gap: .5rem;">
-        <div class="g-col-12 px-2 border-top">
-          <label class="form-label"></label>
-          <div class="description small">
-            <p><strong>mb-article</strong> is a Quarto extension for HTML formats with an opinionated journalistic design and simplified navigational elements, optimized for textual content on smaller display sizes. This custom format makes use of standard Quarto <strong>Project</strong> and <strong>HTML Article</strong> variables, such as branding, navigation links, and page banners, but changes the default layout and behaviors.</p>
-          </div>
-        </div>
-      </div>
+    <label>Status</label>
+    <p class="small"><i class="me-1 bi bi-square"></i>
+      Draft<br>
+      <i class="me-1 bi bi-square"></i>
+      Frozen
+    </p>
 
-      <div class="g-col-12 px-2 border-top">
-        <label class="form-label">Citation</label>
-      </div>
-    </div>
+    <label class="border-top">Published on</label>
+    <p>Oct 4, 2025</p>
 
-    <div class="g-col-md-5 g-col-12">
+    <label>Last modified</label>
+    <p>Oct 4, 2025</p>
 
-      <div class="grid">
-
-        <div class="g-col-6 px-2 border-top border-md-start mb-1">
-          <label class="form-label">Published on</label>
-          <p>Oct 4, 2025</p>
-        </div>
-        <div class="g-col-6 px-2 border-top border-start mb-1">
-          <label class="form-label">Last modified</label>
-          <p>Oct 4, 2025</p>
-        </div>
-
-        <div class="g-col-12 px-2 border-top border-md-start mb-1">
-          <label class="form-label">Author-1Author-2</label>
-          <p>
-                        
+    <label class="border-top">Authors</label>
+        <p>
   Author-1
   
 
@@ -375,8 +361,8 @@ background: transparent url(contour.avif) 0 0 / cover no-repeat;
   <i class="bi bi-envelope ms-1"></i></a>
 <a href="https://orcid.org/0000-0003-1810-6820">
   <i class="bi bi-mortarboard ms-1"></i></a>
-<br>
-                        
+</p>
+        <p>
   Author-2
   
 
@@ -384,56 +370,31 @@ background: transparent url(contour.avif) 0 0 / cover no-repeat;
   <i class="bi bi-envelope ms-1"></i></a>
 <a href="https://orcid.org/0000-0003-1810-6819">
   <i class="bi bi-mortarboard ms-1"></i></a>
-<br>
-                      </p>
-        </div>
+</p>
+    
+    <label class="border-top">Keywords</label>
+    <ul>
+       <li class="small">cat-1</li>  <li class="small">cat-2</li>  <li class="small">cat-3</li> 
+    </ul>
 
-        <div class="g-col-6 px-2 border-top border-md-start mb-1">
-          <label class="form-label">Status</label>
-          <p><i class="me-1 bi bi-square"></i>
-            Draft<br>
-            <i class="me-1 bi bi-square"></i>
-            Frozen
-          </p>
-        </div>
+    <label class="border-top">Project</label>
+    <p class="small">true</p>
 
-        <div class="g-col-6 px-2 border-top border-start mb-1">
-          <label class="form-label">Keywords</label>
-          <ul>
-             <li>cat-1</li>  <li>cat-2</li>  <li>cat-3</li> 
-          </ul>
-        </div>
+    <label class="border-top">Credits</label>
+    <p class="small">Special acknowledgments</p>
 
-      </div>
-    </div>
+  </div></div><label>Description</label>
+  <div class="description small"><p><strong>mb-article</strong> is a Quarto extension for HTML formats with an opinionated journalistic design and simplified navigational elements, optimized for textual content on smaller display sizes. This custom format makes use of standard Quarto <strong>Project</strong> and <strong>HTML Article</strong> variables, such as branding, navigation links, and page banners, but changes the default layout and behaviors.</p></div>
+  
+  <label class="border-top">Abstract</label>
+  <div class="abstract small"><p>Abstract text – Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>
 
-    <div class="g-col-12 px-2 border-top">
-      <label class="form-label">Abstract</label>
-      <div class="abstract small"><p>Abstract text – Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>
-    </div>
-
-    <div class="g-col-md-2 g-col-4 px-2 border-top mb-1">
-      <label class="form-label">License</label>
-      <p class="small">true</p>
-    </div>
-    <div class="g-col-md-3 g-col-4 px-2 border-top border-start mb-1">
-      <label class="form-label">Project / Funding</label>
-      <p class="small">true</p>
-    </div>
-    <div class="g-col-md-4 g-col-4 px-2 border-top border-start mb-1">
-      <label class="form-label">Affiliation</label>
-      <p class="small">
-                <br>
-                <br>
-              </p>
-    </div>
-    <div class="g-col-md-3 g-col-12 px-2 border-top border-md-start mb-1">
-      <label class="form-label">Credits</label>
-      <p class="small">Special acknowledgments</p>
-    </div>
-
+  <label class="border-top">Citation</label>
+  <div class="citation small">
+    <p>Citation</p>
   </div>
-</div>
+
+</header>
 
 
 <section id="introduction" class="level1 page-columns page-full">

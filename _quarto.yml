@@ -23,13 +23,10 @@ website:
   page-navigation: true
   bread-crumbs: true
 
-  search:
-    show-item-context: true
-
   navbar: false
   sidebar:
     style: floating
+    alignment: right
     border: false
     search: false
-    alignment: right
 

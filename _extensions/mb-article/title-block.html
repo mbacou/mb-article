@@ -1,7 +1,6 @@
 <!-- article title header -->
 
-<header id="mb-header" class="column-page-right sticky-top 
-  $if(title-block-banner-color)$ bg-$title-block-banner-color$ $endif$ ">
+<header id="mb-header" class="column-page-right sticky-top">
 
   $navbar.html()$
 
@@ -10,97 +9,57 @@
   </div>
   $endif$
 
-  $if(title)$ <h1 class="title bg-shaded">$title$</h1> $endif$
+  $if(title)$ <h1 class="title">$title$</h1> $endif$
 </header>
 
-<div class="column-page-right">
-
+<header id="mb-title-block">
   $if(subtitle)$ <p class="lead">$subtitle$</p> $endif$
 
-  <div class="grid border-top border-bottom border-2">
+  <div class="column-margin">
 
-    <div class="g-col-md-7 g-col-12">
+    <label>Status</label>
+    <p class="small"><i
+        class="me-1 bi bi-$if(draft)$check2-square$else$square$endif$"></i>
+      Draft<br />
+      <i class="me-1 bi bi-$if(freeze)$check2-square$else$square$endif$"></i>
+      Frozen
+    </p>
 
-      <div class="grid" style="row-gap: .5rem;">
-        <div class="g-col-12 px-2 border-top">
-          <label class="form-label">$description.title$</label>
-          <div class="description small">
-            $if(description)$$description$$else$--$endif$
-          </div>
-        </div>
-      </div>
+    <label class="border-top">Published on</label>
+    <p>$date$</p>
 
-      <div class="g-col-12 px-2 border-top">
-        <label class="form-label">Citation</label>
-      </div>
-    </div>
+    <label>Last modified</label>
+    <p>$date-modified$</p>
 
-    <div class="g-col-md-5 g-col-12">
+    <label class="border-top">Authors</label>
+    $for(by-author)$
+    <p>$title-meta-author.html()$</p>
+    $endfor$
 
-      <div class="grid">
+    <label class="border-top">Keywords</label>
+    <ul>
+      $for(categories)$ <li class="small">$categories$</li> $endfor$
+    </ul>
 
-        <div class="g-col-6 px-2 border-top border-md-start mb-1">
-          <label class="form-label">Published on</label>
-          <p>$date$</p>
-        </div>
-        <div class="g-col-6 px-2 border-top border-start mb-1">
-          <label class="form-label">Last modified</label>
-          <p>$date-modified$</p>
-        </div>
+    <label class="border-top">Project</label>
+    <p class="small">$if(funding)$$funding$$else$--$endif$</p>
 
-        <div class="g-col-12 px-2 border-top border-md-start mb-1">
-          <label class="form-label">$author-meta$</label>
-          <p>
-            $for(by-author)$
-            $title-meta-author.html()$<br />
-            $endfor$
-          </p>
-        </div>
-
-        <div class="g-col-6 px-2 border-top border-md-start mb-1">
-          <label class="form-label">Status</label>
-          <p><i class="me-1 bi bi-$if(draft)$check2-square$else$square$endif$"></i>
-            Draft<br />
-            <i class="me-1 bi bi-$if(freeze)$check2-square$else$square$endif$"></i>
-            Frozen
-          </p>
-        </div>
-
-        <div class="g-col-6 px-2 border-top border-start mb-1">
-          <label class="form-label">Keywords</label>
-          <ul>
-            $for(categories)$ <li>$categories$</li> $endfor$
-          </ul>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="g-col-12 px-2 border-top">
-      <label class="form-label">$abstract-title$</label>
-      <div class="abstract small">$if(abstract)$$abstract$$else$--$endif$</div>
-    </div>
-
-    <div class="g-col-md-2 g-col-4 px-2 border-top mb-1">
-      <label class="form-label">License</label>
-      <p class="small">$if(license)$$license$$else$--$endif$</p>
-    </div>
-    <div class="g-col-md-3 g-col-4 px-2 border-top border-start mb-1">
-      <label class="form-label">Project / Funding</label>
-      <p class="small">$if(funding)$$funding$$else$--$endif$</p>
-    </div>
-    <div class="g-col-md-4 g-col-4 px-2 border-top border-start mb-1">
-      <label class="form-label">Affiliation</label>
-      <p class="small">
-        $for(by-author)$
-        $it.affiliation$<br />
-        $endfor$
-      </p>
-    </div>
-    <div class="g-col-md-3 g-col-12 px-2 border-top border-md-start mb-1">
-      <label class="form-label">Credits</label>
-      <p class="small">$if(thanks)$$thanks$$else$--$endif$</p>
-    </div>
+    <label class="border-top">Credits</label>
+    <p class="small">$if(thanks)$$thanks$$else$--$endif$</p>
 
   </div>
-</div>
+
+  $if(description)$
+  <label>Description</label>
+  <div class="description small">$description$</div>
+  $endif$
+
+  <label class="border-top">$abstract-title$</label>
+  <div class="abstract small">$if(abstract)$$abstract$$else$--$endif$</div>
+
+  <label class="border-top">Citation</label>
+  <div class="citation small">
+    <p>Citation</p>
+  </div>
+
+</header>
