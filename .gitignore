@@ -9,5 +9,6 @@ _assets
 _site
 .quarto/
 /.quarto/
+src/
 
 **/*.quarto_ipynb

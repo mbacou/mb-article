@@ -18,15 +18,26 @@ website:
   site-url: https://mbacou.github.io/mb-article
   repo-url: https://github.com/mbacou/mb-article
   repo-branch: main
-  repo-actions: none
+  repo-actions: [edit, issue]
   back-to-top-navigation: false
   page-navigation: true
   bread-crumbs: true
-
-  navbar: false
   sidebar:
+    background: transparent
+    logo: logo.png
     style: floating
-    alignment: right
-    border: false
     search: false
+    footer: |
+      <strong>Mel B. Labs</strong> -- a personal blog about statistics
+      and spatial econometrics. BACOU, Melanie © 2024 under 
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">
+      CC BY-NC 4.0</a>
+  other-links: 
+    - href: ./
+      icon: arrow-up-square-fill
+      text: Back to top
+    - href: "#quarto-appendix"
+      icon: arrow-up-square-fill
+      text: Appendix    
+
 

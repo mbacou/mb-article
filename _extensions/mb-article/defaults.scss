@@ -436,12 +436,13 @@ main {
 
 // Reorder flex blocks in sidebar
 #quarto-sidebar>* {
-  text-align: end;
+  text-align: start;
   padding: 0;
   margin: 0;
 }
 #quarto-sidebar {
-  padding: 4rem 1rem 1rem 1rem;
+  padding: 4rem 1rem 1rem 0;
+  justify-content: space-between;  
 }
 
 /* Quarto TOC on the left */

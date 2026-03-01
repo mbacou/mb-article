@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.2">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -95,13 +95,16 @@ div.csl-indent {
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet" class="quarto-color-scheme-extra">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-6051fe89951f9e0284bd1ea7efb76511.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-6051fe89951f9e0284bd1ea7efb76511.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-6051fe89951f9e0284bd1ea7efb76511.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a539028af377ee833dba4ccfb044a4a8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-fca64194640a38294f04d9e68b929aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-a539028af377ee833dba4ccfb044a4a8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-99dc78647ff9ead1bebcc7401822ca2a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-355382c09812cd504eb779740baa48b5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-99dc78647ff9ead1bebcc7401822ca2a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -132,19 +135,9 @@ div.csl-indent {
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
 
-      .quarto-title-block .quarto-title-banner h1,
-      .quarto-title-block .quarto-title-banner h2,
-      .quarto-title-block .quarto-title-banner h3,
-      .quarto-title-block .quarto-title-banner h4,
-      .quarto-title-block .quarto-title-banner h5,
-      .quarto-title-block .quarto-title-banner h6
-      {
-        color: light;
-      }
-
       .quarto-title-block .quarto-title-banner {
-        color: light;
-background: transparent url(contour.avif) 0 0 / cover no-repeat;
+        background-image: url(banner.avif);
+background-size: cover;
       }
 </style>
 
@@ -174,89 +167,50 @@ background: transparent url(contour.avif) 0 0 / cover no-repeat;
   </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block"></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<header id="title-block-header" class="quarto-title-block"></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-end sidebar-header">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
       <a href="./index.html" class="sidebar-logo-link">
+      <img src="./logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       </div>
-    <nav id="TOC" role="doc-toc" class="d-flex flex-column justify-content-around h-100 toc-active">
-
-  <!-- Optional sidebar menu -->
-    <div class="mb-links">
-    <ul>
-            <li class="nav-link">
-        <a class="nav-item" href="site_libs/quarto-contrib/quarto-project/mb-article">
-          <i class="bi bi-link" role="img"></i>
-          <span class="menu-text">Link 1</span></a>
-      </li>
-            <li class="nav-link">
-        <a class="nav-item" href="site_libs/quarto-contrib/quarto-project/mb-article">
-          <i class="bi bi-link" role="img"></i>
-          <span class="menu-text">Link 2</span></a>
-      </li>
-            <li class="nav-link">
-        <a class="nav-item" href="site_libs/quarto-contrib/quarto-project/mb-article">
-          <i class="bi bi-link" role="img"></i>
-          <span class="menu-text">Link 3</span></a>
-      </li>
-          </ul>
-  </div>
-  
-  <!-- Quarto TOC -->
-    <label id="toc-title" class="label form-label text-primary">On this page</label>
-    <ul>
-    <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-    <li><a href="#typography" id="toc-typography" class="nav-link" data-scroll-target="#typography">Typography</a>
-    <ul class="collapse">
-    <li><a href="#heading-2" id="toc-heading-2" class="nav-link" data-scroll-target="#heading-2">Heading 2</a>
-    <ul class="collapse">
-    <li><a href="#heading-3" id="toc-heading-3" class="nav-link" data-scroll-target="#heading-3">Heading 3</a></li>
-    </ul></li>
-    </ul></li>
-    <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables">Tables</a></li>
-    </ul>
-
-
-  <!-- Back to top -->
-  <div class="order-3 border-top text-sans small py-2">
-    <a class="icon-link icon-link-hover text-decoration-none" href="#quarto-appendix">Appendix <i class="bi bi-arrow-up-square-fill" role="img"></i></a><br>
-    <a class="icon-link icon-link-hover text-decoration-none" href="#mb-title-block">Back
-      to top <i class="bi bi-arrow-up-square-fill" role="img"></i></a>
-  </div>
-
-  <!-- Optional sidebar footer -->
-    <div class="mb-footer order-4 mt-auto pt-2">
-    <p><strong>Mel B. Labs</strong> – a personal blog about statistics and spatial econometrics.<br>
-    BACOU, Melanie © 2024 under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">CC BY-NC 4.0</a></p>
-  </div>
-  
-  <!-- Optional sidebar logo -->
-    <div class="mb-logo order-5">
-    <a href=""><img src="logo.png" alt="Logo" class="img-fluid"></a>
-  </div>
-  
-</nav>
-</nav>
+    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#typography" id="toc-typography" class="nav-link" data-scroll-target="#typography">Typography</a>
+  <ul class="collapse">
+  <li><a href="#heading-2" id="toc-heading-2" class="nav-link" data-scroll-target="#heading-2">Heading 2</a>
+  <ul class="collapse">
+  <li><a href="#heading-3" id="toc-heading-3" class="nav-link" data-scroll-target="#heading-3">Heading 3</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables">Tables</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mbacou/mb-article/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mbacou/mb-article/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="./"><i class="bi bi-arrow-up-square-fill"></i>Back to top</a></li><li><a href="#quarto-appendix"><i class="bi bi-arrow-up-square-fill"></i>Appendix</a></li></ul></div></nav>
+<div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
+<p><strong>Mel B. Labs</strong> – a personal blog about statistics and spatial econometrics. BACOU, Melanie © 2024 under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"> CC BY-NC 4.0</a></p>
+</div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block page-columns page-full column-body" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 <!-- article title header -->
-
 <header id="mb-header" class="column-page-right sticky-top">
 
   <!-- mb-navbar -->
   <nav id="mb-navbar" class="d-flex align-items-end 
-   bg-light ">
+  ">
 
     <!-- logo -->
-      <div class="d-lg-none m-0">
-      <a href="site_libs/quarto-contrib/quarto-project/mb-article"><img src="logo.png" alt="logo" class="mb-logo img-fluid mb-1"></a>
+      <div class="d-lg-none me-2">
+      <a href="site_libs/quarto-contrib/quarto-project/mb-article"><img src="logo.png" alt="logo" class="mb-logo"></a>
     </div>
     
     <!-- links -->
@@ -313,12 +267,6 @@ background: transparent url(contour.avif) 0 0 / cover no-repeat;
     <!-- Quarto buttons -->
     <ul class="navbar-nav flex-row ms-2 justify-content-end">
       <li class="nav-item">
-        <a class="nav-link px-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="bi bi-layout-text-sidebar-reverse"></i>
-        </a>
-      </li>
-
-      <li class="nav-item">
         <a class="nav-link px-1" role="button" aria-label="Search" onclick="window.quartoOpenSearch();">
           <i class="bi bi-search"></i>
         </a>
@@ -326,7 +274,7 @@ background: transparent url(contour.avif) 0 0 / cover no-repeat;
     </ul>
 
   </nav>
-    <div class="mb-banner border-top py-2" style="background: transparent url(contour.avif) 0 0 / cover no-repeat;">
+    <div class="mb-banner border-top py-2" style="background: banner.avif;">
   </div>
   
    <h1 class="title display-7">mb-article HTML Format for Quarto</h1> 
@@ -337,7 +285,7 @@ background: transparent url(contour.avif) 0 0 / cover no-repeat;
 
   
 
-    <div class="no-row-height column-margin column-container"><div class="">
+    <div class="no-row-height column-margin column-container"><div class="ms-2">
 
     <label>Status</label>
     <p class="small"><i class="me-1 bi bi-square"></i>
@@ -347,10 +295,10 @@ background: transparent url(contour.avif) 0 0 / cover no-repeat;
     </p>
 
     <label class="border-top">Published on</label>
-    <p>Oct 4, 2025</p>
+    <p>Mar 1, 2026</p>
 
     <label>Last modified</label>
-    <p>Oct 4, 2025</p>
+    <p>Mar 1, 2026</p>
 
     <label class="border-top">Authors</label>
         <p>
@@ -402,27 +350,27 @@ background: transparent url(contour.avif) 0 0 / cover no-repeat;
 <p>This document is an example that demonstrates the formatting and features of the current HTML format extension for Quarto.</p>
 <p>Here is a sample margin note to the right column, and a sidebar note below on the left.</p>
 
-<div class="no-row-height column-margin column-container"><div class="bg-secondary-subtle text-serif mt-2 p-2 margin-aside">
+<div class="no-row-height column-margin column-container"><div class="bg-secondary-subtle text-serif mt-2 p-2 border margin-aside">
 <p>aside – A note placed in the page margin with CSS class <code>aside</code>.</p>
 </div></div><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-<div class="column-sidebar bg-info-subtle text-serif p-2 text-info">
+
+<div class="no-row-height column-margin column-container"><div class="bg-info-subtle text-serif p-2 text-info margin-aside">
 <p>column-sidebar – A note placed in the page sidebar with CSS classes <code>column-sidebar</code>.</p>
-</div>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+</div></div><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 <p><strong>More Information</strong></p>
 <p>You can learn more about controlling the appearance of HTML output at <a href="https://quarto.org/docs/output-formats/html-basics.html" class="uri">https://quarto.org/docs/output-formats/html-basics.html</a>.</p>
 </section>
 <section id="typography" class="level1 page-columns page-full">
 <h1>Typography</h1>
+<p>Bootstrap default line-height and font sizing typically work, but this format enforces a strict vertical rhythm whenever possible<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. I made sure to define all vertical spacing and padding as multiples of a standard line height of <code>$spacer</code>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;About <strong>vertical rhythm</strong> and why it matters for content readability, see <a href="https://hnldesign.hashnode.dev/setting-a-flexible-baseline-grid-in-css">Klaas Leussink</a> article on his personal blog.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;M+ font system was designed by Japanese artist <a href="https://mplusfonts.github.io/">Coji Morishita</a> with extended support for Latin, Japanese, Cyrillic. It is an excellent monospace font for smaller display sizes.</p></div></div><p>No additional changes to font definitions aside from using <code>Crimson Pro</code> and <code>M+ Code</code> fonts<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
 
 <div class="no-row-height column-margin column-container"><div class="pt-2 margin-aside">
 <p><img src="logo.png" class="rounded-circle img-fluid"></p>
 <p>A rounded image moved to the margin.</p>
-</div><div id="fn1"><p><sup>1</sup>&nbsp;About <strong>vertical rhythm</strong> and why it matters for content readability, see <a href="https://hnldesign.hashnode.dev/setting-a-flexible-baseline-grid-in-css">Klaas Leussink</a> article on his personal blog.</p></div></div><p>Bootstrap default line-height and font sizing typically work, but this format enforces a strict vertical rhythm whenever possible<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. I made sure to define all vertical spacing and padding as multiples of a standard line height of <code>$spacer</code>.</p>
-<p>No additional changes to font definitions aside from using <code>Crimson Pro</code> and <code>M+ Code</code> fonts<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
-<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;M+ font system was designed by Japanese artist <a href="https://mplusfonts.github.io/">Coji Morishita</a> with extended support for Latin, Japanese, Cyrillic. It is an excellent monospace font for smaller display sizes.</p></div></div><p>Here are <strong>bold</strong>, <em>italic</em>, and <small>smaller</small> text spans. Here is <sup>superscript</sup> and <sub>subscript</sub> text, and <del>strikethrough</del> notes. Semantic colors with e.g.&nbsp;<span class="text-info">.text-info</span> provide accented text. I have added 2 background classes for my own use, a semi-transparent and blurred <span class="bg-shaded"><code>.bg-shaded</code></span> and a <span class="bg-striped"><code>.bg-striped</code></span>. This theme uses <span class="text-muted">.text-muted</span> to de-emphasize content such as post metadata, margin notes, and captioning.</p>
+</div></div><p>Here are <strong>bold</strong>, <em>italic</em>, and <small>smaller</small> text spans. Here is <sup>superscript</sup> and <sub>subscript</sub> text, and <del>strikethrough</del> notes. Semantic colors with e.g.&nbsp;<span class="text-info">.text-info</span> provide accented text. I have added 2 background classes for my own use, a semi-transparent and blurred <span class="bg-shaded"><code>.bg-shaded</code></span> and a <span class="bg-striped"><code>.bg-striped</code></span>. This theme uses <span class="text-muted">.text-muted</span> to de-emphasize content such as post metadata, margin notes, and captioning.</p>
 <section id="heading-2" class="level2 page-columns page-full">
-<h2 data-anchor-id="heading-2">Heading 2</h2>
+<h2 class="anchored" data-anchor-id="heading-2">Heading 2</h2>
 <p>Fonts and colors are used as expected. Further, using my own <code>mb-tools</code> R package, I can customize additional plot elements.</p>
 <div class="cell page-columns page-full">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
@@ -439,14 +387,14 @@ background: transparent url(contour.avif) 0 0 / cover no-repeat;
 <div class="cell-output-display page-columns page-full">
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
-<p class="page-columns page-full"><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="figure-img column-page-right"></p>
+<p class="page-columns page-full"><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img column-page-right"></p>
 <figcaption>A sample dynamic graph</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <section id="heading-3" class="level3 page-columns page-full">
-<h3 data-anchor-id="heading-3">Heading 3</h3>
+<h3 class="anchored" data-anchor-id="heading-3">Heading 3</h3>
 <p>Sample paragraph content with list of items:</p>
 <ul>
 <li>List 1
@@ -467,17 +415,17 @@ background: transparent url(contour.avif) 0 0 / cover no-repeat;
 <hr>
 <p>And a paragraph of content after the rule.</p>
 <section id="heading-4" class="level4 page-columns page-full">
-<h4 data-anchor-id="heading-4">Heading 4</h4>
+<h4 class="anchored" data-anchor-id="heading-4">Heading 4</h4>
 <p>By default cittaions (and cross-references) are read in from an external <code>references.bib</code> file, but this may be edited in the YAML front matter as usual. Each citation must have a key, composed of ‘@’ + the citation identifier from the database. Here is a margin reference to <span class="citation" data-cites="xie2015">(<a href="#ref-xie2015" role="doc-biblioref">Xie 2015</a>)</span>.</p>
 <div class="no-row-height column-margin column-container"><div id="ref-xie2015" class="csl-entry" role="listitem">
 Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://yihui.name/knitr/">https://yihui.name/knitr/</a>.
 </div></div><section id="heading-5" class="level5 page-columns page-full">
-<h5 data-anchor-id="heading-5">Heading 5</h5>
+<h5 class="anchored" data-anchor-id="heading-5">Heading 5</h5>
 <p>Here is a long footnote reference<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. Caption and footnote placement can be controlled in the config files <code>_quarto_yml</code> and/or <code>_metadata.yml</code>, or directly in the YAML front matter.</p>
 <div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;Here’s a margin note with multiple paragraph blocks and a fancy section header.</p>
-<h5 id="heading-5-1">Heading 5</h5>
+<h5 id="heading-5-1" class="anchored">Heading 5</h5>
 <p>With subsequent paragraphs indented to show that they belong to the previous footnote.</p></div></div><section id="section-6" class="level6">
-<h6 data-anchor-id="section-6">Section 6</h6>
+<h6 class="anchored" data-anchor-id="section-6">Section 6</h6>
 <p>Headers at level 6 are used as section dividers.</p>
 </section>
 </section>
@@ -493,15 +441,15 @@ Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd 
 <tbody>
 <tr class="odd">
 <td>apple</td>
-<td>2.05</td>
+<td style="text-align: right;">2.05</td>
 </tr>
 <tr class="even">
 <td>pear</td>
-<td>1.37</td>
+<td style="text-align: right;">1.37</td>
 </tr>
 <tr class="odd">
 <td>orange</td>
-<td>3.09</td>
+<td style="text-align: right;">3.09</td>
 </tr>
 </tbody>
 </table>
@@ -528,7 +476,7 @@ Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd 
 </tr>
 </tbody>
 </table>
-<table class="table-striped table-hover table-sm small table">
+<table class="table-striped table-hover table">
 <caption>Caption: striped hover sm</caption>
 <thead>
 <tr class="header">
@@ -551,7 +499,9 @@ Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd 
 </tr>
 </tbody>
 </table>
-<table class="table-striped table-hover table-sm table-secondary small table">
+<div class="column-page-right">
+<p>A table running over the right margin.</p>
+<table class="table-striped table-hover table-secondary table">
 <caption>Caption: striped hover sm secondary</caption>
 <thead>
 <tr class="header">
@@ -574,7 +524,10 @@ Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd 
 </tr>
 </tbody>
 </table>
-<table class="table-striped table-sm table-primary small table">
+</div>
+<div class="column-page-left">
+<p>A table running over the left sidebar.</p>
+<table class="table-striped table-primary table">
 <caption>Caption: sm primary</caption>
 <thead>
 <tr class="header">
@@ -597,9 +550,10 @@ Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd 
 </tr>
 </tbody>
 </table>
+</div>
 <div class="cell page-columns page-full" data-tbl-cap="A full-width table to increase content space">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(mtcars[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>])</span></code></pre></div>
-<div class="cell-output-display column-page-right">
+<div class="cell-output-display column-page">
 <table class="table table-sm table-striped small">
 <caption>A full-width table to increase content space</caption>
 <colgroup>
@@ -713,6 +667,10 @@ Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd 
 </table>
 </div>
 </div>
+<blockquote class="blockquote">
+<p>We also test quoted lines.<br>
+With a signature</p>
+</blockquote>
 
 
 
@@ -722,6 +680,13 @@ Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>Melanie BACOU 2025</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
         var filterRegex = new RegExp("https:\/\/mbacou\.github\.io\/mb-article");
@@ -770,6 +735,276 @@ Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd 
       }
       window.tippy(el, config); 
     }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+        for (let i=0; i<annoteTargets.length; i++) {
+          const annoteTarget = annoteTargets[i];
+          const targetCell = annoteTarget.getAttribute("data-target-cell");
+          const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+          const contentFn = () => {
+            const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+            if (content) {
+              const tipContent = content.cloneNode(true);
+              tipContent.classList.add("code-annotation-tip-content");
+              return tipContent.outerHTML;
+            }
+          }
+          const config = {
+            allowHTML: true,
+            content: contentFn,
+            onShow: (instance) => {
+              selectCodeLines(instance.reference);
+              instance.reference.classList.add('code-annotation-active');
+              window.tippy.hideAll();
+            },
+            onHide: (instance) => {
+              unselectCodeLines();
+              instance.reference.classList.remove('code-annotation-active');
+            },
+            maxWidth: 300,
+            delay: [50, 0],
+            duration: [200, 0],
+            offset: [5, 10],
+            arrow: true,
+            appendTo: function(el) {
+              return el.parentElement.parentElement.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'quarto',
+            placement: 'right',
+            popperOptions: {
+              modifiers: [
+              {
+                name: 'flip',
+                options: {
+                  flipVariations: false, // true by default
+                  allowedAutoPlacements: ['right'],
+                  fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+                },
+              },
+              {
+                name: 'preventOverflow',
+                options: {
+                  mainAxis: false,
+                  altAxis: false
+                }
+              }
+              ]        
+            }      
+          };
+          window.tippy(annoteTarget, config); 
+        }
     const findCites = (el) => {
       const parentEl = el.parentElement;
       if (parentEl) {
@@ -814,5 +1049,5 @@ Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd 
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mbacou/mb-article/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mbacou/mb-article/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

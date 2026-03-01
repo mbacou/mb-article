@@ -28,22 +28,39 @@ nav .nav-item .bi {
 
 /* Misc */
 .column-screen-inset-shaded {
-  padding: 1rem;
+  padding: 0 1rem 0 1rem;
   background-color: $shaded;
 }
 
 // Sidebar
-.mb-footer p {
+.sidebar-navigation {
+  padding-left: unset;
+}
+.sidebar-header {
+  order: 1;
+  margin-top: auto !important;
+}
+.quarto-sidebar-footer {
+  order: 2;
+}
+#toc-title {
+  font-family: $headings-font-family;
+}
+#quarto-header, .quarto-other-links h2 {
+  display: none;
+}
+.quarto-sidebar-footer p {
   color: $text-muted;
   font-size: $code-font-size;
   line-height: 1.5rem;
 }
-.mb-logo img {
+.sidebar-logo {
   max-height: 11vh;
-  filter: grayscale(100%);
+  margin-bottom: 1rem;
 }
-.mb-logo img:hover {
-  filter: none;
+.mb-logo {
+  height: 3rem;
+  width: 3rem;
 }
 
 /* Helper classes */

@@ -28,7 +28,6 @@ keywords:
   - keyword 2
   - keyword 3
 
-
 abstract: |
   Abstract text -- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -36,12 +35,10 @@ abstract: |
 description: |
   **mb-article** is a Quarto extension for HTML formats with an opinionated journalistic design and simplified navigational elements, optimized for textual content on smaller display sizes. This custom format makes use of standard Quarto **Project** and **HTML Article** variables, such as branding, navigation links, and page banners, but changes the default layout and behaviors.
 
-title-block-banner: transparent url(contour.avif) 0 0 / cover no-repeat
-title-block-banner-color: light
 
 format: mb-article-html
+title-block-banner: banner.avif
 ---
-
 
 # Introduction
 
@@ -49,25 +46,31 @@ This document is an example that demonstrates the formatting and features of the
 
 Here is a sample margin note to the right column, and a sidebar note below on the left.
 
-::: {.aside .bg-secondary-subtle .text-serif .mt-2 .p-2}
+::: {.aside .bg-secondary-subtle .text-serif .mt-2 .p-2 .border}
 aside -- A note placed in the page margin with CSS class `aside`.
 :::
 
- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 
-::: {.column-sidebar .bg-info-subtle .text-serif .p-2 .text-info}
+::: {.aside .bg-info-subtle .text-serif .p-2 .text-info}
 column-sidebar -- A note placed in the page sidebar with CSS classes `column-sidebar`.
 :::
 
- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 
 **More Information**
 
 You can learn more about controlling the appearance of HTML output at <https://quarto.org/docs/output-formats/html-basics.html>.
 
-
 # Typography
+
+Bootstrap default line-height and font sizing typically work, but this format enforces a strict vertical rhythm whenever possible[^1]. I made sure to define all vertical spacing and padding as multiples of a standard line height of `$spacer`.
+
+[^1]: About **vertical rhythm** and why it matters for content readability, see [Klaas Leussink](https://hnldesign.hashnode.dev/setting-a-flexible-baseline-grid-in-css) article on his personal blog.
+
+No additional changes to font definitions aside from using `Crimson Pro` and `M+ Code` fonts[^2].
+
+[^2]: M+ font system was designed by Japanese artist [Coji Morishita](https://mplusfonts.github.io/) with extended support for Latin, Japanese, Cyrillic. It is an excellent monospace font for smaller display sizes.
 
 ::: {.aside .pt-2}
 ![](logo.png){.rounded-circle .img-fluid}
@@ -75,15 +78,7 @@ You can learn more about controlling the appearance of HTML output at <https://q
 A rounded image moved to the margin.
 :::
 
-Bootstrap default line-height and font sizing typically work, but this format enforces a strict vertical rhythm whenever possible[^7]. I made sure to define all vertical spacing and padding as multiples of a standard line height of `$spacer`.
-
-[^7]: About **vertical rhythm** and why it matters for content readability, see [Klaas Leussink](https://hnldesign.hashnode.dev/setting-a-flexible-baseline-grid-in-css) article on his personal blog.
-
-No additional changes to font definitions aside from using `Crimson Pro` and `M+ Code` fonts[^8].
-
 Here are **bold**, *italic*, and <small>smaller</small> text spans. Here is ^superscript^ and ~subscript~ text, and ~~strikethrough~~ notes. Semantic colors with e.g. [.text-info]{.text-info} provide accented text. I have added 2 background classes for my own use, a semi-transparent and blurred [`.bg-shaded`]{.bg-shaded} and a [`.bg-striped`]{.bg-striped}. This theme uses [.text-muted]{.text-muted} to de-emphasize content such as post metadata, margin notes, and captioning.
-
-[^8]: M+ font system was designed by Japanese artist [Coji Morishita](https://mplusfonts.github.io/) with extended support for Latin, Japanese, Cyrillic. It is an excellent monospace font for smaller display sizes.
 
 ## Heading 2
 
@@ -111,8 +106,8 @@ ggplot(mtcars, aes(factor(carb), mpg, fill = factor(carb))) +
 Sample paragraph content with list of items:
 
 -   List 1
-    - List 1.1
-    - List 1.2
+    -   List 1.1
+    -   List 1.2
 -   List 2
 -   List 3
 
@@ -130,29 +125,28 @@ And a paragraph of content after the rule.
 
 #### Heading 4
 
-By default cittaions (and cross-references) are read in from an external `references.bib` file, but this may be edited in the YAML front matter as usual. Each citation must have a key, composed of ‘@’ + the citation identifier from the database. Here is a margin reference to [@xie2015].
+By default cittaions (and cross-references) are read in from an external `references.bib` file, but this may be edited in the YAML front matter as usual. Each citation must have a key, composed of ‘\@’ + the citation identifier from the database. Here is a margin reference to [@xie2015].
 
 ##### Heading 5
 
-Here is a long footnote reference[^10]. Caption and footnote placement can be controlled in the config files `_quarto_yml` and/or `_metadata.yml`, or directly in the YAML front matter.
+Here is a long footnote reference[^3]. Caption and footnote placement can be controlled in the config files `_quarto_yml` and/or `_metadata.yml`, or directly in the YAML front matter.
 
-[^10]: Here's a margin note with multiple paragraph blocks and a fancy section header.
+[^3]: Here's a margin note with multiple paragraph blocks and a fancy section header.
 
     ##### Heading 5
-  
+
     With subsequent paragraphs indented to show that they belong to the previous footnote.
 
 ###### Section 6
 
 Headers at level 6 are used as section dividers.
 
-
 # Tables
 
 I prefer my tables to resemble LaTeX typesetting, so a few simple changes here.
 
 |        |      |
-|--------|------|
+|--------|-----:|
 | apple  | 2.05 |
 | pear   | 1.37 |
 | orange | 3.09 |
@@ -173,7 +167,10 @@ I prefer my tables to resemble LaTeX typesetting, so a few simple changes here.
 | pear   | 1.37  |
 | orange | 3.09  |
 
-: Caption: striped hover sm {.striped .hover .sm}
+: Caption: striped hover sm {.striped .hover}
+
+::: column-page-right
+A table running over the right margin.
 
 | fruit  | price |
 |--------|-------|
@@ -181,7 +178,11 @@ I prefer my tables to resemble LaTeX typesetting, so a few simple changes here.
 | pear   | 1.37  |
 | orange | 3.09  |
 
-: Caption: striped hover sm secondary {.striped .hover .sm .secondary}
+: Caption: striped hover sm secondary {.striped .hover .secondary}
+:::
+
+::: column-page-left
+A table running over the left sidebar.
 
 | fruit  | price |
 |--------|-------|
@@ -189,12 +190,15 @@ I prefer my tables to resemble LaTeX typesetting, so a few simple changes here.
 | pear   | 1.37  |
 | orange | 3.09  |
 
-: Caption: sm primary {.striped .sm .primary}
+: Caption: sm primary {.striped .primary}
+:::
 
 ```{r}
-#| column: page-right
+#| column: page
 #| tbl-cap: A full-width table to increase content space
 
 knitr::kable(mtcars[1:6, 1:10])
 ```
 
+> We also test quoted lines.\
+> With a signature
