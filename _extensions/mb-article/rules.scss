@@ -11,17 +11,14 @@ nav .nav-item .nav-link,
   line-height: 3rem;
   padding: $nav-link-padding-y $nav-link-padding-x;
 }
-
 nav .nav-item .nav-link.active,
 .nav-tabs .nav-item .nav-link.active {
   color: $nav-link-active-color;
 }
-
 nav .nav-item .nav-link:hover,
 .nav-tabs .nav-item .nav-link:hover {
   background-color: rgba($nav-link-hover-color, 10%);
 }
-
 nav .nav-item .bi {
   font-size: $font-size-base;
 }
@@ -30,37 +27,6 @@ nav .nav-item .bi {
 .column-screen-inset-shaded {
   padding: 0 1rem 0 1rem;
   background-color: $shaded;
-}
-
-// Sidebar
-.sidebar-navigation {
-  padding-left: unset;
-}
-.sidebar-header {
-  order: 1;
-  margin-top: auto !important;
-}
-.quarto-sidebar-footer {
-  order: 2;
-}
-#toc-title {
-  font-family: $headings-font-family;
-}
-#quarto-header, .quarto-other-links h2 {
-  display: none;
-}
-.quarto-sidebar-footer p {
-  color: $text-muted;
-  font-size: $code-font-size;
-  line-height: 1.5rem;
-}
-.sidebar-logo {
-  max-height: 11vh;
-  margin-bottom: 1rem;
-}
-.mb-logo {
-  height: 3rem;
-  width: 3rem;
 }
 
 /* Helper classes */
@@ -77,10 +43,4 @@ nav .nav-item .bi {
 }
 .text-serif {
   font-family: $font-family-serif;
-}
-
-@media(min-width: 768px) {
-  .border-md-start {
-    border-left: 1px solid $border-color;
-  }
 }

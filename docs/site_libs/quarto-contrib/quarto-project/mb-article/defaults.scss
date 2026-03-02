@@ -48,7 +48,7 @@ $gray-900: tint-color($gray, 10%);
 $body-color: $gray-800;
 $body-bg: $light;
 $link-color: $gray-700;
-$text-muted: rgba($body-color, .85);
+$text-muted: rgba($body-color, .80);
 $code-color: $gray-700;
 $shaded: rgba(tint-color($body-bg, 25%), .65); // also $input-bg
 
@@ -72,14 +72,25 @@ $code-font-size: calc($font-size-base - 5px);
 $sub-sup-font-size: calc($font-size-base - 5px);
 
 $line-height-base: calc($spacer / $font-size-base) !default;
+$line-height-sm: 1.5rem;
+$line-height-lg: 1.75rem;
 $list-inline-padding: .25rem;
 
-$h1-font-size: calc($font-size-base + 14px); // 34px
-$h2-font-size: calc($font-size-base + 10px); // 30px
-$h3-font-size: calc($font-size-base + 6px); // 26px
-$h4-font-size: calc($font-size-base + 4px); // 24px
-$h5-font-size: calc($font-size-base + 2px); // 22px
-$h6-font-size: calc($font-size-base + 2px);
+$h1-font-size: calc($font-size-base + 14px);  // 34px
+$h2-font-size: calc($font-size-base + 10px);  // 30px
+$h3-font-size: calc($font-size-base +  6px);  // 26px
+$h4-font-size: calc($font-size-base +  4px);  // 24px
+$h5-font-size: calc($font-size-base +  2px);  // 22px
+$h6-font-size: calc($font-size-base +  2px);
+
+$font-sizes: (
+  1: calc($font-size-base - 0px),
+  2: calc($font-size-base - 2px),
+  3: calc($font-size-base - 4px),
+  4: calc($font-size-base - 6px),
+  5: calc($font-size-base - 7px),
+  6: calc($font-size-base - 8px)
+);
 
 $enable-rounded: true;
 $enable-negative-margins: true;
@@ -196,8 +207,9 @@ hr {
   margin: .5rem 0 2.25rem;
 }
 
-label, .label {
+label, .label, #toc-title {
   display: block;
+  color: $gray-400;
   font-size: $form-label-font-size;
   font-family: $font-family-sans-serif;
   font-weight: $form-label-font-weight;
@@ -205,9 +217,6 @@ label, .label {
   letter-spacing: 1px;
   line-height: 1.75rem;
   padding-bottom: .25rem;
-}
-.form-label {
-  text-align: end;
 }
 mark, .mark {
   color: inherit;
@@ -222,19 +231,21 @@ small, .small {
 }
 
 // Headings
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .title {
   font-weight: $headings-font-weight;
   line-height: 3rem;
   padding: 0;
   margin: 2rem 0;
 }
-h1.title {
-  margin: 2rem 0 1rem 0 !important;
+h1.title, p.title {
+  font-family: $headings-font-family;
+  font-size: calc($h1-font-size + 6px);
+  margin: 1rem 0 !important;
 }
 h1.quarto-secondary-nav-title {
   font-size: 2rem;
   line-height: 2rem;
-  margin: 1rem 0 1rem;
+  margin: 1rem 0;
   padding: 0;
 }
 h2, .h2 {
@@ -259,19 +270,15 @@ h6, .h6 {
   margin: 0 0 1rem 0;
   transform: rotate(-.6deg);
 }
-.lead, .lead p {
+.lead, .lead p, p.subtitle {
   font-family: $font-family-base;
   font-size: 2rem;
   font-weight: 300;
-  color: $text-muted;
+  letter-spacing: 90%;
+  color: $gray-500;
   font-style: normal;
   line-height: 2rem;
   margin-bottom: 3rem;
-}
-p.subtitle {
-  color: $gray-500;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
 }
 
 // Code blocks
@@ -407,6 +414,7 @@ figcaption, .column-margin figcaption, .margin-caption {
   padding: 0;
   margin: 0;
 }
+// Gridlines
 #quarto-content {
   border-top: solid 1px $darkgray;
   background-image:
@@ -416,14 +424,14 @@ figcaption, .column-margin figcaption, .margin-caption {
   background-position: 0 calc(-.5rem + 1px);
   background-repeat: repeat;
 }
+main {
+  background-image:
+  linear-gradient(to right, $body-bg, transparent, $body-bg);
+}
 #quarto-announcement {
   font-family: $font-family-sans-serif;
   font-size: 1.25rem;
   border: none;
-}
-main {
-  background-image:
-  linear-gradient(to right, $body-bg, transparent, $body-bg);
 }
 #quarto-header, #title-block-header,
 #quarto-sidebarnav-toggle, .toc-actions {
@@ -433,19 +441,24 @@ main {
   z-index: 1300;
   backdrop-filter: blur(3px);  
 }
+.mb-header-logo {
+  height: 3rem;
+  width: 3rem;
+}
+.mb-logo {
+  max-height: 10vh;
+}
 
-// Reorder flex blocks in sidebar
-#quarto-sidebar>* {
-  text-align: start;
-  padding: 0;
-  margin: 0;
-}
-#quarto-sidebar {
-  padding: 4rem 1rem 1rem 0;
-  justify-content: space-between;  
-}
 
 /* Quarto TOC on the left */
+#quarto-sidebar>* {
+  text-align: end;
+}
+#quarto-sidebar {
+  margin: 0;
+  padding: 0; 
+  max-width: 35vw;
+}
 .sidebar.sidebar-navigation:not(.rollup) {
   background-color: transparent;
 }

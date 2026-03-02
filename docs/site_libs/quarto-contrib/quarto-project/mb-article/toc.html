@@ -1,0 +1,45 @@
+<nav id="$idprefix$TOC" role="doc-toc"
+  class="d-flex flex-column justify-content-around h-100 pt-5 px-2 ps-lg-0">
+
+  <!-- Fixed article meta -->
+  <div class="mb-meta mt-4 mb-auto">
+
+    <p>$date-modified$<i class="bi bi-clock ms-1"></i></p>
+
+    $if(description)$
+    <label>Description</label>
+    <div class="lh-sm fs-3">$description$</div>
+    $endif$
+
+  </div>
+
+  <!-- Quarto TOC -->
+  $if(toc-title)$
+  <label id="$idprefix$toc-title" class="text-primary">$toc-title$</label>
+  $endif$
+  $table-of-contents$
+
+  <!-- Back to top -->
+  <div class="text-sans pt-1 mb-auto lh-lg fs-5">
+    <p><a class="text-decoration-none" href="#quarto-appendix">Appendix <i
+          class="bi bi-arrow-down-square ms-1"></i></a><br />
+      <a class="text-decoration-none" href="#mb-title-block">Back
+        to top <i class="bi bi-arrow-up-square ms-1"></i></a>
+    </p>
+  </div>
+
+  <!-- Optional sidebar logo -->
+  $if(logo)$
+  <div class="d-none d-lg-block">
+    <a href="$logo.url$"><img src="$logo$" alt="Logo" class="mb-logo img-fluid"></a>
+  </div>
+  $endif$
+
+  <!-- Optional sidebar footer -->
+  $if(footer)$
+  <div class="lh-sm fs-3 text-muted pt-2">
+    $footer$
+  </div>
+  $endif$
+
+</nav>

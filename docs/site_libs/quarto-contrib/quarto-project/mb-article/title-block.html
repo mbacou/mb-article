@@ -1,64 +1,69 @@
 <!-- article title header -->
-<header id="mb-header" class="column-page-right sticky-top">
+<header id="mb-header" class="sticky-top">
 
-  $navbar.html()$
+  $header.html()$
 
   $if(title-block-banner)$
-  <div class="mb-banner border-top py-2" style="background: $title-block-banner$;">
+  <div class="column-page-right border-top py-2"
+    style="background: $title-block-banner$;">
   </div>
   $endif$
 
-  $if(title)$ <h1 class="title">$title$</h1> $endif$
 </header>
 
-<header id="mb-title-block">
-  $if(subtitle)$ <p class="lead">$subtitle$</p> $endif$
+<header id="mb-title-block" class="py-2">
 
-  <div class="column-margin ms-2">
+  <ul class="navbar-nav d-flex flex-row text-sans text-uppercase">
+    $for(categories)$ <li class="nav-item me-2 fw-bold text-primary">
+      $categories$</li>$endfor$
+  </ul>
 
-    <label>Status</label>
-    <p class="small"><i
-        class="me-1 bi bi-$if(draft)$check2-square$else$square$endif$"></i>
-      Draft<br />
-      <i class="me-1 bi bi-$if(freeze)$check2-square$else$square$endif$"></i>
-      Frozen
-    </p>
+  $if(title)$ <p class="title">$title$</p> $endif$
 
-    <label class="border-top">Published on</label>
-    <p>$date$</p>
+  <div class="column-margin">
 
-    <label>Last modified</label>
-    <p>$date-modified$</p>
-
-    <label class="border-top">Authors</label>
-    $for(by-author)$
-    <p>$title-meta-author.html()$</p>
-    $endfor$
-
-    <label class="border-top">Keywords</label>
-    <ul>
-      $for(categories)$ <li class="small">$categories$</li> $endfor$
+    <ul class="navbar-nav d-flex flex-row mb-4 text-sans text-uppercase">
+      <li class="nav-item"><i
+          class="me-1 bi bi-$if(draft)$check2-square$else$square$endif$"></i>Draft
+      </li>
+      <li class="nav-item ms-3"><i
+          class="me-1 bi bi-$if(freeze)$check2-square$else$square$endif$"></i>Frozen
+      </li>
     </ul>
 
-    <label class="border-top">Project</label>
-    <p class="small">$if(funding)$$funding$$else$--$endif$</p>
+    $for(by-author)$
+    <p class="text-body">$title-meta-author.html()$</p>
+    $endfor$
 
-    <label class="border-top">Credits</label>
-    <p class="small">$if(thanks)$$thanks$$else$--$endif$</p>
+    $if(affiliation)$
+    <label>Affiliation</label>
+    <p>$affiliation$</p>
+    $endif$
+
+    <label>First published</label>
+    <p class="text-body">$date$</p>
+
+    $if(thanks)$
+    <label>Credits</label>
+    <p class="fs-2 text-body">$thanks$</p>
+    $endif$
+
+    <label>Citation</label>
+    <p class="fs-2 text-body">
+      Citation
+    </p>
 
   </div>
 
-  $if(description)$
-  <label>Description</label>
-  <div class="description small">$description$</div>
-  $endif$
+  $if(subtitle)$<p class="subtitle">$subtitle$</p>$endif$
 
-  <label class="border-top">$abstract-title$</label>
-  <div class="abstract small">$if(abstract)$$abstract$$else$--$endif$</div>
+  <label>$abstract-title$</label>
+  <div class="lh-lg fs-2">$if(abstract)$$abstract$$else$--$endif$</div>
 
-  <label class="border-top">Citation</label>
-  <div class="citation small">
-    <p>Citation</p>
-  </div>
+  <ul class="navbar-nav d-flex flex-row text-sans fw-bold">
+    $for(keywords)$ <li class="nav-item">$keywords$<span class="fw-normal">;
+        &nbsp;</span></li>
+    $endfor$
+  </ul>
 
 </header>

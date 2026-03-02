@@ -7,18 +7,16 @@ draft: false
 freeze: false
 copyright: Melanie BACOU 2025
 license: CC BY-NC 4.0
-funding: Project or client funding
 thanks: Special acknowledgments
 author:
   - name: Author-1
     linkedin: mbacou 
     email: author-1@mail.com
     orcid: 0000-0003-1810-6820
-    affiliation: My Affiliation 1
   - name: Author-2
     email: author-2@mail.com
     orcid: 0000-0003-1810-6819
-    affiliation: My Affiliation 2
+affiliation: My Affiliation
 categories:
   - cat-1
   - cat-2
@@ -33,7 +31,7 @@ abstract: |
   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
 description: |
-  **mb-article** is a Quarto extension for HTML formats with an opinionated journalistic design and simplified navigational elements, optimized for textual content on smaller display sizes. This custom format makes use of standard Quarto **Project** and **HTML Article** variables, such as branding, navigation links, and page banners, but changes the default layout and behaviors.
+  **mb-article** is a Quarto extension for HTML formats with an opinionated journalistic design and simplified navigational elements.
 
 
 format: mb-article-html
