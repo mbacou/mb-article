@@ -40,25 +40,6 @@ format:
         href: ./link-3
 ```
 
-Content on the left sidebar uses standard `website` configuration in `_quarto.yml`, e.g.
-
-```{yaml}
-website:
-  sidebar:
-    background: transparent
-    logo: logo.png
-    style: floating
-    search: false
-    footer: Brabd baseline description will show below branded logo
-  other-links: 
-    - href: ./
-      icon: arrow-up-square-fill
-      text: Back to top
-    - href: "#quarto-appendix"
-      icon: arrow-down-square-fill
-      text: Appendix  
-```
-
 ## Example
 
 Here is the source code for a minimal sample document [index.qmd](index.qmd).
