@@ -1,22 +1,22 @@
 ---
 title: mb-article HTML Format for Quarto
-subtitle: A journalistic format for Quarto posts and articles
-date: last-modified
+subtitle: A 3-column academic format for Quarto posts and articles
+date: 2025-11-12
 date-modified: last-modified
 draft: false
 freeze: false
-copyright: Melanie BACOU 2025
-license: CC BY-NC 4.0
-thanks: Special acknowledgments
+thanks: Special acknowledgments and funding sources
+bibliography: biblio.bib
 author:
   - name: Author-1
     linkedin: mbacou 
     email: author-1@mail.com
     orcid: 0000-0003-1810-6820
+    affiliation: My Affiliation 1    
   - name: Author-2
     email: author-2@mail.com
     orcid: 0000-0003-1810-6819
-affiliation: My Affiliation
+    affiliation: My Affiliation 2
 categories:
   - cat-1
   - cat-2
@@ -31,8 +31,7 @@ abstract: |
   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
 description: |
-  **mb-article** is a Quarto extension for HTML formats with an opinionated journalistic design and simplified navigational elements.
-
+  **mb-article** is a Quarto extension for HTML formats with an opinionated academic design and simplified navigational elements.
 
 format: mb-article-html
 title-block-banner: banner.avif
@@ -42,16 +41,16 @@ title-block-banner: banner.avif
 
 This document is an example that demonstrates the formatting and features of the current HTML format extension for Quarto.
 
-Here is a sample margin note to the right column, and a sidebar note below on the left.
+Here is a sample margin note. The left column can also include side margins, but note that they will display above the TOC and branding (see below).
 
-::: {.aside .bg-secondary-subtle .text-serif .mt-2 .p-2 .border}
-aside -- A note placed in the page margin with CSS class `aside`.
+::: {.aside .text-serif .fs-1 .mb-2}
+aside -- A note placed in the page margin with CSS classes `.aside .text-serif`.
 :::
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 
-::: {.aside .bg-info-subtle .text-serif .p-2 .text-info}
-column-sidebar -- A note placed in the page sidebar with CSS classes `column-sidebar`.
+::: {.aside .bg-danger-subtle .text-danger .p-2}
+aside -- A note placed in the page margin with CSS class `.aside .bg-danger-subtle .text-danger`.
 :::
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -60,7 +59,28 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 You can learn more about controlling the appearance of HTML output at <https://quarto.org/docs/output-formats/html-basics.html>.
 
+# Colors
+
+Bootstrap colors inherit from [_brand.yml](_brand.yml) so customizations are straightforward.
+
+<div class="d-flex w-100 gap-1 text-sans mb-2">
+<div class="flex-fill p-1 text-bg-success">Success</div>
+<div class="flex-fill p-1 text-bg-danger">Danger</div>
+<div class="flex-fill p-1 text-bg-warning">Warning</div>
+<div class="flex-fill p-1 text-bg-info">Info</div>
+</div>
+<div class="d-flex w-100 gap-1 text-sans">
+<div class="flex-fill p-1 text-bg-primary">Primary</div>
+<div class="flex-fill p-1 text- bg-secondary">Secondary</div>
+<div class="flex-fill p-1 text-bg-light">Light</div>
+<div class="flex-fill p-1 text-bg-dark">Dark</div>
+</div>
+
 # Typography
+
+::: {.column-sidebar .bg-info-subtle .p-2 .text-info}
+column-sidebar -- A note placed in the left column with CSS class `column-sidebar`.
+:::
 
 Bootstrap default line-height and font sizing typically work, but this format enforces a strict vertical rhythm whenever possible[^1]. I made sure to define all vertical spacing and padding as multiples of a standard line height of `$spacer`.
 
@@ -70,17 +90,21 @@ No additional changes to font definitions aside from using `Crimson Pro` and `M+
 
 [^2]: M+ font system was designed by Japanese artist [Coji Morishita](https://mplusfonts.github.io/) with extended support for Latin, Japanese, Cyrillic. It is an excellent monospace font for smaller display sizes.
 
-::: {.aside .pt-2}
-![](logo.png){.rounded-circle .img-fluid}
+::: {.aside}
+{{< placeholder 200 200 format=svg >}}
 
 A rounded image moved to the margin.
 :::
 
-Here are **bold**, *italic*, and <small>smaller</small> text spans. Here is ^superscript^ and ~subscript~ text, and ~~strikethrough~~ notes. Semantic colors with e.g. [.text-info]{.text-info} provide accented text. I have added 2 background classes for my own use, a semi-transparent and blurred [`.bg-shaded`]{.bg-shaded} and a [`.bg-striped`]{.bg-striped}. This theme uses [.text-muted]{.text-muted} to de-emphasize content such as post metadata, margin notes, and captioning.
+Here are **bold**, *italic*, and <small>smaller</small> text spans. Here is ^superscript^ and ~subscript~ text, and ~~strikethrough~~ notes. Standard Bootstrap semantic colors with e.g. [.text-info]{.text-info} provide accented text. In addition this theme uses [.text-muted]{.text-muted} to de-emphasize content such as post metadata, margin notes, and captioning.
 
-## Heading 2
+> Quoted lines.
+> <small>With a signature</small>
 
-Fonts and colors are used as expected. Further, using my own `mb-tools` R package, I can customize additional plot elements.
+
+## Figures & Plots
+
+Fonts and colors are used as expected.
 
 ```{r}
 #| column: page-right
@@ -96,7 +120,8 @@ ggplot(mtcars, aes(factor(carb), mpg, fill = factor(carb))) +
     subtitle = "Theme provided by R package `mblabs`",
     caption = "A long plot caption with many references
     over multiples lines."
-  )
+  ) +
+  theme(legend.position = "bottom")
 ```
 
 ### Heading 3
@@ -115,7 +140,7 @@ Ordered list:
 2.  List 2
 3.  List 3
 
-Finally a normal rule `hr` element.
+Finally a normal rule `hr` divider.
 
 ------------------------------------------------------------------------
 
@@ -123,7 +148,7 @@ And a paragraph of content after the rule.
 
 #### Heading 4
 
-By default cittaions (and cross-references) are read in from an external `references.bib` file, but this may be edited in the YAML front matter as usual. Each citation must have a key, composed of ‘\@’ + the citation identifier from the database. Here is a margin reference to [@xie2015].
+By default citations (and cross-references) are read in from an external `references.bib` file, but this may be edited in the YAML front matter as usual. Each citation must have a key, composed of ‘\@’ + the citation identifier from the database. Here is a margin reference to [@xie2015].
 
 ##### Heading 5
 
@@ -157,7 +182,7 @@ I prefer my tables to resemble LaTeX typesetting, so a few simple changes here.
 | pear   | 1.37  |
 | orange | 3.09  |
 
-: Caption: smaller spacing borderless hover sm {.borderless .hover .sm}
+: Caption: compact spacing borderless {.borderless .hover .sm}
 
 | fruit  | price |
 |--------|-------|
@@ -165,7 +190,7 @@ I prefer my tables to resemble LaTeX typesetting, so a few simple changes here.
 | pear   | 1.37  |
 | orange | 3.09  |
 
-: Caption: striped hover sm {.striped .hover}
+: Caption: striped hover {.striped .hover}
 
 ::: column-page-right
 A table running over the right margin.
@@ -176,7 +201,7 @@ A table running over the right margin.
 | pear   | 1.37  |
 | orange | 3.09  |
 
-: Caption: striped hover sm secondary {.striped .hover .secondary}
+: Caption: striped hover secondary {.striped .hover .secondary}
 :::
 
 ::: column-page-left
@@ -188,7 +213,7 @@ A table running over the left sidebar.
 | pear   | 1.37  |
 | orange | 3.09  |
 
-: Caption: sm primary {.striped .primary}
+: Caption: striped primary {.striped .primary}
 :::
 
 ```{r}
@@ -198,5 +223,7 @@ A table running over the left sidebar.
 knitr::kable(mtcars[1:6, 1:10])
 ```
 
-> We also test quoted lines.\
-> With a signature
+
+
+
+

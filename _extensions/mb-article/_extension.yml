@@ -1,6 +1,6 @@
 title: mb-article
 author: Melanie Bacou
-version: 1.4.1
+version: 1.4.3
 quarto-required: ">=1.8.0"
 contributes:
   formats:
@@ -12,19 +12,18 @@ contributes:
 
       tbl-cap-location: bottom
       fig-cap-location: bottom
+      citation: true
+      citation-location: document
       reference-location: margin
-      citation-location: margin
       citations-hover: true
       footnotes-hover: false
-      bibliography: references.bib
       
       abstract-title: Abstract
       description-title: Summary
-      appendix-style: default
-      appendix-cite-as: bibtex
+      appendix-style: plain
 
       fig-dpi: 120
-      fig-format: png
+      fig-format: svg
 
       code-copy: false
       code-overflow: wrap
@@ -39,9 +38,10 @@ contributes:
       toc-title: Content
 
       format-resources:
-        - ./resources/references.bib
-        - ./resources/logo.png
-        - ./resources/banner.avif     
+        - _brand.yml
+        - logo.png
+        - banner.avif
+        - biblio.bib  
 
       title-block-banner: true
       template-partials:
@@ -62,13 +62,14 @@ contributes:
         margin-width: 210px
         gutter-width: 2rem
 
+      # default branding, customize in your own documents or websites
       logo: logo.png
       logo-href: ./
       footer: |
         <strong>Mel B. Labs</strong> -- a personal blog about statistics
-        and spatial econometrics.<br/>© 2026 
-        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">
-        CC BY-NC 4.0</a>
+        and spatial econometrics.
+      copyright: 2026
+      license: CC BY-NC 4.0
       tools: 
         - icon: github
           href: https://github.com/mbacou/mb-article

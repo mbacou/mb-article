@@ -1,6 +1,6 @@
 # mb-article Quarto Format (DRAFT)
 
-Custom HTML format for Quarto standalone documents and websites that provides a simplified document header (optional), as well as project branding and TOC on the left sidebar. Colors and typography are controlled via `_brand.yml`. The default Boostrap theme was modified slightly to improve vertical rythm.
+Custom 3-column format for stand-alone Quarto HTML documents and website projects. The format provides an optional document header and places **all project branding and table-of-content on the left sidebar**. Colors and typography are controlled via `_brand.yml`. The default Bootstrap theme was modified slightly to improve vertical rythm. As with the built-in Quarto document type, the 3-column page design is fully responsive.
 
 ## Installing
 
@@ -12,7 +12,7 @@ This will install the extension and create an example `.qmd` file that you can u
 
 ## Using
 
-The format provides the following custom options (to be included in document front matter or in `_quarto.yml` per standard practices). This will display a minimum document header.
+The format provides the additional configuration options below (to be included in the document front matter or in a separate `_quarto.yml` per standard practices). This will display a minimum document header and brand on the left column..
 
 ```{yaml}
 format:
@@ -38,6 +38,12 @@ format:
       - text: Link 3
         icon: link
         href: ./link-3
+
+    footer: |
+      <strong>Mel B. Labs</strong> -- a personal blog about statistics
+      and spatial econometrics.<br/>© 2026 
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">
+      CC BY-NC 4.0</a>        
 ```
 
 ## Example

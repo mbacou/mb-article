@@ -8,21 +8,8 @@
 
 $theme: 'mb-article';
 
-$teal: $brand-teal;
-$indigo: $brand-indigo;
-$blue: $brand-blue;
-$cyan: $brand-cyan;
-$green: $brand-green;
-$purple: $brand-purple;
-$pink: $brand-pink;
-$red: $brand-red;
-$orange: $brand-orange;
-$yellow: $brand-yellow;
 $gray: $brand-gray;
 $darkgray: $brand-darkgray;
-
-$light: $brand-light;
-$dark: $brand-dark;
 
 // use brand variables?
 $font-family-base: "Crimson Text";
@@ -134,7 +121,7 @@ $component-active-bg: rgba($primary, 12%);
 $form-label-margin-top: 0rem;
 $form-label-margin-bottom: 0.5rem;
 $form-label-color: $border-color;
-$form-label-font-size: calc($code-font-size - 3px);
+$form-label-font-size: calc($code-font-size - 2px);
 $form-label-font-weight: 500;
 $list-group-bg: $input-bg;
 $list-group-border-color: $input-border-color;
@@ -207,9 +194,9 @@ hr {
   margin: .5rem 0 2.25rem;
 }
 
-label, .label, #toc-title {
+label, .label, #toc-title, #quarto-appendix h2 {
   display: block;
-  color: $gray-400;
+  color: $gray-900;
   font-size: $form-label-font-size;
   font-family: $font-family-sans-serif;
   font-weight: $form-label-font-weight;
@@ -235,7 +222,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .title {
   font-weight: $headings-font-weight;
   line-height: 3rem;
   padding: 0;
-  margin: 2rem 0;
+  margin: 2rem 0 1rem 0;
 }
 h1.title, p.title {
   font-family: $headings-font-family;
@@ -292,7 +279,6 @@ pre, code, pre code {
 code span.fu, code span.sc {
   font-weight: 400;
 }
-
 p code:not(.sourceCode), li code:not(.sourceCode), 
 td code:not(.sourceCode) {
   color: inherit;
@@ -373,7 +359,7 @@ figcaption, .column-margin figcaption, .margin-caption {
   padding: 0;
   margin: .5rem 0 1rem 0;
 }
-.aside, .column-margin {
+.aside, .column-margin, .column-sidebar {
   font-family: $font-family-base;
   font-size: $small-font-size;
   color: $text-muted;
@@ -437,6 +423,14 @@ main {
 #quarto-sidebarnav-toggle, .toc-actions {
   display: none;
 }
+#quarto-appendix {
+  border-top: solid 1px $border-color;
+  background-color: $body-bg;
+  grid-column-start: body-start;
+  grid-column-end: page-end;
+  font-size: $small-font-size;
+}
+
 #mb-header {
   z-index: 1300;
   backdrop-filter: blur(3px);  
@@ -490,6 +484,7 @@ main {
 .sidebar nav[role=doc-toc] ul>li>ul>li>a.nav-link:hover {
   border: none;
   border-right: solid 4px $border-color;
+  background-color: rgba($nav-link-hover-color, 10%);
 }
 .sidebar nav[role=doc-toc] ul>li>ul {
   margin-bottom: .25rem;

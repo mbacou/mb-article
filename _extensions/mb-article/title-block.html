@@ -5,7 +5,7 @@
 
   $if(title-block-banner)$
   <div class="column-page-right border-top py-2"
-    style="background: $title-block-banner$;">
+    style="background: $title-block-banner$ ;">
   </div>
   $endif$
 
@@ -13,23 +13,28 @@
 
 <header id="mb-title-block" class="py-2">
 
-  <ul class="navbar-nav d-flex flex-row text-sans text-uppercase">
-    $for(categories)$ <li class="nav-item me-2 fw-bold text-primary">
+  <ul class="navbar-nav d-flex flex-row gap-2 text-sans text-uppercase">
+    $for(categories)$ <li class="nav-item fw-bold text-primary">
       $categories$</li>$endfor$
   </ul>
 
-  $if(title)$ <p class="title">$title$</p> $endif$
-
   <div class="column-margin">
-
-    <ul class="navbar-nav d-flex flex-row mb-4 text-sans text-uppercase">
+    <ul class="navbar-nav d-flex flex-row gap-2 text-sans text-uppercase">
       <li class="nav-item"><i
-          class="me-1 bi bi-$if(draft)$check2-square$else$square$endif$"></i>Draft
+          class="me-1 bi bi-$if(draft)$check2-square$else$square$endif$"></i><span
+          class="text-warning">Draft</span>
       </li>
-      <li class="nav-item ms-3"><i
-          class="me-1 bi bi-$if(freeze)$check2-square$else$square$endif$"></i>Frozen
+      <li class="nav-item"><i
+          class="me-1 bi bi-$if(freeze)$check2-square$else$square$endif$"></i><span
+          class="text-info">Frozen</span>
       </li>
     </ul>
+  </div>
+
+  $if(title)$ <p class="title">$title$</p> $endif$
+  $if(subtitle)$<p class="subtitle">$subtitle$</p>$endif$
+
+  <div class="column-margin">
 
     $for(by-author)$
     <p class="text-body">$title-meta-author.html()$</p>
@@ -48,22 +53,20 @@
     <p class="fs-2 text-body">$thanks$</p>
     $endif$
 
-    <label>Citation</label>
-    <p class="fs-2 text-body">
-      Citation
-    </p>
+    <label>How to cite</label>
+    <p class="fs-2 text-body">$citeas$</p>
 
   </div>
 
-  $if(subtitle)$<p class="subtitle">$subtitle$</p>$endif$
+  <div class="mx-lg-2">
+    <label>$abstract-title$</label>
+    <div class="lh-lg fs-2">$if(abstract)$$abstract$$else$--$endif$</div>
 
-  <label>$abstract-title$</label>
-  <div class="lh-lg fs-2">$if(abstract)$$abstract$$else$--$endif$</div>
-
-  <ul class="navbar-nav d-flex flex-row text-sans fw-bold">
-    $for(keywords)$ <li class="nav-item">$keywords$<span class="fw-normal">;
-        &nbsp;</span></li>
-    $endfor$
-  </ul>
+    <ul class="navbar-nav d-flex flex-row text-sans fw-bold">
+      $for(keywords)$ <li class="nav-item">$keywords$<span class="fw-normal">;
+          &nbsp;</span></li>
+      $endfor$
+    </ul>
+  </div>
 
 </header>
