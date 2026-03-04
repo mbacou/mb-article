@@ -10,7 +10,7 @@ $theme: 'mb-article';
 
 // Extra colors from _brand.yml
 $gray:      $brand-gray;      // base dark gray
-$gray-dark: $brand-graydark;  // gridline color
+$grid:      $brand-grid;      // gridline color
 
 // Use _brand.yml fonts
 $font-family-sans-serif:  $font-family-monospace;
@@ -97,9 +97,9 @@ $grid-gutter-width: 0;
 
 $table-cell-padding: 0 .5rem;
 $table-cell-padding-sm: 0 .5rem;
-$table-striped-bg: tint-color($gray-dark, 55%);
-$table-border-color: tint-color($gray-dark, 55%);
-$table-hover-bg: rgba($gray-dark, .75);
+$table-striped-bg: tint-color($grid, 55%);
+$table-border-color: tint-color($grid, 55%);
+$table-hover-bg: rgba($grid, .75);
 
 $thumbnail-border-width: 0;
 $thumbnail-border-radius: $border-radius;
@@ -146,7 +146,7 @@ $card-title-color: $headings-font-color;
 $card-bg: transparent;
 $card-cap-bg: $shaded;
 $card-border-width: 0;
-$card-border-color: $gray-dark;
+$card-border-color: $grid;
 $card-border-radius: $border-radius;
 
 $callout-margin-x: 0;
@@ -342,7 +342,7 @@ table, .table {
 .table td {
   line-height: calc(2rem - 1px);
   border: none;
-  border-bottom: 1px solid $gray-dark;
+  border-bottom: 1px solid $grid;
 }
 .table-borderless td,
 .table tr:last-of-type td,
@@ -404,10 +404,10 @@ figcaption, .column-margin figcaption, .margin-caption {
 }
 // Gridlines
 #quarto-content {
-  border-top: solid 1px $gray-dark;
+  border-top: solid 1px $grid;
   background-image:
-    linear-gradient(to right, $gray-dark, transparent 1px, transparent),
-    linear-gradient(to bottom, $gray-dark, transparent 1px, transparent);
+    linear-gradient(to right, $grid, transparent 1px, transparent),
+    linear-gradient(to bottom, $grid, transparent 1px, transparent);
   background-size: 2rem 2rem;
   background-position: 0 calc(-.5rem + 1px);
   background-repeat: repeat;
@@ -422,7 +422,7 @@ main {
   border: none;
 }
 #quarto-header, #title-block-header,
-#quarto-sidebarnav-toggle {
+#quarto-sidebarnav-toggle, .quarto-alternate-formats {
   display: none;
 }
 #quarto-appendix {

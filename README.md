@@ -1,6 +1,6 @@
-# mb-article Quarto Format (DRAFT)
+# mb-article Quarto Format
 
-Custom 3-column format for stand-alone Quarto HTML documents and website projects. The format provides an optional document header and places **all project branding and table-of-content on the left sidebar**. Colors and typography are controlled via `_brand.yml`. The default Bootstrap theme was modified slightly to improve vertical rythm. As with the built-in Quarto document type, the 3-column page design is fully responsive.
+Custom 3-column format for Quarto HTML documents and website projects. The format provides an optional document header and places **all project branding and table-of-content on the left sidebar**. Colors and typography are controlled via `_brand.yml`. The default Bootstrap theme was modified slightly to improve vertical rythm. As with the built-in Quarto document type, the 3-column page design is fully responsive.
 
 ## Installing
 
@@ -12,38 +12,37 @@ This will install the extension and create an example `.qmd` file that you can u
 
 ## Using
 
-The format provides the additional configuration options below (to be included in the document front matter or in a separate `_quarto.yml` per standard practices). This will display a minimum document header and brand on the left column..
+This format provides additional configuration options, as shown below (to be included in the document front matter or in a project-level `_quarto.yml` file per standard practices). This will display a minimum document header, as well as branding and footer in the left column (sidebar).
 
 ```{yaml}
 format:
   mb-article-html:
-    logo: logo.png
-    logo-href: ./    
-
-    tools: 
-      - icon: github
-        href: ./tool-1
-      - icon: telegram
-        href: ./tool-2
-      - icon: linkedin
-        href: ./tool-3
-    
-    links:
-      - text: Link 1
-        icon: link
-        href: ./link-1
-      - text: Link 2
-        icon: link
-        href: ./link-2
-      - text: Link 3
-        icon: link
-        href: ./link-3
-
-    footer: |
-      <strong>Mel B. Labs</strong> -- a personal blog about statistics
-      and spatial econometrics.<br/>© 2026 
-      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">
-      CC BY-NC 4.0</a>        
+      logo: logo.svg
+      logo-href: ./
+      footer: |
+        <strong>Mel B. Labs</strong> -- a personal blog about statistics
+        and spatial econometrics.      
+      header:
+        palette: true      // show Bootstrap semantic colors
+        left:
+          - text: Link 1
+            icon: link
+            href: ./
+          - text: Link 2
+            icon: link
+            href: ./
+          - text: Link 3
+            icon: link
+            href: ./         
+        right: 
+          - icon: github
+            href: https://github.com/mbacou/mb-article
+          - icon: telegram
+            href: https://t.me/mbacou
+          - icon: linkedin
+            href: https://linkedin.com/in/mbacou
+          - icon: youtube
+            href: https://youtube.com/\@mbacou/playlists
 ```
 
 ## Example

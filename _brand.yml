@@ -13,14 +13,14 @@ color:
     green:     "#73842A"
     purple:    "#8D46C1"
     pink:      "#C6A5E8"
+    brick:     "#D47979"
     red:       "#B54D4D"
     orange:    "#A1713C"
     yellow:    "#E0D1A4"
     gray:      "#212120"
-    graydark:  "#e7e2da"
-    brick:     "#D47979"
     light:     "#FCFAF5"
     dark:      "#003946"
+    grid:      "#e7e2da"
 
   primary:     brick
   secondary:   purple

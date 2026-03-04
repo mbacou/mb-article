@@ -35,8 +35,10 @@ description: |
   **mb-article** is a Quarto extension for HTML formats with an opinionated academic design and simplified navigational elements.
 
 title-block-banner: url(banner.svg)
-format-links: pdf
-format: mb-article-html
+format-links: [pdf]
+format: 
+  mb-article-html: default
+  pdf: default
 ---
 
 # Introduction
@@ -225,6 +227,7 @@ A table running over the left sidebar.
 
 knitr::kable(mtcars[1:6, 1:10])
 ```
+
 
 
 

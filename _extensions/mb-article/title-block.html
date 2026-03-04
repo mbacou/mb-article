@@ -1,14 +1,12 @@
 <!-- article title header -->
-<header id="mb-header" class="sticky-top">
-
+<header id="mb-header" class="column-page-right sticky-top">
   $header.html()$
 
-  $if(title-block-banner)$
-  <div class="column-page-right border-top pt-3"
-    style="background: $title-block-banner$ ;">
+  <div class="border-top $if(title-block-banner)$ pt-4 $endif$"
+    $if(title-block-banner)$ style="background: $title-block-banner$;" $endif$>
 
     <!-- Optional brand color palette -->
-    $if(palette)$
+    $if(header.palette)$
     <div class="d-flex justify-content-end">
       <div class="p-1 text-bg-primary"></div>
       <div class="p-1 text-bg-secondary"></div>
@@ -22,8 +20,6 @@
     $endif$
 
   </div>
-  $endif$
-
 </header>
 
 <header id="mb-title-block" class="bg-light py-2">
@@ -37,7 +33,7 @@
         class="me-1 bi bi-$if(draft)$check2-square$else$square$endif$"></i><span
         class="text-warning">Draft</span>
     </li>
-    <li class="nav-item"><i
+    <li class="nav-item me-2 me-md-4"><i
         class="me-1 bi bi-$if(freeze)$check2-square$else$square$endif$"></i><span
         class="text-info">Frozen</span>
     </li>
@@ -61,7 +57,7 @@
     </p>
     $endfor$
 
-    <label class="mt-4">First published</label>
+    <label class="mt-3">First published</label>
     <p class="text-body">$date$</p>
 
     $if(thanks)$
@@ -76,6 +72,11 @@
     <label>DOI</label>
     <p class="fs-2 text-body"><a href="https://doi.org/$doi$">$doi$</a></p>
     $endif$
+
+    $for(format-links)$
+    <button type="button" class="btn btn-info"><i class="bi bi-file-pdf"></i>Download
+      PDF</button>
+    $endfor$
 
   </div>
 
