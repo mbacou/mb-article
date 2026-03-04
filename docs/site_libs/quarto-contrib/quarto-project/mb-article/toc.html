@@ -1,26 +1,26 @@
 <nav id="$idprefix$TOC" role="doc-toc"
-  class="d-flex flex-column justify-content-around h-100 pt-5 px-2 ps-lg-0">
+  class="d-flex flex-column justify-content-around h-100 pt-5 px-2">
 
   <!-- Fixed article meta -->
-  <div class="mb-meta mt-5 mb-auto">
+  <div class="mb-meta mt-2 mt-md-5 mb-auto">
 
     <p>$date-modified$<i class="bi bi-clock ms-1"></i></p>
 
     $if(description)$
-    <div class="lh-sm fs-3">$description$</div>
+    <div class="lh-sm fs-2 text-muted"><em>$description$</em></div>
     $endif$
 
   </div>
 
   <!-- Quarto TOC -->
   $if(toc-title)$
-  <label id="$idprefix$toc-title" class="text-primary fs-4">$toc-title$</label>
+  <label class="text-primary fs-4">$toc-title$</label>
   $endif$
   $table-of-contents$
 
   <!-- Back to top -->
-  <div class="text-sans pt-1 mb-auto lh-lg fs-4">
-    <p><a class="text-decoration-none" href="#quarto-appendix">Appendix <i
+  <div class="text-sans pt-1 mb-auto lh-sm fs-5 border-grid">
+    <p><a class="text-decoration-none" href="#quarto-appendix">References <i
           class="bi bi-arrow-down-square ms-1"></i></a><br />
       <a class="text-decoration-none" href="#mb-title-block">Back
         to top <i class="bi bi-arrow-up-square ms-1"></i></a>

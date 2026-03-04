@@ -17,11 +17,12 @@ color:
     orange:    "#A1713C"
     yellow:    "#E0D1A4"
     gray:      "#212120"
-    darkgray:  "#e7e2da"
+    graydark:  "#e7e2da"
+    brick:     "#D47979"
     light:     "#FCFAF5"
     dark:      "#003946"
 
-  primary:     "#D47979"
+  primary:     brick
   secondary:   purple
   info:        blue
   success:     green

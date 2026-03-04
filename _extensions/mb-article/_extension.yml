@@ -1,9 +1,11 @@
 title: mb-article
 author: Melanie Bacou
-version: 1.4.3
+version: 1.4.4
 quarto-required: ">=1.8.0"
 contributes:
   formats:
+    typst: default
+
     html:
       smooth-scroll: true
       date-format: medium
@@ -28,6 +30,11 @@ contributes:
       code-copy: false
       code-overflow: wrap
       code-annotations: hover
+      format-links:
+        - html
+        - format: typst
+          text: Download PDF
+          icon: file-pdf
       search:
         show-item-context: true
 
@@ -40,10 +47,10 @@ contributes:
       format-resources:
         - _brand.yml
         - logo.png
+        - logo.svg
         - banner.avif
         - biblio.bib  
 
-      title-block-banner: true
       template-partials:
         - header.html
         - title-block.html
@@ -57,17 +64,18 @@ contributes:
 
       fontsize: 15px
       grid:
-        body-width: 720px
-        sidebar-width: 180px
+        body-width: 700px
+        sidebar-width: 200px
         margin-width: 210px
         gutter-width: 2rem
 
       # default branding, customize in your own documents or websites
-      logo: logo.png
+      logo: logo.svg
       logo-href: ./
       footer: |
         <strong>Mel B. Labs</strong> -- a personal blog about statistics
         and spatial econometrics.
+      palette: true
       copyright: 2026
       license: CC BY-NC 4.0
       tools: 
@@ -77,6 +85,8 @@ contributes:
           href: https://t.me/mbacou
         - icon: linkedin
           href: https://linkedin.com/in/mbacou
+        - icon: youtube
+          href: https://youtube.com/\@mbacou/playlists
       links:
         - text: Link 1
           icon: link

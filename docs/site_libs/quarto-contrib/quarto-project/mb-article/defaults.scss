@@ -8,15 +8,14 @@
 
 $theme: 'mb-article';
 
-$gray: $brand-gray;
-$darkgray: $brand-darkgray;
+// Extra colors from _brand.yml
+$gray:      $brand-gray;      // base dark gray
+$gray-dark: $brand-graydark;  // gridline color
 
-// use brand variables?
-$font-family-base: "Crimson Text";
-$font-family-sans-serif: "M PLUS Code Latin";
-$font-family-serif: "Caveat";
-$font-monospace: "M PLUS Code Latin";
-$headings-font-family: "M PLUS Code Latin";
+// Use _brand.yml fonts
+$font-family-sans-serif:  $font-family-monospace;
+$font-family-serif:       $headings-font-family;
+$headings-font-family:    $font-family-monospace;
 
 // Generally no need to modify below (unless dark theme maybe)
 $black: #000000;
@@ -37,9 +36,9 @@ $body-bg: $light;
 $link-color: $gray-700;
 $text-muted: rgba($body-color, .80);
 $code-color: $gray-700;
-$shaded: rgba(tint-color($body-bg, 25%), .65); // also $input-bg
+$shaded: rgba(tint-color($body-bg, 25%), .65);  // also $input-bg
 
-$headings-font-color: $gray-900; // darker than text
+$headings-font-color: $gray-900;  // darker than text
 $headings-font-weight: 400;
 $font-weight-bold: 500;
 
@@ -54,9 +53,12 @@ $spacers: (
 );
 
 $font-size-base: 20/15 * 1rem; // 1rem = 15px in YAML
-$small-font-size: calc($font-size-base - 2px);
+$font-size-sm: calc($font-size-base - 2px);
+$font-size-lg: calc($font-size-base + 2px);
 $code-font-size: calc($font-size-base - 5px);
 $sub-sup-font-size: calc($font-size-base - 5px);
+$lead-font-size: 2rem;
+$blockquote-font-size: $font-size-lg;
 
 $line-height-base: calc($spacer / $font-size-base) !default;
 $line-height-sm: 1.5rem;
@@ -95,9 +97,9 @@ $grid-gutter-width: 0;
 
 $table-cell-padding: 0 .5rem;
 $table-cell-padding-sm: 0 .5rem;
-$table-striped-bg: tint-color($darkgray, 55%);
-$table-border-color: tint-color($darkgray, 55%);
-$table-hover-bg: rgba($darkgray, .75);
+$table-striped-bg: tint-color($gray-dark, 55%);
+$table-border-color: tint-color($gray-dark, 55%);
+$table-hover-bg: rgba($gray-dark, .75);
 
 $thumbnail-border-width: 0;
 $thumbnail-border-radius: $border-radius;
@@ -144,7 +146,7 @@ $card-title-color: $headings-font-color;
 $card-bg: transparent;
 $card-cap-bg: $shaded;
 $card-border-width: 0;
-$card-border-color: $darkgray;
+$card-border-color: $gray-dark;
 $card-border-radius: $border-radius;
 
 $callout-margin-x: 0;
@@ -176,10 +178,10 @@ $nav-link-padding-y: 0;
 $nav-tabs-border-color: $border-color;
 
 // Sidebar variables
-$sidebar-font-size: $small-font-size;
-$sidebar-font-size-section: $small-font-size;
-$sidebar-font-size-collapse: $small-font-size;
-$sidebar-font-size-section-collapse: $small-font-size;
+$sidebar-font-size: $font-size-sm;
+$sidebar-font-size-section: $font-size-sm;
+$sidebar-font-size-collapse: $font-size-sm;
+$sidebar-font-size-section-collapse: $font-size-sm;
 
 
 /*-- scss:rules --*/
@@ -213,7 +215,7 @@ mark, .mark {
   border-radius: $border-radius;
 }
 small, .small {
-  font-size: $small-font-size;
+  font-size: $font-size-sm;
   line-height: 1.75rem;
 }
 
@@ -227,7 +229,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .title {
 h1.title, p.title {
   font-family: $headings-font-family;
   font-size: calc($h1-font-size + 6px);
-  margin: 1rem 0 !important;
+  margin: 0 0 1rem 0 !important;
 }
 h1.quarto-secondary-nav-title {
   font-size: 2rem;
@@ -259,7 +261,7 @@ h6, .h6 {
 }
 .lead, .lead p, p.subtitle {
   font-family: $font-family-base;
-  font-size: 2rem;
+  font-size: $lead-font-size;
   font-weight: 300;
   letter-spacing: 90%;
   color: $gray-500;
@@ -271,7 +273,7 @@ h6, .h6 {
 // Code blocks
 pre, code, pre code {
   color: $code-color;
-  font-family: $font-monospace;
+  font-family: $font-family-monospace;
   font-size: $code-font-size;
   background-color: none;
   padding: 0;
@@ -282,7 +284,7 @@ code span.fu, code span.sc {
 p code:not(.sourceCode), li code:not(.sourceCode), 
 td code:not(.sourceCode) {
   color: inherit;
-  font-family: $font-monospace;
+  font-family: $font-family-monospace;
   font-size: $code-font-size;
   line-height: inherit;
   background-color: $shaded;
@@ -340,7 +342,7 @@ table, .table {
 .table td {
   line-height: calc(2rem - 1px);
   border: none;
-  border-bottom: 1px solid $darkgray;
+  border-bottom: 1px solid $gray-dark;
 }
 .table-borderless td,
 .table tr:last-of-type td,
@@ -361,7 +363,7 @@ figcaption, .column-margin figcaption, .margin-caption {
 }
 .aside, .column-margin, .column-sidebar {
   font-family: $font-family-base;
-  font-size: $small-font-size;
+  font-size: $font-size-sm;
   color: $text-muted;
   line-height: 1.75rem;
   margin: 0;
@@ -402,10 +404,10 @@ figcaption, .column-margin figcaption, .margin-caption {
 }
 // Gridlines
 #quarto-content {
-  border-top: solid 1px $darkgray;
+  border-top: solid 1px $gray-dark;
   background-image:
-    linear-gradient(to right, $darkgray, transparent 1px, transparent),
-    linear-gradient(to bottom, $darkgray, transparent 1px, transparent);
+    linear-gradient(to right, $gray-dark, transparent 1px, transparent),
+    linear-gradient(to bottom, $gray-dark, transparent 1px, transparent);
   background-size: 2rem 2rem;
   background-position: 0 calc(-.5rem + 1px);
   background-repeat: repeat;
@@ -420,7 +422,7 @@ main {
   border: none;
 }
 #quarto-header, #title-block-header,
-#quarto-sidebarnav-toggle, .toc-actions {
+#quarto-sidebarnav-toggle {
   display: none;
 }
 #quarto-appendix {
@@ -428,11 +430,12 @@ main {
   background-color: $body-bg;
   grid-column-start: body-start;
   grid-column-end: page-end;
-  font-size: $small-font-size;
+  font-size: $font-size-sm;
 }
 
 #mb-header {
   z-index: 1300;
+  background-color: rgba($body-bg, .65);  
   backdrop-filter: blur(3px);  
 }
 .mb-header-logo {
@@ -440,7 +443,7 @@ main {
   width: 3rem;
 }
 .mb-logo {
-  max-height: 10vh;
+  max-height: 11vh;
 }
 
 
@@ -452,6 +455,7 @@ main {
   margin: 0;
   padding: 0; 
   max-width: 35vw;
+  background-color: rgba($body-bg, .65);
 }
 .sidebar.sidebar-navigation:not(.rollup) {
   background-color: transparent;

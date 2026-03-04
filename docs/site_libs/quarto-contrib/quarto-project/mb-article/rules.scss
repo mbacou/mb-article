@@ -34,6 +34,9 @@ nav .nav-item .bi {
   background-color: $shaded;
   backdrop-filter: blur(3px);
 }
+.border-grid {
+  border-top: solid 1px $gray-dark;
+}
 .text-muted {
   color: $text-muted !important;
 }

@@ -6,6 +6,7 @@ date-modified: last-modified
 draft: false
 freeze: false
 thanks: Special acknowledgments and funding sources
+doi: "123.456"
 bibliography: biblio.bib
 author:
   - name: Author-1
@@ -34,7 +35,7 @@ description: |
   **mb-article** is a Quarto extension for HTML formats with an opinionated academic design and simplified navigational elements.
 
 format: mb-article-html
-title-block-banner: banner.avif
+title-block-banner: url(banner.avif)
 ---
 
 # Introduction
@@ -59,19 +60,19 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 You can learn more about controlling the appearance of HTML output at <https://quarto.org/docs/output-formats/html-basics.html>.
 
-# Colors
+# Brand Colors
 
 Bootstrap colors inherit from [_brand.yml](_brand.yml) so customizations are straightforward.
 
-<div class="d-flex w-100 gap-1 text-sans mb-2">
-<div class="flex-fill p-1 text-bg-success">Success</div>
-<div class="flex-fill p-1 text-bg-danger">Danger</div>
-<div class="flex-fill p-1 text-bg-warning">Warning</div>
+<div class="d-flex gap-1 text-sans mb-2">
 <div class="flex-fill p-1 text-bg-info">Info</div>
+<div class="flex-fill p-1 text-bg-success">Success</div>
+<div class="flex-fill p-1 text-bg-warning">Warning</div>
+<div class="flex-fill p-1 text-bg-danger">Danger</div>
 </div>
-<div class="d-flex w-100 gap-1 text-sans">
+<div class="d-flex gap-1 text-sans">
 <div class="flex-fill p-1 text-bg-primary">Primary</div>
-<div class="flex-fill p-1 text- bg-secondary">Secondary</div>
+<div class="flex-fill p-1 text-bg-secondary">Secondary</div>
 <div class="flex-fill p-1 text-bg-light">Light</div>
 <div class="flex-fill p-1 text-bg-dark">Dark</div>
 </div>
@@ -86,43 +87,22 @@ Bootstrap default line-height and font sizing typically work, but this format en
 
 [^1]: About **vertical rhythm** and why it matters for content readability, see [Klaas Leussink](https://hnldesign.hashnode.dev/setting-a-flexible-baseline-grid-in-css) article on his personal blog.
 
-No additional changes to font definitions aside from using `Crimson Pro` and `M+ Code` fonts[^2].
+No additional changes to font definitions aside from using `Crimson Pro` and `M+ Code` fonts[^2] by default, but always customizable via `_brand.yml` utility.
 
 [^2]: M+ font system was designed by Japanese artist [Coji Morishita](https://mplusfonts.github.io/) with extended support for Latin, Japanese, Cyrillic. It is an excellent monospace font for smaller display sizes.
 
 ::: {.aside}
-{{< placeholder 200 200 format=svg >}}
+![](logo.svg){.rounded-circle}
 
-A rounded image moved to the margin.
+A rounded image with `.rounded-circle` moved to the margin.
 :::
 
-Here are **bold**, *italic*, and <small>smaller</small> text spans. Here is ^superscript^ and ~subscript~ text, and ~~strikethrough~~ notes. Standard Bootstrap semantic colors with e.g. [.text-info]{.text-info} provide accented text. In addition this theme uses [.text-muted]{.text-muted} to de-emphasize content such as post metadata, margin notes, and captioning.
+Here are **bold**, *italic*, and <small>smaller</small> text spans. Here are ^superscript^ and ~subscript~ characters, and ~~strikethrough~~ notes. Standard Bootstrap semantic colors with e.g. [.text-info]{.text-info} provide accented text. In addition this theme uses [.text-muted]{.text-muted} to de-emphasize content such as post metadata, margin notes, and captioning.
+
+## Heading 2
 
 > Quoted lines.
 > <small>With a signature</small>
-
-
-## Figures & Plots
-
-Fonts and colors are used as expected.
-
-```{r}
-#| column: page-right
-#| fig-cap: A sample dynamic graph
-
-library(ggplot2)
-
-ggplot(mtcars, aes(factor(carb), mpg, fill = factor(carb))) +
-  geom_col() +
-  guides(fill = guide_legend(nrow = 1)) +
-  labs(
-    title = "Custom ggplot with Bootstrap brand",
-    subtitle = "Theme provided by R package `mblabs`",
-    caption = "A long plot caption with many references
-    over multiples lines."
-  ) +
-  theme(legend.position = "bottom")
-```
 
 ### Heading 3
 
@@ -162,7 +142,29 @@ Here is a long footnote reference[^3]. Caption and footnote placement can be con
 
 ###### Section 6
 
-Headers at level 6 are used as section dividers.
+Headers at level 6 are used as fancy section dividers.
+
+
+# Figures & Plots
+
+```{r}
+#| column: page-right
+#| fig-cap: A sample dynamic graph
+
+library(ggplot2)
+
+ggplot(mtcars, aes(factor(carb), mpg, fill = factor(carb))) +
+  geom_col() +
+  guides(fill = guide_legend(nrow = 1)) +
+  labs(
+    title = "Custom ggplot with Bootstrap brand",
+    subtitle = "Theme provided by R package `mblabs`",
+    caption = "A long plot caption with many references
+    over multiples lines."
+  ) +
+  theme(legend.position = "bottom")
+```
+
 
 # Tables
 
