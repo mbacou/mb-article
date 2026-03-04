@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
 
-<meta charset="utf-8" />
-<meta name="generator" content="quarto-1.8.27" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-
-<meta name="author" content="Author-1" />
-<meta name="author" content="Author-2" />
-<meta name="keywords" content="keyword 1, keyword 2, keyword 3" />
-<meta name="description" content="mb-article is a Quarto extension for HTML formats with an opinionated academic design and simplified navigational elements." />
+<meta name="author" content="Author-1">
+<meta name="author" content="Author-2">
+<meta name="keywords" content="keyword 1, keyword 2, keyword 3">
+<meta name="description" content="mb-article is a Quarto extension for HTML formats with an opinionated academic design and simplified navigational elements.">
 
 <title>mb-article HTML Format for Quarto – mb-article</title>
 <style>
@@ -83,7 +81,28 @@ div.csl-indent {
   margin-left: 2em;
 }</style>
 
-<!-- htmldependencies:E3FAD763 -->
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-6051fe89951f9e0284bd1ea7efb76511.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-6051fe89951f9e0284bd1ea7efb76511.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-6051fe89951f9e0284bd1ea7efb76511.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-8be481cb681e2171cf0874f776e17921.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-ca4db4c7107ec61c051448990bd7f682.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-8be481cb681e2171cf0874f776e17921.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -122,21 +141,66 @@ div.csl-indent {
 
 </head>
 
-<body>
+<body class="floating slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<header id="title-block-header" class="quarto-title-block"></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div id="quarto-toc-target"></div>
+    <nav id="TOC" role="doc-toc" class="d-flex flex-column justify-content-around h-100 pt-5 px-2 toc-active" data-toc-expanded="99">
+
+  <!-- Fixed article meta -->
+  <div class="mb-meta mt-2 mt-md-5 mb-auto">
+
+    <p>Mar 4, 2026<i class="bi bi-clock ms-1"></i></p>
+
+        <div class="lh-sm fs-2 text-muted"><em><p><strong>mb-article</strong> is a Quarto extension for HTML formats with an opinionated academic design and simplified navigational elements.</p></em></div>
+    
+  </div>
+
+  <!-- Quarto TOC -->
+    <label class="text-primary fs-4">Content</label>
+    <ul>
+    <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+    <li><a href="#brand-colors" id="toc-brand-colors" class="nav-link" data-scroll-target="#brand-colors">Brand Colors</a></li>
+    <li><a href="#typography" id="toc-typography" class="nav-link" data-scroll-target="#typography">Typography</a>
+    <ul class="collapse">
+    <li><a href="#heading-2" id="toc-heading-2" class="nav-link" data-scroll-target="#heading-2">Heading 2</a>
+    <ul class="collapse">
+    <li><a href="#heading-3" id="toc-heading-3" class="nav-link" data-scroll-target="#heading-3">Heading 3</a></li>
+    </ul></li>
+    </ul></li>
+    <li><a href="#figures-plots" id="toc-figures-plots" class="nav-link" data-scroll-target="#figures-plots">Figures &amp; Plots</a></li>
+    <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables">Tables</a></li>
+    </ul>
+
+  <!-- Back to top -->
+  <div class="text-sans pt-1 mb-auto lh-sm fs-5 border-grid">
+    <p><a class="text-decoration-none" href="#quarto-appendix">References <i class="bi bi-arrow-down-square ms-1"></i></a><br>
+      <a class="text-decoration-none" href="#mb-title-block">Back
+        to top <i class="bi bi-arrow-up-square ms-1"></i></a>
+    </p>
+  </div>
+
+  <!-- Optional sidebar logo -->
+    <div class="d-none d-lg-block mt-2">
+    <a href=""><img src="site_libs/quarto-contrib/quarto-project/mb-article/logo.svg" alt="Logo" class="mb-logo img-fluid"></a>
+  </div>
+  
+  <!-- Optional sidebar footer -->
+    <div class="lh-sm fs-3 text-muted mt-2">
+    <p><strong>Mel B. Labs</strong> – a personal blog about statistics and spatial econometrics.</p>
+  </div>
+  
 </nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" ></div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 <!-- article title header -->
 <header id="mb-header" class="column-page-right sticky-top">
@@ -146,22 +210,22 @@ div.csl-indent {
 
     <!-- logo -->
       <div class="d-lg-none">
-      <a href="_extensions/mb-article/"><img src="_extensions/mb-article/logo.svg" alt="logo" class="mb-header-logo"></a>
+      <a href="site_libs/quarto-contrib/quarto-project/mb-article"><img src="site_libs/quarto-contrib/quarto-project/mb-article/logo.svg" alt="logo" class="mb-header-logo"></a>
     </div>
     
     <!-- left links -->
     <ul class="navbar-nav d-none d-md-flex flex-row w-100">
 
           <li class="nav-item flex-fill">
-        <a class="nav-link" href="_extensions/mb-article/">
+        <a class="nav-link" href="site_libs/quarto-contrib/quarto-project/mb-article">
           <span class="menu-text">Link 1</span></a>
       </li>
           <li class="nav-item flex-fill">
-        <a class="nav-link" href="_extensions/mb-article/">
+        <a class="nav-link" href="site_libs/quarto-contrib/quarto-project/mb-article">
           <span class="menu-text">Link 2</span></a>
       </li>
           <li class="nav-item flex-fill">
-        <a class="nav-link" href="_extensions/mb-article/">
+        <a class="nav-link" href="site_libs/quarto-contrib/quarto-project/mb-article">
           <span class="menu-text">Link 3</span></a>
       </li>
         </ul>
@@ -170,15 +234,15 @@ div.csl-indent {
     <ul class="navbar-nav d-flex d-md-none flex-row w-100">
 
           <li class="nav-item flex-fill text-center">
-        <a class="nav-link" href="_extensions/mb-article/">
+        <a class="nav-link" href="site_libs/quarto-contrib/quarto-project/mb-article">
           <i class="bi bi-link"></i></a>
       </li>
           <li class="nav-item flex-fill text-center">
-        <a class="nav-link" href="_extensions/mb-article/">
+        <a class="nav-link" href="site_libs/quarto-contrib/quarto-project/mb-article">
           <i class="bi bi-link"></i></a>
       </li>
           <li class="nav-item flex-fill text-center">
-        <a class="nav-link" href="_extensions/mb-article/">
+        <a class="nav-link" href="site_libs/quarto-contrib/quarto-project/mb-article">
           <i class="bi bi-link"></i></a>
       </li>
         </ul>
@@ -207,23 +271,19 @@ div.csl-indent {
     <!-- Quarto buttons -->
     <ul class="navbar-nav flex-row ms-2 justify-content-end">
       <li class="nav-item d-lg-none">
-        <a class="nav-link px-1" role="button" data-bs-toggle="collapse"
-          data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar"
-          aria-expanded="false" aria-label="Toggle navigation">
+        <a class="nav-link px-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle navigation">
           <i class="bi bi-layout-text-sidebar-reverse"></i>
         </a>
       </li>
           <li class="nav-item">
-        <a class="nav-link px-1" role="button" aria-label="Search"
-          onclick="window.quartoOpenSearch();">
+        <a class="nav-link px-1" role="button" aria-label="Search" onclick="window.quartoOpenSearch();">
           <i class="bi bi-search"></i>
         </a>
       </li>
         </ul>
 
   </nav>
-  <div class="border-top  pt-4 "
-     style="background: url(banner.svg);" >
+  <div class="border-top  pt-4 " style="background: url(banner.svg);">
 
     <!-- Optional brand color palette -->
         <div class="d-flex justify-content-end">
@@ -240,29 +300,26 @@ div.csl-indent {
   </div>
 </header>
 
-<header id="mb-title-block" class="bg-light py-2">
+<header id="mb-title-block" class="bg-light py-2 page-columns page-full">
 
-  <ul
-    class="column-page-right navbar-nav d-flex flex-row gap-3 my-2 text-sans text-uppercase">
+  <ul class="column-page-right navbar-nav d-flex flex-row gap-3 my-2 text-sans text-uppercase">
      <li class="nav-item fw-bold text-primary">
       cat-1</li> <li class="nav-item fw-bold text-primary">
       cat-2</li> <li class="nav-item fw-bold text-primary">
       cat-3</li>
     <li class="flex-fill"></li>
-    <li class="nav-item"><i
-        class="me-1 bi bi-square"></i><span
-        class="text-warning">Draft</span>
+    <li class="nav-item"><i class="me-1 bi bi-square"></i><span class="text-warning">Draft</span>
     </li>
-    <li class="nav-item me-2 me-md-4"><i
-        class="me-1 bi bi-square"></i><span
-        class="text-info">Frozen</span>
+    <li class="nav-item me-2 me-md-4"><i class="me-1 bi bi-square"></i><span class="text-info">Frozen</span>
     </li>
   </ul>
 
-   <p class="title">mb-article HTML Format for Quarto</p> 
-  <p class="subtitle">A 3-column academic format for Quarto posts and articles</p>
+   <p class="title display-7">mb-article HTML Format for Quarto</p> 
+  <p class="subtitle lead">A 3-column academic format for Quarto posts and articles</p>
 
-  <div class="column-margin">
+  
+
+  <div class="no-row-height column-margin column-container"><div class="">
 
         <p><a href="https://orcid.org/0000-0003-1810-6820">
   <i class="bi bi-person-circle me-1"></i></a>
@@ -275,7 +332,7 @@ div.csl-indent {
 <a class="fs-4" href="mailto:author-1@mail.com">
   <i class="bi bi-envelope"></i></a>
 
-                  <br />
+                  <br>
       
         <em class="ms-3 fs-3">My Affiliation 1</em>
         
@@ -291,7 +348,7 @@ div.csl-indent {
 <a class="fs-4" href="mailto:author-2@mail.com">
   <i class="bi bi-envelope"></i></a>
 
-                  <br />
+                  <br>
       
         <em class="ms-3 fs-3">My Affiliation 2</em>
         
@@ -304,15 +361,13 @@ div.csl-indent {
     <p class="fs-2 text-body">Special acknowledgments and funding sources</p>
     
     <label>How to cite</label>
-    <p class="fs-2 text-body">{{< contents cls-entry>}}</p>
+    <p class="fs-2 text-body">{{&lt; contents cls-entry&gt;}}</p>
 
         <label>DOI</label>
     <p class="fs-2 text-body"><a href="https://doi.org/123.4567">123.4567</a></p>
     
     
-  </div>
-
-  <div class="mx-lg-2">
+  </div></div><div class="mx-lg-2">
     <label>Abstract</label>
     <div class="lh-lg fs-2 text-muted"><p>Abstract text – Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>
 
@@ -329,66 +384,19 @@ div.csl-indent {
 
 </header>
 
-<nav id="TOC" role="doc-toc"
-  class="d-flex flex-column justify-content-around h-100 pt-5 px-2">
 
-  <!-- Fixed article meta -->
-  <div class="mb-meta mt-2 mt-md-5 mb-auto">
-
-    <p>Mar 4, 2026<i class="bi bi-clock ms-1"></i></p>
-
-        <div class="lh-sm fs-2 text-muted"><em><p><strong>mb-article</strong> is a Quarto extension for HTML formats with an opinionated academic design and simplified navigational elements.</p></em></div>
-    
-  </div>
-
-  <!-- Quarto TOC -->
-    <label class="text-primary fs-4">Content</label>
-    <ul>
-    <li><a href="#introduction" id="toc-introduction">Introduction</a></li>
-    <li><a href="#brand-colors" id="toc-brand-colors">Brand Colors</a></li>
-    <li><a href="#typography" id="toc-typography">Typography</a>
-    <ul>
-    <li><a href="#heading-2" id="toc-heading-2">Heading 2</a>
-    <ul>
-    <li><a href="#heading-3" id="toc-heading-3">Heading 3</a></li>
-    </ul></li>
-    </ul></li>
-    <li><a href="#figures-plots" id="toc-figures-plots">Figures &amp; Plots</a></li>
-    <li><a href="#tables" id="toc-tables">Tables</a></li>
-    </ul>
-
-  <!-- Back to top -->
-  <div class="text-sans pt-1 mb-auto lh-sm fs-5 border-grid">
-    <p><a class="text-decoration-none" href="#quarto-appendix">References <i
-          class="bi bi-arrow-down-square ms-1"></i></a><br />
-      <a class="text-decoration-none" href="#mb-title-block">Back
-        to top <i class="bi bi-arrow-up-square ms-1"></i></a>
-    </p>
-  </div>
-
-  <!-- Optional sidebar logo -->
-    <div class="d-none d-lg-block mt-2">
-    <a href=""><img src="_extensions/mb-article/logo.svg" alt="Logo" class="mb-logo img-fluid"></a>
-  </div>
-  
-  <!-- Optional sidebar footer -->
-    <div class="lh-sm fs-3 text-muted mt-2">
-    <p><strong>Mel B. Labs</strong> – a personal blog about statistics and spatial econometrics.</p>
-  </div>
-  
-</nav>
-<section id="introduction" class="level1">
+<section id="introduction" class="level1 page-columns page-full">
 <h1>Introduction</h1>
 <p>This document is an example that demonstrates the formatting and features of the current HTML format extension for Quarto.</p>
 <p>Here is a sample margin note. The left column can also include side margins, but note that they will display above the TOC and branding (see below).</p>
-<div class="text-serif fs-1 mb-2 column-margin margin-aside">
+
+<div class="no-row-height column-margin column-container"><div class="text-serif fs-1 mb-2 margin-aside">
 <p>aside – A note placed in the page margin with CSS classes <code>.aside .text-serif</code>.</p>
-</div>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-<div class="bg-danger-subtle text-danger p-2 column-margin margin-aside">
+</div></div><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+<div class="no-row-height column-margin column-container"><div class="bg-danger-subtle text-danger p-2 margin-aside">
 <p>aside – A note placed in the page margin with CSS class <code>.aside .bg-danger-subtle .text-danger</code>.</p>
-</div>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+</div></div><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 <p><strong>More Information</strong></p>
 <p>You can learn more about controlling the appearance of HTML output at <a href="https://quarto.org/docs/output-formats/html-basics.html" class="uri">https://quarto.org/docs/output-formats/html-basics.html</a>.</p>
 </section>
@@ -424,25 +432,25 @@ Dark
 </div>
 </div>
 </section>
-<section id="typography" class="level1">
+<section id="typography" class="level1 page-columns page-full">
 <h1>Typography</h1>
 <div class="column-sidebar bg-info-subtle p-2 text-info">
 <p>column-sidebar – A note placed in the left column with CSS class <code>column-sidebar</code>.</p>
 </div>
 <p>Bootstrap default line-height and font sizing typically work, but this format enforces a strict vertical rhythm whenever possible<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. I made sure to define all vertical spacing and padding as multiples of a standard line height of <code>$spacer</code>.</p>
-<p>No additional changes to font definitions aside from using <code>Crimson Pro</code> and <code>M+ Code</code> fonts<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> by default, but always customizable via <code>_brand.yml</code> utility.</p>
-<div class="column-margin margin-aside">
-<p><img src="logo.svg" class="rounded-circle img-fluid" /></p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;About <strong>vertical rhythm</strong> and why it matters for content readability, see <a href="https://hnldesign.hashnode.dev/setting-a-flexible-baseline-grid-in-css">Klaas Leussink</a> article on his personal blog.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;M+ font system was designed by Japanese artist <a href="https://mplusfonts.github.io/">Coji Morishita</a> with extended support for Latin, Japanese, Cyrillic. It is an excellent monospace font for smaller display sizes.</p></div></div><p>No additional changes to font definitions aside from using <code>Crimson Pro</code> and <code>M+ Code</code> fonts<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> by default, but always customizable via <code>_brand.yml</code> utility.</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p><img src="logo.svg" class="rounded-circle img-fluid"></p>
 <p>A rounded image with <code>.rounded-circle</code> moved to the margin.</p>
-</div>
-<p>Here are <strong>bold</strong>, <em>italic</em>, and <small>smaller</small> text spans. Here are <sup>superscript</sup> and <sub>subscript</sub> characters, and <del>strikethrough</del> notes. Standard Bootstrap semantic colors with e.g. <span class="text-info">.text-info</span> provide accented text. In addition this theme uses <span class="text-muted">.text-muted</span> to de-emphasize content such as post metadata, margin notes, and captioning.</p>
-<section id="heading-2" class="level2">
-<h2>Heading 2</h2>
-<blockquote>
+</div></div><p>Here are <strong>bold</strong>, <em>italic</em>, and <small>smaller</small> text spans. Here are <sup>superscript</sup> and <sub>subscript</sub> characters, and <del>strikethrough</del> notes. Standard Bootstrap semantic colors with e.g.&nbsp;<span class="text-info">.text-info</span> provide accented text. In addition this theme uses <span class="text-muted">.text-muted</span> to de-emphasize content such as post metadata, margin notes, and captioning.</p>
+<section id="heading-2" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="heading-2">Heading 2</h2>
+<blockquote class="blockquote">
 <p>Quoted lines. <small>With a signature</small></p>
 </blockquote>
-<section id="heading-3" class="level3">
-<h3>Heading 3</h3>
+<section id="heading-3" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="heading-3">Heading 3</h3>
 <p>Sample paragraph content with list of items:</p>
 <ul>
 <li>List 1
@@ -460,16 +468,18 @@ Dark
 <li>List 3</li>
 </ol>
 <p>Finally a normal rule <code>hr</code> divider.</p>
-<hr />
+<hr>
 <p>And a paragraph of content after the rule.</p>
-<section id="heading-4" class="level4">
-<h4>Heading 4</h4>
+<section id="heading-4" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="heading-4">Heading 4</h4>
 <p>By default citations (and cross-references) are read in from an external <code>references.bib</code> file, but this may be edited in the YAML front matter as usual. Each citation must have a key, composed of ‘@’ + the citation identifier from the database. Here is a margin reference to <span class="citation" data-cites="xie2015">(<a href="#ref-xie2015" role="doc-biblioref">Xie 2015</a>)</span>.</p>
-<section id="heading-5" class="level5">
-<h5>Heading 5</h5>
+<section id="heading-5" class="level5 page-columns page-full">
+<h5 class="anchored" data-anchor-id="heading-5">Heading 5</h5>
 <p>Here is a long footnote reference<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. Caption and footnote placement can be controlled in the config files <code>_quarto_yml</code> and/or <code>_metadata.yml</code>, or directly in the YAML front matter.</p>
-<section id="section-6" class="level6">
-<h6>Section 6</h6>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;Here’s a margin note with multiple paragraph blocks and a fancy section header.</p>
+<h5 id="heading-5-1" class="anchored">Heading 5</h5>
+<p>With subsequent paragraphs indented to show that they belong to the previous footnote.</p></div></div><section id="section-6" class="level6">
+<h6 class="anchored" data-anchor-id="section-6">Section 6</h6>
 <p>Headers at level 6 are used as fancy section dividers.</p>
 </section>
 </section>
@@ -477,35 +487,35 @@ Dark
 </section>
 </section>
 </section>
-<section id="figures-plots" class="level1">
+<section id="figures-plots" class="level1 page-columns page-full">
 <h1>Figures &amp; Plots</h1>
-<div class="cell">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<div class="cell page-columns page-full">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="fu">factor</span>(carb), mpg, <span class="at">fill =</span> <span class="fu">factor</span>(carb))) <span class="sc">+</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="at">nrow =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;Custom ggplot with Bootstrap brand&quot;</span>,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">&quot;Theme provided by R package `mblabs`&quot;</span>,</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">&quot;A long plot caption with many references</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="st">    over multiples lines.&quot;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Custom ggplot with Bootstrap brand"</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Theme provided by R package `mblabs`"</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"A long plot caption with many references</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="st">    over multiples lines."</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;bottom&quot;</span>)</span></code></pre></div>
-<div class="cell-output-display column-page-right">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img src="index_files/figure-html/unnamed-chunk-1-1.svg" class="img-fluid" /></p>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code></pre></div>
+<div class="cell-output-display page-columns page-full">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><img src="index_files/figure-html/unnamed-chunk-1-1.svg" class="img-fluid figure-img column-page-right"></p>
 <figcaption>A sample dynamic graph</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="tables" class="level1">
+<section id="tables" class="level1 page-columns page-full">
 <h1>Tables</h1>
 <p>I prefer my tables to resemble LaTeX typesetting, so a few simple changes here.</p>
-<table>
+<table class="table">
 <caption>Caption: my default table spacing</caption>
 <tbody>
 <tr class="odd">
@@ -522,7 +532,7 @@ Dark
 </tr>
 </tbody>
 </table>
-<table class="table-borderless table-hover table-sm small">
+<table class="table-borderless table-hover table-sm small table">
 <caption>Caption: compact spacing borderless</caption>
 <thead>
 <tr class="header">
@@ -545,7 +555,7 @@ Dark
 </tr>
 </tbody>
 </table>
-<table class="table-striped table-hover">
+<table class="table-striped table-hover table">
 <caption>Caption: striped hover</caption>
 <thead>
 <tr class="header">
@@ -570,7 +580,7 @@ Dark
 </table>
 <div class="column-page-right">
 <p>A table running over the right margin.</p>
-<table class="table-striped table-hover table-secondary">
+<table class="table-striped table-hover table-secondary table">
 <caption>Caption: striped hover secondary</caption>
 <thead>
 <tr class="header">
@@ -596,7 +606,7 @@ Dark
 </div>
 <div class="column-page-left">
 <p>A table running over the left sidebar.</p>
-<table class="table-striped table-primary">
+<table class="table-striped table-primary table">
 <caption>Caption: striped primary</caption>
 <thead>
 <tr class="header">
@@ -620,23 +630,23 @@ Dark
 </tbody>
 </table>
 </div>
-<div class="cell" data-tbl-cap="A full-width table to increase content space">
-<div class="sourceCode" id="cb2"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(mtcars[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>])</span></code></pre></div>
+<div class="cell page-columns page-full" data-tbl-cap="A full-width table to increase content space">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(mtcars[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>])</span></code></pre></div>
 <div class="cell-output-display column-page">
-<table>
+<table class="table table-sm table-striped small">
 <caption>A full-width table to increase content space</caption>
 <colgroup>
-<col style="width: 28%" />
-<col style="width: 7%" />
-<col style="width: 6%" />
-<col style="width: 7%" />
-<col style="width: 6%" />
-<col style="width: 7%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 7%" />
+<col style="width: 28%">
+<col style="width: 7%">
+<col style="width: 6%">
+<col style="width: 7%">
+<col style="width: 6%">
+<col style="width: 7%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 7%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -736,31 +746,38 @@ Dark
 </table>
 </div>
 </div>
-<div id="quarto-navigation-envelope" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyLXRpdGxl">mb-article</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXItdGl0bGU=">mb-article</span></p>
-</div>
-<div id="quarto-meta-markdown" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGF0aXRsZQ==">mb-article HTML Format for Quarto – mb-article</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkdGl0bGU=">mb-article HTML Format for Quarto – mb-article</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZHRpdGxl">mb-article HTML Format for Quarto – mb-article</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGFzaXRlbmFtZQ==">mb-article</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkZGVzYw=="><strong>mb-article</strong> is a Quarto extension for HTML formats with an opinionated academic design and simplified navigational elements.</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZGRkZXNj"><strong>mb-article</strong> is a Quarto extension for HTML formats with an opinionated academic design and simplified navigational elements.</span></p>
-</div>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+
+
+
+</section>
+
+
+<div id="quarto-appendix"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-xie2015" class="csl-entry" role="listitem">
 Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://yihui.name/knitr/">https://yihui.name/knitr/</a>.
 </div>
-</div>
-</section>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p>About <strong>vertical rhythm</strong> and why it matters for content readability, see <a href="https://hnldesign.hashnode.dev/setting-a-flexible-baseline-grid-in-css">Klaas Leussink</a> article on his personal blog.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>M+ font system was designed by Japanese artist <a href="https://mplusfonts.github.io/">Coji Morishita</a> with extended support for Latin, Japanese, Cyrillic. It is an excellent monospace font for smaller display sizes.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>Here’s a margin note with multiple paragraph blocks and a fancy section header.</p>
-<h5 id="heading-5-1">Heading 5</h5>
-<p>With subsequent paragraphs indented to show that they belong to the previous footnote.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-
-</main> <!-- /main -->
-<script id = "quarto-html-after-body" type="application/javascript">
+</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{2025,
+  author = {, Author-1 and , Author-2},
+  title = {Mb-Article {HTML} {Format} for {Quarto}},
+  date = {2025-11-12},
+  doi = {123.4567},
+  langid = {en},
+  abstract = {Abstract text -\/- Lorem Ipsum is simply dummy text of the
+    printing and typesetting industry. Lorem Ipsum has been the
+    industry’s standard dummy text ever since the 1500s, when an unknown
+    printer took a galley of type and scrambled it to make a type
+    specimen book. It has survived not only five centuries, but also the
+    leap into electronic typesetting, remaining essentially unchanged.
+    It was popularised in the 1960s with the release of Letraset sheets
+    containing Lorem Ipsum passages, and more recently with desktop
+    publishing software like Aldus PageMaker including versions of Lorem
+    Ipsum.}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-2025" class="csl-entry quarto-appendix-citeas" role="listitem">
+Author-1, and Author-2. 2025. <span>“Mb-Article HTML Format for
+Quarto.”</span> November 12, 2025. <a href="https://doi.org/123.4567">https://doi.org/123.4567</a>.
+</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -1128,6 +1145,8 @@ Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd 
   </script>
 </div> <!-- /content -->
 
-</body>
 
-</html>
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
