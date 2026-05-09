@@ -163,7 +163,7 @@ ggplot(mtcars, aes(factor(carb), mpg, fill = factor(carb))) +
   scale_brand_df() +
   labs(
     title = "Custom ggplot with Bootstrap brand",
-    subtitle = "Theme provided by R package `mblabs`",
+    subtitle = "Theme provided by R package `mbutils`",
     caption = "A long plot caption with many references
     over multiples lines."
   ) +
@@ -171,7 +171,7 @@ ggplot(mtcars, aes(factor(carb), mpg, fill = factor(carb))) +
     base_bg = "light",
     base_color = "gray",
     base_family = "monospace",
-    base_size = 12,
+    base_size = 11,
     legend.position = "top"
   )
 ```
@@ -192,7 +192,7 @@ ggplot(
   scale_brand_df(c("purple", "light")) +
   labs(
     title = "Custom ggplot with Bootstrap brand",
-    subtitle = "Theme provided by R package `mblabs`",
+    subtitle = "Theme provided by R package `mbutils`",
     caption = "A long plot caption with many references
     over multiples lines."
   )
@@ -208,7 +208,7 @@ axes(
   xlab = "X label",
   ylab = "Y label"
 )
-legend(1:6, fill = col, col = col)
+legend(1:6, fill = col, border = NA)
 
 brand_off()
 ```

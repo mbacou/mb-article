@@ -69,15 +69,15 @@ $h2-font-size: calc($font-size-base + 11px);  // 30px
 $h3-font-size: calc($font-size-base +  9px);  // 26px
 $h4-font-size: calc($font-size-base +  7px);  // 24px
 $h5-font-size: calc($font-size-base +  5px);  // 22px
-$h6-font-size: calc($code-font-size -  5px);
+$h6-font-size: calc($code-font-size +  0px);
 
 $font-sizes: (
+  0: calc($font-size-base + 1px),
   1: calc($font-size-base - 0px),
   2: calc($font-size-base - 1px),
   3: calc($font-size-base - 2px),
   4: calc($font-size-base - 3px),
-  5: calc($font-size-base - 4px),
-  6: calc($font-size-base - 5px)
+  5: calc($font-size-base - 4px)
 );
 
 $enable-rounded: true;
@@ -121,7 +121,7 @@ $component-active-bg: rgba($primary, 12%);
 
 $form-label-margin-top: 0rem;
 $form-label-margin-bottom: 0.5rem;
-$form-label-color: $border-color;
+$form-label-color: $body-color;
 $form-label-font-size: $code-font-size;
 $form-label-font-weight: 500;
 $list-group-bg: $input-bg;
@@ -242,7 +242,7 @@ h1.title, p.title {
   font-family: $headings-font-family;
   font-size: calc($h1-font-size + 6px);
   line-height: 3rem;
-  margin: 0 0 1rem 0 !important;
+  margin: 1rem 0 1rem 0 !important;
 }
 h1.quarto-secondary-nav-title {
   font-size: 2rem;
@@ -265,6 +265,7 @@ h5, .h5 {
 }
 h6, .h6 {
   font-size: $h6-font-size;
+  margin-top: 1rem;
   margin-bottom: 0;
 }
 
