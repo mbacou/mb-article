@@ -1,6 +1,8 @@
 # mb-article Quarto Format
 
-Custom responsive 3-column format for Quarto HTML documents and website projects. The format provides an optional document header and places **all project branding and table-of-content on the left sidebar**. Colors and typography are controlled via `_brand.yml`. The default Bootstrap theme was modified slightly to improve vertical rythm. As with the built-in Quarto document type, the 3-column page design is fully responsive.
+Responsive 3-column format for Quarto HTML documents and website projects. The format provides an optional document header and places **all project branding and table-of-content on the left sidebar**. 
+
+Colors and typography are controlled via `_brand.yml`. The default Bootstrap theme was modified slightly to improve vertical rythm. The 3-column page design is fully responsive.
 
 ![Template](template.png)
 
