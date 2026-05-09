@@ -50,7 +50,7 @@ typography:
   base: 
     family: Crimson Text
     size: 19px
-    line-height: 30/19
+    line-height: 28/19
   headings: Caveat
   monospace: 
     family: M PLUS Code Latin

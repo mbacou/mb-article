@@ -9,7 +9,7 @@ project:
 website:
   title: "mb-article - Quarto Format"
   favicon: favicon.svg
-  image: logo.png
+  image: logo.svg
   description: mb-article - Custom Quarto Format
   site-url: https://mbacou.github.io/mb-article
   repo-url: https://github.com/mbacou/mb-article
@@ -19,7 +19,7 @@ website:
   page-navigation: false
   bread-crumbs: false
 
-highlight-style: tango
+highlight-style: a11y-light
 
 format:
   mb-article-html:
@@ -32,7 +32,7 @@ format:
 
     status: DRAFT waiting for review
 
-    logo: logo.png
+    logo: logo.svg
     logo-href: /
     title-block-banner: url(banner.svg)  
     license: CC BY-NC 4.0

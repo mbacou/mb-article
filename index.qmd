@@ -55,7 +55,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 **More Information**
 
-You can learn more about controlling the appearance of HTML output at <https://quarto.org/docs/output-formats/html-basics.html>.
+You can learn more about controlling the appearance of HTML output under [Quarto Documentation](https://quarto.org/docs/output-formats/html-basics.html){.url}.
 
 # Brand Colors
 
@@ -89,7 +89,7 @@ No additional changes to font definitions aside from using `Crimson Pro` and `M+
 [^2]: M+ font system was designed by Japanese artist [Coji Morishita](https://mplusfonts.github.io/) with extended support for Latin, Japanese, Cyrillic. It is an excellent monospace font for smaller display sizes.
 
 ::: {.aside}
-![Example](logo.png){.rounded-circle .lightbox}
+![Example](logo.svg){.rounded-circle .lightbox}
 
 A rounded image with `.rounded-circle.lightbox` moved to the margin.
 :::
@@ -171,6 +171,7 @@ ggplot(mtcars, aes(factor(carb), mpg, fill = factor(carb))) +
     base_bg = "light",
     base_color = "gray",
     base_family = "monospace",
+    base_size = 12,
     legend.position = "top"
   )
 ```
@@ -207,7 +208,7 @@ axes(
   xlab = "X label",
   ylab = "Y label"
 )
-legend(1:6, fill = col)
+legend(1:6, fill = col, col = col)
 
 brand_off()
 ```
