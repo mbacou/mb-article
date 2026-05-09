@@ -1,17 +1,19 @@
 title: mb-article
 author: Melanie Bacou
-version: 1.4.6
+version: 1.5.0
 quarto-required: ">=1.8.0"
 contributes:
   formats:
     html:
-      smooth-scroll: true
       date-format: medium
+      date-modified: last-modified
+      smooth-scroll: true
       link-external-icon: false
       link-external-newwindow: true
 
       tbl-cap-location: bottom
-      fig-cap-location: bottom
+      fig-cap-location: margin
+      fig-numbering: true
       citation: true
       citation-location: document
       reference-location: margin
@@ -22,10 +24,11 @@ contributes:
       description-title: Summary
       appendix-style: plain
 
+      lightbox: false 
       fig-dpi: 120
       fig-format: svg
 
-      code-copy: false
+      code-copy: true
       code-overflow: wrap
       code-annotations: hover
       search:
@@ -37,14 +40,8 @@ contributes:
       toc-location: left
       toc-title: Content
 
-      format-resources:
-        - _brand.yml
-        - mb-logo.png
-        - mb-banner.avif
-        - logo.svg
-        - banner.svg
-        - biblio.bib  
-
+      include-after-body:
+        - file: hacks.html      
       template-partials:
         - header.html
         - title-block.html
@@ -56,46 +53,9 @@ contributes:
           - rules.scss
           - brand      
 
-      fontsize: 15px
       grid:
         body-width: 700px
         sidebar-width: 200px
         margin-width: 210px
         gutter-width: 2rem
-
-      copyright: 2026
-      license: CC BY-NC 4.0
-
-      # format extras
-      logo: logo.svg
-      logo-href: ./
-      footer: |
-        <strong>Mel B. Labs</strong> -- a personal blog about statistics
-        and spatial econometrics.      
-      header:
-        palette: true
-        right: 
-          - icon: github
-            href: https://github.com/mbacou/mb-article
-          - icon: telegram
-            href: https://t.me/mbacou
-          - icon: linkedin
-            href: https://linkedin.com/in/mbacou
-          - icon: youtube
-            href: https://youtube.com/\@mbacou/playlists
-        left:
-          - text: Link 1
-            icon: link
-            href: ./
-          - text: Link 2
-            icon: link
-            href: ./
-          - text: Link 3
-            icon: link
-            href: ./         
-
-      
-        
-
-
 

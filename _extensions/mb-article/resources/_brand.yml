@@ -1,5 +1,6 @@
 meta:
   name: Mel B. Labs
+  logo: quarto.ico
   link:
     home: https://mbacou.github.io/mb-article
     github: https://github.com/mbacou/mb-article
@@ -22,8 +23,11 @@ color:
     dark:      "#003946"
     grid:      "#e7e2da"
 
+  foreground:  gray
+  background:  light
   primary:     brick
   secondary:   purple
+  tertiary:    gray
   info:        blue
   success:     green
   warning:     orange
@@ -36,20 +40,22 @@ typography:
     - family: Crimson Text
       source: google
       weight: [400, 500, 600]
-    - family: M PLUS Code Latin
+    - family: Iosevka Charon Mono
       source: google
       weight: [400, 500]
     - family: Caveat
       source: google
       weight: [400]
 
-  base: Crimson Text
+  base: 
+    family: Crimson Text
+    size: 19px
+    line-height: 2
   headings: Caveat
-  monospace: M PLUS Code Latin
-  
-  
-  
-  
+  monospace: 
+    family: Iosevka Charon Mono
+    size: 14px
+ 
 
   
 

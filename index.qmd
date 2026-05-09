@@ -7,7 +7,7 @@ draft: false
 freeze: false
 thanks: Special acknowledgments and funding sources
 doi: "123.4567"
-bibliography: biblio.bib
+bibliography: index.bib
 author:
   - name: Author-1
     linkedin: mbacou 
@@ -33,10 +33,6 @@ abstract: |
 
 description: |
   **mb-article** is a Quarto extension for HTML formats with an opinionated academic design and simplified navigational elements.
-
-title-block-banner: url(banner.svg)
-format-links: pdf
-format: mb-article-html
 ---
 
 # Introduction
@@ -45,14 +41,14 @@ This document is an example that demonstrates the formatting and features of the
 
 Here is a sample margin note. The left column can also include side margins, but note that they will display above the TOC and branding (see below).
 
-::: {.aside .text-serif .fs-1 .mb-2}
-aside -- A note placed in the page margin with CSS classes `.aside .text-serif`.
+::: {.aside .note .text-serif}
+aside -- A note placed in the page margin with CSS classes .aside.note.text-serif.
 :::
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 
-::: {.aside .bg-danger-subtle .text-danger .p-2}
-aside -- A note placed in the page margin with CSS class `.aside .bg-danger-subtle .text-danger`.
+::: {.aside .note .danger}
+aside -- A note placed in the page margin with CSS classes `.aside.note.danger`.
 :::
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -80,8 +76,8 @@ Bootstrap colors inherit from [_brand.yml](_brand.yml) so customizations are str
 
 # Typography
 
-::: {.column-sidebar .bg-info-subtle .p-2 .text-info}
-column-sidebar -- A note placed in the left column with CSS class `column-sidebar`.
+::: {.column-sidebar .note .info}
+column-sidebar -- A note placed in the left column with CSS class `.column-sidebar.note.info`.
 :::
 
 Bootstrap default line-height and font sizing typically work, but this format enforces a strict vertical rhythm whenever possible[^1]. I made sure to define all vertical spacing and padding as multiples of a standard line height of `$spacer`.
@@ -93,17 +89,18 @@ No additional changes to font definitions aside from using `Crimson Pro` and `M+
 [^2]: M+ font system was designed by Japanese artist [Coji Morishita](https://mplusfonts.github.io/) with extended support for Latin, Japanese, Cyrillic. It is an excellent monospace font for smaller display sizes.
 
 ::: {.aside}
-![](logo.svg){.rounded-circle}
+![Example](logo.png){.rounded-circle .lightbox}
 
-A rounded image with `.rounded-circle` moved to the margin.
+A rounded image with `.rounded-circle.lightbox` moved to the margin.
 :::
 
 Here are **bold**, *italic*, and <small>smaller</small> text spans. Here are ^superscript^ and ~subscript~ characters, and ~~strikethrough~~ notes. Standard Bootstrap semantic colors with e.g. [.text-info]{.text-info} provide accented text. In addition this theme uses [.text-muted]{.text-muted} to de-emphasize content such as post metadata, margin notes, and captioning.
 
 ## Heading 2
 
-> Quoted lines.
-> <small>With a signature</small>
+> Quoted lines.   
+> Over multiples lines.   
+> [--- With a signature]{.small}
 
 ### Heading 3
 
@@ -137,39 +134,88 @@ Here is a long footnote reference[^3]. Caption and footnote placement can be con
 
 [^3]: Here's a margin note with multiple paragraph blocks and a fancy section header.
 
-    ##### Heading 5
+    ###### Heading 6
 
     With subsequent paragraphs indented to show that they belong to the previous footnote.
 
-###### Section 6
+###### Heading 6 (label)
 
-Headers at level 6 are used as fancy section dividers.
+Headers at level 6 are used as section dividers.
 
 
 # Figures & Plots
 
+We recommend using `library(brand.yml)`[^brand.yml] to automatically apply brand typography and color  palette to tables and charts.
+
+In the example below I use my own `mbutils` branding utilities.
+
+[^brand.yml]: See [brand.yml](https://posit-dev.github.io/brand-yml/pkg/r/reference/index.htmll) package documentation for details.
+
 ```{r}
 #| column: page-right
 #| fig-cap: A sample dynamic graph
-
 library(ggplot2)
+library(mbutils)
 
 ggplot(mtcars, aes(factor(carb), mpg, fill = factor(carb))) +
   geom_col() +
   guides(fill = guide_legend(nrow = 1)) +
+  scale_brand_df() +
   labs(
     title = "Custom ggplot with Bootstrap brand",
     subtitle = "Theme provided by R package `mblabs`",
     caption = "A long plot caption with many references
     over multiples lines."
   ) +
-  theme(legend.position = "bottom")
+  theme_brand(
+    base_bg = "light",
+    base_color = "gray",
+    base_family = "monospace",
+    legend.position = "top"
+  )
+```
+
+My utility package [`mbutils`](https://mbacou.github.io/mbutils) also includes a fully-themed ggplot replacement with `brand_on()`.
+
+```{r}
+#| column: page-right
+#| fig-cap: A sample dynamic graph
+brand_on()
+
+ggplot(
+  mtcars,
+  aes(factor(carb), mpg, fill = factor(carb))
+) +
+  geom_col() +
+  guides(fill = guide_legend(nrow = 1)) +
+  scale_brand_df(c("purple", "light")) +
+  labs(
+    title = "Custom ggplot with Bootstrap brand",
+    subtitle = "Theme provided by R package `mblabs`",
+    caption = "A long plot caption with many references
+    over multiples lines."
+  )
+
+# Or using base R plot
+col = sapply((20 + 15 * 6:1) / 100, function(x) pal("purple", alpha = x))
+plot(mpg ~ factor(carb), data = mtcars, col = col)
+axes(
+  c(3, 4),
+  nx = F,
+  main = "Base R Plot",
+  sub = "with Bootstrap branding",
+  xlab = "X label",
+  ylab = "Y label"
+)
+legend(1:6, fill = col)
+
+brand_off()
 ```
 
 
 # Tables
 
-I prefer my tables to resemble LaTeX typesetting, so a few simple changes here.
+I prefer my tables to use traditional LaTeX typesetting, so a few simple changes to Bootstrap defaults here.
 
 |        |      |
 |--------|-----:|
@@ -185,7 +231,7 @@ I prefer my tables to resemble LaTeX typesetting, so a few simple changes here.
 | pear   | 1.37  |
 | orange | 3.09  |
 
-: Caption: compact spacing borderless {.borderless .hover .sm}
+: Caption: compact spacing and borderless {.borderless .hover .sm}
 
 | fruit  | price |
 |--------|-------|
@@ -193,7 +239,7 @@ I prefer my tables to resemble LaTeX typesetting, so a few simple changes here.
 | pear   | 1.37  |
 | orange | 3.09  |
 
-: Caption: striped hover {.striped .hover}
+: Caption: striped rows and hover effect {.striped .hover}
 
 ::: column-page-right
 A table running over the right margin.
@@ -222,7 +268,6 @@ A table running over the left sidebar.
 ```{r}
 #| column: page
 #| tbl-cap: A full-width table to increase content space
-
 knitr::kable(mtcars[1:6, 1:10])
 ```
 

@@ -6,4 +6,54 @@ project:
   preview:
     port: 5555
 
-highlight-style: tango 
+website:
+  title: "mb-article - Quarto Format"
+  favicon: favicon.svg
+  image: logo.png
+  description: mb-article - Custom Quarto Format
+  site-url: https://mbacou.github.io/mb-article
+  repo-url: https://github.com/mbacou/mb-article
+  repo-actions: [edit, issue]
+  search: true 
+  back-to-top-navigation: false
+  page-navigation: false
+  bread-crumbs: false
+
+highlight-style: tango
+
+format:
+  mb-article-html:
+    author:
+      - name: BACOU, Melanie
+        linkedin: mbacou 
+        email: author-1@mail.com
+        orcid: 0000-0003-1810-6820
+        affiliation: mbacou.com
+
+    status: DRAFT waiting for review
+
+    logo: logo.png
+    logo-href: /
+    title-block-banner: url(banner.svg)  
+    license: CC BY-NC 4.0
+    copyright: © Mel B. Labs - a personal blog about statistics and spatial econometrics.
+
+    header:
+      palette: true
+      left:
+        - text: Menu 1
+          icon: link
+          href: index.qmd
+        - text: Menu 2
+          icon: link
+          href: index.qmd       
+      right: 
+        - icon: github
+          href: https://github.com/mbacou/mb-article
+        - icon: telegram
+          href: https://t.me/mbacou
+        - icon: linkedin
+          href: https://linkedin.com/in/mbacou
+        - icon: youtube
+          href: https://youtube.com/\@mbacou/playlists
+

@@ -35,7 +35,7 @@ nav .nav-item .bi {
   backdrop-filter: blur(3px);
 }
 .border-grid {
-  border-top-color: $grid;
+  border-top: solid 1px $grid;
 }
 .text-muted {
   color: $text-muted !important;
@@ -46,4 +46,29 @@ nav .nav-item .bi {
 }
 .text-serif {
   font-family: $font-family-serif;
+  font-size: $font-size-lg;
+}
+.note {
+  color: $secondary;
+  background-color: tint-color($secondary, 85%);
+  padding: 1rem 1rem 0;
+  margin-bottom: 1rem;
+  border-radius: $border-radius;
+  line-height: $line-height-lg;
+}
+.info {
+  color: $info;
+  background-color: tint-color($info, 85%);  
+}
+.success {
+  color: $success;
+  background-color: tint-color($success, 85%);  
+}
+.warning {
+  color: $warning;
+  background-color: tint-color($warning, 85%);  
+}
+.danger {
+  color: $danger;
+  background-color: tint-color($danger, 85%);  
 }

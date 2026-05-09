@@ -2,12 +2,12 @@
   class="d-flex flex-column justify-content-around h-100 pt-5 px-2">
 
   <!-- Fixed article meta -->
-  <div class="mb-meta mt-2 mt-md-5 mb-auto">
+  <div class="mb-meta mt-2 mt-md-3 mb-3">
 
     <p>$date-modified$<i class="bi bi-clock ms-1"></i></p>
 
     $if(description)$
-    <div class="lh-sm fs-2 text-muted"><em>$description$</em></div>
+    <div class="lh-lg fs-2 text-muted"><em>$description$</em></div>
     $endif$
 
   </div>
@@ -19,25 +19,23 @@
   $table-of-contents$
 
   <!-- Back to top -->
-  <div class="text-sans pt-1 mb-auto lh-sm fs-5 border-grid">
-    <p><a class="text-decoration-none" href="#quarto-appendix">References <i
-          class="bi bi-arrow-down-square ms-1"></i></a><br />
-      <a class="text-decoration-none" href="#mb-title-block">Back
-        to top <i class="bi bi-arrow-up-square ms-1"></i></a>
-    </p>
+  <div class="d-flex flex-column text-sans pt-1 mb-auto lh-lg fs-6 border-grid">
+    <a href="#quarto-appendix">References <i class="bi bi-link-45deg ms-1"></i></a>
+    <a href="#citation">How to cite <i class="bi bi-share ms-1"></i></a>
+    <a class="mt-1 border-grid pt-1 text-muted" href="#mb-title-block">Back
+      to top <i class="bi bi-arrow-up ms-1"></i></a>
   </div>
 
   <!-- Optional sidebar logo -->
   $if(logo)$
-  <div class="d-none d-lg-block mt-2">
+  <div class="d-none d-lg-block mt-4">
     <a href="$logo.url$"><img src="$logo$" alt="Logo" class="mb-logo img-fluid"></a>
   </div>
   $endif$
 
-  <!-- Optional sidebar footer -->
-  $if(footer)$
-  <div class="lh-sm fs-3 text-muted mt-2">
-    $footer$
+  <!-- Copyright -->
+  $if(copyright)$
+  <div id="mb-copyright" class="lh-sm fs-3 text-muted my-2">
   </div>
   $endif$
 

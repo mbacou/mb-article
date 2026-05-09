@@ -33,16 +33,24 @@ $gray-900: tint-color($gray, 10%);
 
 $body-color: $gray-800;
 $body-bg: $light;
-$link-color: $gray-700;
+$link-color: $secondary;
+$link-hover-color: $gray;
 $text-muted: rgba($body-color, .80);
-$code-color: $gray-700;
-$shaded: rgba(tint-color($body-bg, 25%), .65);  // also $input-bg
+$code-color: inherit;
+$shaded: rgba(tint-color($body-bg, 85%), .65);  // also $input-bg
+$min-contrast-ratio:   4;
 
 $headings-font-color: $gray-900;  // darker than text
 $headings-font-weight: 400;
 $font-weight-bold: 500;
 
-$spacer: 2rem; // 2 x 15px line-height
+$font-size-root: 15px !default;
+$font-size-sm: calc($font-size-base - 2px);
+$font-size-lg: calc($font-size-base + 2px);
+$sub-sup-font-size: calc($font-size-base - 5px);
+$lead-font-size: 2rem;
+
+$spacer: 2rem;  // 2*15px in _quarto.yml
 $spacers: (
   0: 0,
   1: $spacer * .25,
@@ -52,17 +60,8 @@ $spacers: (
   5: $spacer * 2,
 );
 
-$font-size-base: 20/15 * 1rem; // 1rem = 15px in YAML
-$font-size-sm: calc($font-size-base - 2px);
-$font-size-lg: calc($font-size-base + 2px);
-$code-font-size: calc($font-size-base - 5px);
-$sub-sup-font-size: calc($font-size-base - 5px);
-$lead-font-size: 2rem;
-$blockquote-font-size: $font-size-lg;
-
-$line-height-base: calc($spacer / $font-size-base) !default;
-$line-height-sm: 1.5rem;
-$line-height-lg: 1.75rem;
+$line-height-sm: 1.25rem;
+$line-height-lg: 1.5rem;
 $list-inline-padding: .25rem;
 
 $h1-font-size: calc($font-size-base + 14px);  // 34px
@@ -70,15 +69,15 @@ $h2-font-size: calc($font-size-base + 10px);  // 30px
 $h3-font-size: calc($font-size-base +  6px);  // 26px
 $h4-font-size: calc($font-size-base +  4px);  // 24px
 $h5-font-size: calc($font-size-base +  2px);  // 22px
-$h6-font-size: calc($font-size-base +  2px);
+$h6-font-size: calc($code-font-size -  2px);
 
 $font-sizes: (
   1: calc($font-size-base - 0px),
-  2: calc($font-size-base - 2px),
-  3: calc($font-size-base - 4px),
-  4: calc($font-size-base - 6px),
-  5: calc($font-size-base - 7px),
-  6: calc($font-size-base - 8px)
+  2: calc($font-size-base - 1px),
+  3: calc($font-size-base - 2px),
+  4: calc($font-size-base - 3px),
+  5: calc($font-size-base - 4px),
+  6: calc($font-size-base - 5px)
 );
 
 $enable-rounded: true;
@@ -123,7 +122,7 @@ $component-active-bg: rgba($primary, 12%);
 $form-label-margin-top: 0rem;
 $form-label-margin-bottom: 0.5rem;
 $form-label-color: $border-color;
-$form-label-font-size: calc($code-font-size - 2px);
+$form-label-font-size: $code-font-size;
 $form-label-font-weight: 500;
 $list-group-bg: $input-bg;
 $list-group-border-color: $input-border-color;
@@ -168,8 +167,8 @@ $navbar-brand-margin-end: 2rem;
 $navbar-toggler-font-size: $code-font-size;
 
 $nav-link-color: $body-color;
-$nav-link-active-color: $body-color;
-$nav-link-hover-color: $primary;
+$nav-link-active-color: $gray;
+$nav-link-hover-color: $gray;
 $nav-link-font-family: $font-family-sans-serif;
 $nav-link-font-size: $code-font-size;
 $nav-link-font-weight: 400;
@@ -186,17 +185,29 @@ $sidebar-font-size-section-collapse: $font-size-sm;
 
 /*-- scss:rules --*/
 body {
+  font-size: $font-size-base;
   line-height: 2rem;
 }
 p, ol, ul {
   margin: 0 0 1rem 0;
 }
+ul li::marker {
+  font-size: .85em;
+}
 hr {
   border-top: double .25rem $hr-border-color;
   margin: .5rem 0 2.25rem;
 }
-
-label, .label, #toc-title, #quarto-appendix h2 {
+a {
+  text-decoration: none;
+}
+a:hover {
+  filter: darken($link-color, 1);
+}
+a .uri, .citation a {
+  text-decoration: underline;
+}
+label, .label, #toc-title, #quarto-appendix h2, h6, .h6 {
   display: block;
   color: $gray-900;
   font-size: $form-label-font-size;
@@ -220,15 +231,16 @@ small, .small {
 }
 
 // Headings
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .title {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, .title {
   font-weight: $headings-font-weight;
-  line-height: 3rem;
+  line-height: 2.5rem;
   padding: 0;
   margin: 2rem 0 1rem 0;
 }
 h1.title, p.title {
   font-family: $headings-font-family;
   font-size: calc($h1-font-size + 6px);
+  line-height: 3rem;
   margin: 0 0 1rem 0 !important;
 }
 h1.quarto-secondary-nav-title {
@@ -244,21 +256,17 @@ h2, .h2 {
 h4, .h4 {
   color: $gray-500;
 }
-h3, .h3 {
-  line-height: 2.5rem;
-}
-h4, .h4, h5, .h5, h6, .h6 {
+h4, .h4, h5, .h5 {
   line-height: 2rem;
 }
 h5, .h5 {
   color: $primary;
 }
 h6, .h6 {
-  color: $secondary;
-  font-family: $font-family-serif;
-  margin: 0 0 1rem 0;
-  transform: rotate(-.6deg);
+  font-size: $h6-font-size;
+  margin-bottom: 0;
 }
+
 .lead, .lead p, p.subtitle {
   font-family: $font-family-base;
   font-size: $lead-font-size;
@@ -268,6 +276,19 @@ h6, .h6 {
   font-style: normal;
   line-height: 2rem;
   margin-bottom: 3rem;
+}
+.blockquote {
+  font-family: $font-family-serif;
+  font-size: 2.5rem;
+  color: $body-color;
+  text-align: center;
+  padding: 0 2rem;
+  border: none;
+}
+.blockquote .small {
+  font-family: $font-family-base;
+  font-size: $font-size-sm;
+  color: $text-muted;
 }
 
 // Code blocks
@@ -283,9 +304,9 @@ code span.fu, code span.sc {
 }
 p code:not(.sourceCode), li code:not(.sourceCode), 
 td code:not(.sourceCode) {
-  color: inherit;
   font-family: $font-family-monospace;
-  font-size: $code-font-size;
+  font-size: .8em;
+  font-weight: 500;
   line-height: inherit;
   background-color: $shaded;
   padding: 0 .25rem !important;
@@ -426,11 +447,22 @@ main {
   display: none;
 }
 #quarto-appendix {
-  border-top: solid 1px $border-color;
+  color: $text-muted;
   background-color: $body-bg;
-  grid-column-start: body-start;
   grid-column-end: page-end;
   font-size: $font-size-sm;
+  margin: 0 2rem;
+  padding: 2rem;
+}
+#quarto-copyright, #quarto-reuse, div.toc-actions {
+  display: none;
+}
+.quarto-appendix-heading {
+  border-top: solid 1px $border-color;
+}
+.quarto-appendix-citeas, .csl-entry span {
+  color: $body-color;
+  font-style: italic;
 }
 
 #mb-header {
@@ -455,7 +487,13 @@ main {
   margin: 0;
   padding: 0; 
   max-width: 35vw;
-  background-color: rgba($body-bg, .65);
+  overflow: hidden;
+  background-color: rgba($body-bg, .85);
+  backdrop-filter: blur(3px);
+}
+#quarto-sidebar ul {              
+  overflow-y: scroll;                            // hide TOC scrollbars
+  scrollbar-width: none;  
 }
 .sidebar.sidebar-navigation:not(.rollup) {
   background-color: transparent;
@@ -465,7 +503,7 @@ main {
   padding: 0;
 }
 .sidebar nav[role=doc-toc]>ul li a {
-  color: $nav-link-color;
+  color: $nav-link-color !important;
   text-align: end;
   line-height: 1.5rem;
   font-family: $nav-link-font-family;
@@ -476,25 +514,31 @@ main {
 }
 .sidebar nav[role=doc-toc]>ul li a.nav-link,
 .sidebar nav[role=doc-toc] ul>li>ul>li>a.nav-link {
+  color: $nav-link-color !important;
   border: none;
   border-right: solid 4px transparent;
 }
 .sidebar nav[role=doc-toc] ul>li>a.nav-link.active,
 .sidebar nav[role=doc-toc] ul>li>ul>li>a.nav-link.active {
+  color: $nav-link-active-color !important;
   border: none;
   border-right: solid 4px $primary;
 }
 .sidebar nav[role=doc-toc] ul>li>a.nav-link:hover,
 .sidebar nav[role=doc-toc] ul>li>ul>li>a.nav-link:hover {
+  color: $nav-link-hover-color !important;
   border: none;
-  border-right: solid 4px $border-color;
-  background-color: rgba($nav-link-hover-color, 10%);
+  border-right: solid 4px tint-color($primary, 50%);
+  background-color: rgba($nav-link-hover-color, .1);
 }
 .sidebar nav[role=doc-toc] ul>li>ul {
   margin-bottom: .25rem;
 }
 .sidebar nav[role=doc-toc] ul>li>ul a {
   padding-right: 1.5rem;
+}
+.toc-action i {
+  margin-right: .5rem;
 }
 
 #quarto-search {
