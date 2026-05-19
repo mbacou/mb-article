@@ -31,8 +31,6 @@ contributes:
       code-copy: true
       code-overflow: wrap
       code-annotations: hover
-      execute: 
-        results: hold
       search:
         show-item-context: true
 

@@ -20,6 +20,8 @@ website:
   bread-crumbs: false
 
 highlight-style: a11y-light
+execute: 
+  results: hold
 
 format:
   mb-article-html:
