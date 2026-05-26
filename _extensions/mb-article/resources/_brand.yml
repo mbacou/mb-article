@@ -50,11 +50,11 @@ typography:
   base: 
     family: Crimson Text
     size: 19px
-    line-height: 2
+    line-height: 28/19
   headings: Caveat
   monospace: 
     family: Iosevka Charon Mono
-    size: 14px
+    size: 13px
  
 
   

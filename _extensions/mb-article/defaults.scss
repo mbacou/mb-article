@@ -37,10 +37,10 @@ $link-color: $gray;
 $link-hover-color: $gray;
 $text-muted: rgba($body-color, .80);
 $code-color: inherit;
-$shaded: rgba(tint-color($body-bg, 65%), .65);  // also $input-bg
+$shaded: rgba(tint-color($body-bg, 85%), .85);  // also $input-bg
 $min-contrast-ratio:   4;
 
-$headings-font-color: $gray-900;  // darker than text
+$headings-font-color: $gray-700;  // lighter than text
 $headings-font-weight: 400;
 $font-weight-bold: 500;
 
@@ -69,7 +69,7 @@ $h2-font-size: calc($font-size-base + 11px);  // 30px
 $h3-font-size: calc($font-size-base +  9px);  // 26px
 $h4-font-size: calc($font-size-base +  7px);  // 24px
 $h5-font-size: calc($font-size-base +  5px);  // 22px
-$h6-font-size: calc($code-font-size +  0px);
+$h6-font-size: calc($font-size-base -  4px);
 
 $font-sizes: (
   0: calc($font-size-base + 1px),
@@ -121,8 +121,8 @@ $component-active-bg: rgba($primary, 12%);
 
 $form-label-margin-top: 0rem;
 $form-label-margin-bottom: 0.5rem;
-$form-label-color: $body-color;
-$form-label-font-size: $code-font-size;
+$form-label-color: $gray-500;
+$form-label-font-size: $h6-font-size;
 $form-label-font-weight: 500;
 $list-group-bg: $input-bg;
 $list-group-border-color: $input-border-color;
@@ -169,6 +169,7 @@ $navbar-toggler-font-size: $code-font-size;
 $nav-link-color: $body-color;
 $nav-link-active-color: $gray;
 $nav-link-hover-color: $gray;
+$nav-link-hover-bg: rgba($primary, .1);
 $nav-link-font-family: $font-family-sans-serif;
 $nav-link-font-size: $code-font-size;
 $nav-link-font-weight: 400;
@@ -210,12 +211,11 @@ a .uri, .citation a {
 }
 label, .label, #toc-title, #quarto-appendix h2, h6, .h6 {
   display: block;
-  color: $gray-900;
+  color: $form-label-color;
   font-size: $form-label-font-size;
   font-family: $font-family-sans-serif;
   font-weight: $form-label-font-weight;
   text-transform: uppercase;
-  letter-spacing: 1px;
   line-height: 1.75rem;
   padding-bottom: .25rem;
 }
@@ -282,15 +282,16 @@ h6, .h6 {
 .blockquote {
   font-family: $font-family-serif;
   font-size: 2.5rem;
-  color: $body-color;
+  color: rgba($text-muted, 50%);
   text-align: center;
   padding: 0 2rem;
   border: none;
 }
 .blockquote .small {
   font-family: $font-family-base;
-  font-size: $font-size-sm;
-  color: $text-muted;
+  font-size: $font-size-base;
+  font-weight: 500;
+  color: $body-color;
 }
 
 // Code blocks
@@ -334,7 +335,7 @@ div.sourceCode {
 }
 pre.sourceCode, pre>code.sourceCode>span {
   font-size: $code-font-size;
-  line-height: 1.75rem;
+  line-height: 1.5rem;
   background: none;
   padding: 0;
 }
@@ -472,6 +473,9 @@ main {
   background-color: rgba($body-bg, .65);  
   backdrop-filter: blur(3px);  
 }
+.nav-link:hover {
+  background-color: $nav-link-hover-bg;
+}
 .mb-header-logo {
   height: 3rem;
   width: 3rem;
@@ -531,7 +535,7 @@ main {
   color: $nav-link-hover-color !important;
   border: none;
   border-right: solid 4px tint-color($primary, 50%);
-  background-color: rgba($nav-link-hover-color, .1);
+  background-color: $nav-link-hover-bg;
 }
 .sidebar nav[role=doc-toc] ul>li>ul {
   margin-bottom: .25rem;

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -97,14 +97,14 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-8b98e0613004d7cae1566b2c21ad7e12.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8b98e0613004d7cae1566b2c21ad7e12.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-8b98e0613004d7cae1566b2c21ad7e12.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-4f7c0e5da25649d9d1266b2eb28ceaf6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4f7c0e5da25649d9d1266b2eb28ceaf6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-4f7c0e5da25649d9d1266b2eb28ceaf6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8c040adefda00ceab0c2335abc8e84c0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-a22e082044c3e03041d0f81abd4f8511.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-8c040adefda00ceab0c2335abc8e84c0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-76cb0d9f26c2269264a2e9bd71bcf51e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-0454b71a19212f4b878e78ba92869b07.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-76cb0d9f26c2269264a2e9bd71bcf51e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -155,16 +155,17 @@ div.csl-indent {
   <!-- Fixed article meta -->
   <div class="mb-meta mt-2 mt-md-3 mb-3">
 
-    <p>May 9, 2026<i class="bi bi-clock ms-1"></i></p>
+    <p>May 26, 2026<i class="bi bi-clock ms-1"></i></p>
 
         <div class="lh-sm fs-2 text-muted"><em><p><strong>mb-article</strong> is a Quarto extension for HTML formats with an opinionated academic design and simplified navigational elements.</p></em></div>
     
   </div>
 
   <!-- Quarto TOC -->
-    <label class="text-primary fs-4">Content</label>
+    <label class="text-primary">Content</label>
     <ul>
-    <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+    <li><a href="#installation" id="toc-installation" class="nav-link active" data-scroll-target="#installation">Installation</a></li>
+    <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
     <li><a href="#brand-colors" id="toc-brand-colors" class="nav-link" data-scroll-target="#brand-colors">Brand Colors</a></li>
     <li><a href="#typography" id="toc-typography" class="nav-link" data-scroll-target="#typography">Typography</a>
     <ul class="collapse">
@@ -219,11 +220,11 @@ div.csl-indent {
 
           <li class="nav-item flex-fill">
         <a class="nav-link" href="./index.html">
-          <span class="menu-text">Menu 1</span></a>
+          <span class="menu-text">Menu Link 1</span></a>
       </li>
           <li class="nav-item flex-fill">
         <a class="nav-link" href="./index.html">
-          <span class="menu-text">Menu 2</span></a>
+          <span class="menu-text">Menu Link 2</span></a>
       </li>
         </ul>
 
@@ -303,10 +304,14 @@ div.csl-indent {
 
   
 
-   <div class="no-row-height column-margin column-container"><ul class="navbar-nav d-flex flex-row gap-3 my-2 text-sans text-uppercase">
-    <li class="nav-item"><i class="me-1 bi bi-square"></i>Draft
+   <div class="no-row-height column-margin column-container"><ul class="navbar-nav d-flex flex-row gap-3 my-2">
+    <li class="nav-item">
+      <label><i class="bi bi-square"></i>
+        Draft</label>
     </li>
-    <li class="nav-item me-2 me-md-4"><i class="me-1 bi bi-square"></i>Frozen
+    <li class="nav-item">
+      <label><i class="bi bi-square"></i>
+        Frozen</label>
     </li>
   </ul></div><p class="title display-7">mb-article HTML Format for Quarto</p> 
   <p class="subtitle lead"> A 3-column academic format for Quarto posts and articles </p>
@@ -360,12 +365,12 @@ div.csl-indent {
         <label>Reuse</label>
     <p id="mb-reuse" class="lh-lg fs-1 text-body"></p>
     
-    <label class="success p-1 mb-1 text-center"><i class="bi bi-file-pdf"></i>
-      <a class="text-success" href="index.odf">Download PDF</a></label>
+    <label class="success p-1 mb-2 text-center"><i class="bi bi-file-pdf"></i>
+      <a class="text-success" href="mb-article.pdf">Download PDF</a></label>
 
-  </div></div><div class="mx-lg-2">
+  </div></div><div class="mx-lg-3">
     <label>Abstract</label>
-    <div class="lh-lg fs-2 text-muted"><p>Abstract text – Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>
+    <div class="lh-lg fs-1 text-muted"><p>Abstract text – Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>
 
     <ul class="navbar-nav d-flex flex-row gap-1">
       <li class="nav-item fw-bold text-sans text-muted me-1">Keywords: </li>
@@ -379,10 +384,15 @@ div.csl-indent {
 </header>
 
 
+<section id="installation" class="level1">
+<h1>Installation</h1>
+<p>This will install the Quarto extension and create an example <code>.qmd</code> file that you can use as a starting place for your article.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use template mbacou/mb-article</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
 <section id="introduction" class="level1 page-columns page-full">
 <h1>Introduction</h1>
 <p>This document is an example that demonstrates the formatting and features of the current HTML format extension for Quarto.</p>
-<p>Here is a sample margin note. The left column can also include side margins, but note that they will display above the TOC and branding (see below).</p>
+<p>Right is a sample margin note. The left column can also include side margins, but they will display above the TOC and branding (see below).</p>
 
 <div class="no-row-height column-margin column-container"><div class="note text-serif margin-aside">
 <p>aside – A note placed in the page margin with CSS classes .aside.note.text-serif.</p>
@@ -432,7 +442,7 @@ Dark
 <p>column-sidebar – A note placed in the left column with CSS class <code>.column-sidebar.note.info</code>.</p>
 </div>
 <p>Bootstrap default line-height and font sizing typically work, but this format enforces a strict vertical rhythm whenever possible<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. I made sure to define all vertical spacing and padding as multiples of a standard line height of <code>$spacer</code>.</p>
-<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;About <strong>vertical rhythm</strong> and why it matters for content readability, see <a href="https://hnldesign.hashnode.dev/setting-a-flexible-baseline-grid-in-css">Klaas Leussink</a> article on his personal blog.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;M+ font system was designed by Japanese artist <a href="https://mplusfonts.github.io/">Coji Morishita</a> with extended support for Latin, Japanese, Cyrillic. It is an excellent monospace font for smaller display sizes.</p></div></div><p>No additional changes to font definitions aside from using <code>Crimson Pro</code> and <code>M+ Code</code> fonts<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> by default, but always customizable via <code>_brand.yml</code> utility.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;About <strong>vertical rhythm</strong> and why it matters for content readability, see <a href="https://hnldesign.hashnode.dev/setting-a-flexible-baseline-grid-in-css">Klaas Leussink</a> article on his personal blog.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;<strong>Iosevka Charon</strong> is a quasi-proportional font excellent for technical writing and dense UI. These font families are unique derivatives of <a href="https://github.com/jul-sh/iosevka-charon">Iosevka</a> (an open source font project) by be5invis.</p></div></div><p>No additional changes to font definitions aside from using <strong>Crimson Pro</strong> and <strong>Iosevka Charon Mon</strong> fonts<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> by default – but fonts are always customizable using a modified <code>_brand.yml</code> file.</p>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <div class="quarto-figure quarto-figure-center">
@@ -441,14 +451,14 @@ Dark
 <figcaption>Example</figcaption>
 </figure>
 </div>
-<p>A rounded image with <code>.rounded-circle.lightbox</code> moved to the margin.</p>
-</div></div><p>Here are <strong>bold</strong>, <em>italic</em>, and <small>smaller</small> text spans. Here are <sup>superscript</sup> and <sub>subscript</sub> characters, and <del>strikethrough</del> notes. Standard Bootstrap semantic colors with e.g.&nbsp;<span class="text-info">.text-info</span> provide accented text. In addition this theme uses <span class="text-muted">.text-muted</span> to de-emphasize content such as post metadata, margin notes, and captioning.</p>
+<p>A rounded image with <code>.rounded-circle.lightbox</code> placed in the margin.</p>
+</div></div><p>Here are <strong>bold</strong>, <em>italic</em>, and <small>smaller</small> text spans. Here are <sup>superscript</sup> and <sub>subscript</sub> characters, and <del>strikethrough</del> notes. Standard Bootstrap semantic colors with e.g.&nbsp;<span class="text-info">.text-info</span> provide accented text. In addition this theme uses <span class="text-muted">.text-muted</span> to de-emphasize content such as post metadata, margin notes, and captioning, as well as <span class="text-serif">.text-serif</span> for the occasional Serif font.</p>
 <section id="heading-2" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="heading-2">Heading 2</h2>
 <blockquote class="blockquote">
-<p>Quoted lines.<br>
+<p>Quoted citation<br>
 Over multiples lines.<br>
-<span class="small">— With a signature</span></p>
+<span class="small">— From author</span></p>
 </blockquote>
 <section id="heading-3" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="heading-3">Heading 3</h3>
@@ -473,11 +483,11 @@ Over multiples lines.<br>
 <p>And a paragraph of content after the rule.</p>
 <section id="heading-4" class="level4 page-columns page-full">
 <h4 class="anchored" data-anchor-id="heading-4">Heading 4</h4>
-<p>By default citations (and cross-references) are read in from an external <code>references.bib</code> file, but this may be edited in the YAML front matter as usual. Each citation must have a key, composed of ‘@’ + the citation identifier from the database. Here is a margin reference to <span class="citation" data-cites="xie2015">(<a href="#ref-xie2015" role="doc-biblioref">Xie 2015</a>)</span>.</p>
+<p>By default citations (and cross-references) are read in from an external <code>index.bib</code> file, but this may be edited in the YAML front matter as usual. Each citation must have a key, composed of ‘@’ + the citation identifier from the database. For example here is a margin reference to <span class="citation" data-cites="xie2015">(<a href="#ref-xie2015" role="doc-biblioref">Xie 2015</a>)</span>.</p>
 <section id="heading-5" class="level5 page-columns page-full">
 <h5 class="anchored" data-anchor-id="heading-5">Heading 5</h5>
-<p>Here is a long footnote reference<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. Caption and footnote placement can be controlled in the config files <code>_quarto_yml</code> and/or <code>_metadata.yml</code>, or directly in the YAML front matter.</p>
-<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;Here’s a margin note with multiple paragraph blocks and a fancy section header.</p>
+<p>A longer footnote reference<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. Caption and footnote placement are controlled via config files <code>_quarto_yml</code> and/or <code>_metadata.yml</code>, or directly in the document YAML front matter.</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;Here’s a margin note with multiple paragraph blocks and a section header.</p>
 <h6 id="heading-6" class="anchored">Heading 6</h6>
 <p>With subsequent paragraphs indented to show that they belong to the previous footnote.</p></div></div><section id="heading-6-label" class="level6">
 <h6 class="anchored" data-anchor-id="heading-6-label">Heading 6 (label)</h6>
@@ -491,28 +501,28 @@ Over multiples lines.<br>
 <section id="figures-plots" class="level1 page-columns page-full">
 <h1>Figures &amp; Plots</h1>
 <p>We recommend using <code>library(brand.yml)</code><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> to automatically apply brand typography and color palette to tables and charts.</p>
-<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;See <a href="https://posit-dev.github.io/brand-yml/pkg/r/reference/index.htmll">brand.yml</a> package documentation for details.</p></div></div><p>In the example below I use my own <code>mbutils</code> branding utilities.</p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;See <a href="https://posit-dev.github.io/brand-yml/">brand.yml</a> package documentation for details.</p></div></div><p>In the example below I use my own R package <code>mbutils</code> to modify chart appearance.</p>
 <div class="cell page-columns page-full">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mbutils)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="fu">factor</span>(carb), mpg, <span class="at">fill =</span> <span class="fu">factor</span>(carb))) <span class="sc">+</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="at">nrow =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_brand_df</span>() <span class="sc">+</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Custom ggplot with Bootstrap brand"</span>,</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Theme provided by R package `mbutils`"</span>,</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"A long plot caption with many references</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="st">    over multiples lines."</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_brand</span>(</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">base_bg =</span> <span class="st">"light"</span>,</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">base_color =</span> <span class="st">"gray"</span>,</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">base_family =</span> <span class="st">"monospace"</span>,</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">base_size =</span> <span class="dv">11</span>,</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"top"</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mbutils)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="fu">factor</span>(carb), mpg, <span class="at">fill =</span> <span class="fu">factor</span>(carb))) <span class="sc">+</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="at">nrow =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_brand_df</span>() <span class="sc">+</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Custom ggplot with Bootstrap brand"</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Theme provided by R package `mbutils`"</span>,</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"A long plot caption with many references</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="st">    over multiples lines."</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_brand</span>(</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">base_bg =</span> <span class="st">"light"</span>,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">base_color =</span> <span class="st">"gray"</span>,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">base_family =</span> <span class="st">"monospace"</span>,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">base_size =</span> <span class="dv">11</span>,</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"top"</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display page-columns page-full">
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
@@ -522,23 +532,23 @@ Over multiples lines.<br>
 </div>
 </div>
 </div>
-<p>My utility package <a href="https://mbacou.github.io/mbutils"><code>mbutils</code></a> also includes a fully-themed ggplot replacement with <code>brand_on()</code>.</p>
+<p>R package <a href="https://mbacou.github.io/mbutils"><code>mbutils</code></a> also includes a fully-themed ggplot replacement with <code>brand_on()</code>.</p>
 <div class="cell page-columns page-full">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">brand_on</span>()</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  mtcars,</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="fu">factor</span>(carb), mpg, <span class="at">fill =</span> <span class="fu">factor</span>(carb))</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="at">nrow =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_brand_df</span>(<span class="fu">c</span>(<span class="st">"purple"</span>, <span class="st">"light"</span>)) <span class="sc">+</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Custom ggplot with Bootstrap brand"</span>,</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Theme provided by R package `mbutils`"</span>,</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"A long plot caption with many references</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="st">    over multiples lines."</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">brand_on</span>()</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  mtcars,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="fu">factor</span>(carb), mpg, <span class="at">fill =</span> <span class="fu">factor</span>(carb))</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="at">nrow =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_brand_df</span>(<span class="fu">c</span>(<span class="st">"purple"</span>, <span class="st">"light"</span>)) <span class="sc">+</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Custom ggplot with Bootstrap brand"</span>,</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Theme provided by R package `mbutils`"</span>,</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"A long plot caption with many references</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="st">    over multiples lines."</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display page-columns page-full">
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
@@ -547,18 +557,18 @@ Over multiples lines.<br>
 </figure>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Or using base R plot</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>col <span class="ot">=</span> <span class="fu">sapply</span>((<span class="dv">20</span> <span class="sc">+</span> <span class="dv">15</span> <span class="sc">*</span> <span class="dv">6</span><span class="sc">:</span><span class="dv">1</span>) <span class="sc">/</span> <span class="dv">100</span>, <span class="cf">function</span>(x) <span class="fu">pal</span>(<span class="st">"purple"</span>, <span class="at">alpha =</span> x))</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mpg <span class="sc">~</span> <span class="fu">factor</span>(carb), <span class="at">data =</span> mtcars, <span class="at">col =</span> col)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">axes</span>(</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">4</span>),</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">nx =</span> F,</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"Base R Plot"</span>,</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">sub =</span> <span class="st">"with Bootstrap branding"</span>,</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"X label"</span>,</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="st">"Y label"</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">fill =</span> col, <span class="at">border =</span> <span class="cn">NA</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Or using base R plot</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>col <span class="ot">=</span> <span class="fu">sapply</span>((<span class="dv">20</span> <span class="sc">+</span> <span class="dv">15</span> <span class="sc">*</span> <span class="dv">6</span><span class="sc">:</span><span class="dv">1</span>) <span class="sc">/</span> <span class="dv">100</span>, <span class="cf">function</span>(x) <span class="fu">pal</span>(<span class="st">"purple"</span>, <span class="at">alpha =</span> x))</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mpg <span class="sc">~</span> <span class="fu">factor</span>(carb), <span class="at">data =</span> mtcars, <span class="at">col =</span> col)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">axes</span>(</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">4</span>),</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">nx =</span> F,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"Base R Plot"</span>,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">sub =</span> <span class="st">"with Bootstrap branding"</span>,</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"X label"</span>,</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="st">"Y label"</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">fill =</span> col, <span class="at">border =</span> <span class="cn">NA</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display page-columns page-full">
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
@@ -567,7 +577,7 @@ Over multiples lines.<br>
 </figure>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">brand_off</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">brand_off</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="tables" class="level1 page-columns page-full">
@@ -636,32 +646,6 @@ Over multiples lines.<br>
 </tr>
 </tbody>
 </table>
-<div class="column-page-right">
-<p>A table running over the right margin.</p>
-<table class="table-striped table-hover table-secondary table">
-<caption>Caption: striped hover secondary</caption>
-<thead>
-<tr class="header">
-<th>fruit</th>
-<th>price</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>apple</td>
-<td>2.05</td>
-</tr>
-<tr class="even">
-<td>pear</td>
-<td>1.37</td>
-</tr>
-<tr class="odd">
-<td>orange</td>
-<td>3.09</td>
-</tr>
-</tbody>
-</table>
-</div>
 <div class="column-page-left">
 <p>A table running over the left sidebar.</p>
 <table class="table-striped table-primary table">
@@ -688,11 +672,37 @@ Over multiples lines.<br>
 </tbody>
 </table>
 </div>
-<div class="cell page-columns page-full" data-tbl-cap="A full-width table to increase content space">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(mtcars[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="column-page-right">
+<p>A table running over the right margin.</p>
+<table class="table-striped table-hover table-secondary table">
+<caption>Caption: striped hover secondary</caption>
+<thead>
+<tr class="header">
+<th>fruit</th>
+<th>price</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>apple</td>
+<td>2.05</td>
+</tr>
+<tr class="even">
+<td>pear</td>
+<td>1.37</td>
+</tr>
+<tr class="odd">
+<td>orange</td>
+<td>3.09</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell page-columns page-full" data-tbl-cap="A full-width table to increase content space when needed">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(mtcars[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display column-page">
 <table class="table table-sm table-striped small">
-<caption>A full-width table to increase content space</caption>
+<caption>A full-width table to increase content space when needed</caption>
 <colgroup>
 <col style="width: 28%">
 <col style="width: 7%">
@@ -814,8 +824,8 @@ Over multiples lines.<br>
 <div id="ref-xie2015" class="csl-entry" role="listitem">
 Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Chapman; Hall/CRC. <a href="https://yihui.name/knitr/">https://yihui.name/knitr/</a>.
 </div>
-</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© Mel B. Labs - a personal blog about statistics and spatial econometrics.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{melanie2025,
-  author = {Melanie , BACOU and , Author-1 and , Author-2},
+</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© Mel B. Labs - a personal blog about statistics and spatial econometrics.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{2025,
+  author = {, Author-1 and , Author-2},
   title = {Mb-Article {HTML} {Format} for {Quarto}},
   date = {2025-11-12},
   url = {https://mbacou.github.io/mb-article/},
@@ -832,9 +842,9 @@ Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd 
     publishing software like Aldus PageMaker including versions of Lorem
     Ipsum.}
 }
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-melanie2025" class="csl-entry quarto-appendix-citeas" role="listitem">
-Melanie, BACOU, Author-1, and Author-2. 2025. <span>“Mb-Article HTML
-Format for Quarto.”</span> November 12. <a href="https://doi.org/123.4567">https://doi.org/123.4567</a>.
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-2025" class="csl-entry quarto-appendix-citeas" role="listitem">
+Author-1, and Author-2. 2025. <span>“Mb-Article HTML Format for
+Quarto.”</span> November 12. <a href="https://doi.org/123.4567">https://doi.org/123.4567</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {

@@ -40,7 +40,7 @@ typography:
     - family: Crimson Text
       source: google
       weight: [400, 500, 600]
-    - family: M PLUS Code Latin
+    - family: Iosevka Charon Mono
       source: google
       weight: [400, 500]
     - family: Caveat
@@ -53,9 +53,8 @@ typography:
     line-height: 28/19
   headings: Caveat
   monospace: 
-    family: M PLUS Code Latin
-    size: 14px
- 
-
+    family: Iosevka Charon Mono
+    size: 13px
   
+ 
 

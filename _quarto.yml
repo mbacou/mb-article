@@ -20,33 +20,20 @@ website:
   bread-crumbs: false
 
 highlight-style: a11y-light
-execute: 
-  results: hold
 
 format:
   mb-article-html:
-    author:
-      - name: BACOU, Melanie
-        linkedin: mbacou 
-        email: author-1@mail.com
-        orcid: 0000-0003-1810-6820
-        affiliation: mbacou.com
-
-    status: DRAFT waiting for review
-
     logo: logo.svg
     logo-href: /
-    title-block-banner: url(banner.svg)  
     license: CC BY-NC 4.0
     copyright: © Mel B. Labs - a personal blog about statistics and spatial econometrics.
-
     header:
       palette: true
       left:
-        - text: Menu 1
+        - text: Menu Link 1
           icon: link
           href: index.qmd
-        - text: Menu 2
+        - text: Menu Link 2
           icon: link
           href: index.qmd       
       right: 

@@ -30,13 +30,14 @@
     $endfor$
   </ul>
 
-  <ul
-    class="column-margin navbar-nav d-flex flex-row gap-3 my-2 text-sans text-uppercase">
-    <li class="nav-item"><i
-        class="me-1 bi bi-$if(draft)$check2-square$else$square$endif$"></i>Draft
+  <ul class="column-margin navbar-nav d-flex flex-row gap-3 my-2">
+    <li class="nav-item">
+      <label><i class="bi bi-$if(draft)$check2-square$else$square$endif$"></i>
+        Draft</label>
     </li>
-    <li class="nav-item me-2 me-md-4"><i
-        class="me-1 bi bi-$if(freeze)$check2-square$else$square$endif$"></i>Frozen
+    <li class="nav-item">
+      <label><i class="bi bi-$if(freeze)$check2-square$else$square$endif$"></i>
+        Frozen</label>
     </li>
   </ul>
 
@@ -76,14 +77,14 @@
     <p id="mb-reuse" class="lh-lg fs-1 text-body"></p>
     $endif$
 
-    <label class="success p-1 mb-1 text-center"><i class="bi bi-file-pdf"></i>
-      <a class="text-success" href="index.odf">Download PDF</a></label>
+    <label class="success p-1 mb-2 text-center"><i class="bi bi-file-pdf"></i>
+      <a class="text-success" href="$slug$.pdf">Download PDF</a></label>
 
   </div>
 
-  <div class="mx-lg-2">
+  <div class="mx-lg-3">
     <label>$abstract-title$</label>
-    <div class="lh-lg fs-2 text-muted">$if(abstract)$$abstract$$else$--$endif$</div>
+    <div class="lh-lg fs-1 text-muted">$if(abstract)$$abstract$$else$--$endif$</div>
 
     <ul class="navbar-nav d-flex flex-row gap-1">
       <li class="nav-item fw-bold text-sans text-muted me-1">Keywords: </li>

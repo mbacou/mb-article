@@ -33,7 +33,7 @@
 
 /* other quarto variables */
 :root {
-  --quarto-font-monospace: M PLUS Code Latin;
+  --quarto-font-monospace: Iosevka Charon Mono;
 }
 
 /* syntax highlight based on Pandoc's rules */
@@ -230,4 +230,4 @@ code span.wa {
   content: "</";
 }
 
-/*# sourceMappingURL=c5ba448eafa7b31e6d6389271f1c5d3a.css.map */
+/*# sourceMappingURL=121479c387fb755852e1f8dfd69350e2.css.map */
