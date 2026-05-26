@@ -14,10 +14,12 @@ website:
   site-url: https://mbacou.github.io/mb-article
   repo-url: https://github.com/mbacou/mb-article
   repo-actions: [edit, issue]
-  search: true 
   back-to-top-navigation: false
   page-navigation: false
   bread-crumbs: false
+  search:
+    type: overlay
+    show-item-context: true  
 
 highlight-style: a11y-light
 

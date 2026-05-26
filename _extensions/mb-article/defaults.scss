@@ -474,7 +474,7 @@ main {
   backdrop-filter: blur(3px);  
 }
 .nav-link:hover {
-  background-color: $nav-link-hover-bg;
+  background-color: $nav-link-hover-bg !important;
 }
 .mb-header-logo {
   height: 3rem;
@@ -552,4 +552,7 @@ main {
 }
 #quarto-search input {
   font-size: unset;
+}
+#quarto-search .aa-Autocomplete {
+  display: none;
 }

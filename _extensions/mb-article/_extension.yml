@@ -1,12 +1,13 @@
 title: mb-article
 author: Melanie Bacou
-version: 1.9.2
+version: 1.9.3
 quarto-required: ">=1.8.0"
 contributes:
   formats:
     html:
       date-format: medium
       date-modified: last-modified
+      search: true
       smooth-scroll: true
       link-external-icon: false
       link-external-newwindow: true
@@ -32,8 +33,6 @@ contributes:
       code-copy: true
       code-overflow: wrap
       code-annotations: hover
-      search:
-        show-item-context: true
 
       toc: true
       toc-depth: 3
