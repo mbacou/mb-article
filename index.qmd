@@ -7,7 +7,6 @@ draft: false
 freeze: false
 thanks: Special acknowledgments and funding sources
 doi: "123.4567"
-bibliography: index.bib
 status: DRAFT waiting for review
 title-block-banner: url(banner.svg)  
 author:
