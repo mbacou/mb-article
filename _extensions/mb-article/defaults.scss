@@ -206,7 +206,7 @@ a.url:hover {
   filter: darken($link-color, 1);
   text-decoration: underline;
 }
-a .uri, .citation a {
+a.uri, a.url, .citation a {
   text-decoration: underline;
 }
 label, .label, #toc-title, #quarto-appendix h2, h6, .h6 {
