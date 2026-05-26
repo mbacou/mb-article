@@ -51,4 +51,4 @@ format:
 
 ## Example
 
-Here is the source code for a minimal sample document [template.qmd](template.qmd).
+Here is the source code for a minimal sample document [index.qmd](index.qmd).
