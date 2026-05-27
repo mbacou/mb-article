@@ -113,6 +113,8 @@ $input-placeholder-color: $input-color;
 $input-border-color: $border-color;
 $input-disabled-bg: darken($input-bg, 4%);
 $input-group-addon-bg: $shaded;
+$input-btn-font-family: $font-family-sans-serif;
+$input-btn-font-size: $code-font-size;
 
 $jumbotron-bg: $shaded;
 $breadcrumb-active-color: $body-color;
@@ -471,9 +473,6 @@ main {
   z-index: 1300;
   background-color: rgba($body-bg, .65);  
   backdrop-filter: blur(3px);  
-}
-.nav-link:hover {
-  background-color: $nav-link-hover-bg !important;
 }
 .mb-header-logo {
   height: 3rem;

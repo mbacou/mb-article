@@ -17,13 +17,17 @@ nav .nav-item .nav-link.active,
 }
 nav .nav-item .nav-link:hover,
 .nav-tabs .nav-item .nav-link:hover {
-  background-color: rgba($nav-link-hover-color, 10%);
+  background-color: $nav-link-hover-bg;
 }
 nav .nav-item .bi {
   font-size: $font-size-base;
 }
 
 /* Misc */
+.quarto-video {
+  margin: 0;
+  padding: 0;
+}
 .column-screen-inset-shaded {
   padding: 0 1rem 0 1rem;
   background-color: $shaded;
