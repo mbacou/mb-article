@@ -18,7 +18,7 @@
   $table-of-contents$
 
   <!-- Back to top -->
-  <div class="d-flex flex-column text-sans pt-1 mb-auto lh-lg fs-6 border-grid">
+  <div class="d-flex flex-column text-sans pt-1 lh-lg fs-6 border-grid">
     <a href="#quarto-appendix">References <i class="bi bi-link-45deg ms-1"></i></a>
     <a href="#citation">How to cite <i class="bi bi-share ms-1"></i></a>
     <a class="mt-1 border-grid pt-1 text-muted" href="#mb-title-block">Back
@@ -26,17 +26,16 @@
   </div>
   $endif$
 
-  <!-- Optional sidebar logo -->
-  $if(logo)$
-  <div class="d-none d-lg-block mt-4">
+  <div class="d-none d-lg-block mt-auto">
+    <!-- Optional sidebar logo -->
+    $if(logo)$
     <a href="$logo.url$"><img src="$logo$" alt="Logo" class="mb-logo img-fluid"></a>
+    $endif$
+    <!-- Copyright -->
+    $if(copyright)$
+    <div id="mb-copyright" class="lh-sm fs-3 text-muted my-2">
+    </div>
+    $endif$
   </div>
-  $endif$
-
-  <!-- Copyright -->
-  $if(copyright)$
-  <div id="mb-copyright" class="lh-sm fs-3 text-muted my-2">
-  </div>
-  $endif$
 
 </nav>
