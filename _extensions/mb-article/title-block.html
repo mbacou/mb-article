@@ -24,13 +24,13 @@
 
 <header id="mb-title-block" class="bg-light py-2">
 
-  <ul class="navbar-nav d-flex flex-row gap-3 my-2 text-sans text-uppercase">
+  <ul class="navbar-nav d-flex flex-row gap-3 my-1 text-sans text-uppercase">
     $for(categories)$
     <li class="nav-item fs-2 text-primary fw-bold">$it$</li>
     $endfor$
   </ul>
 
-  <ul class="column-margin navbar-nav d-flex flex-row gap-3 my-2">
+  <ul class="column-margin navbar-nav d-flex flex-row gap-3 my-1">
     <li class="nav-item">
       <label><i class="bi bi-$if(draft)$check2-square$else$square$endif$"></i>
         Draft</label>
