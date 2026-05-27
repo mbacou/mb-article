@@ -44,6 +44,7 @@
   $if(title)$ <p class="title">$title$</p> $endif$
   <p class="subtitle">$if(subtitle)$ $subtitle$ $endif$</p>
 
+  $if(author)$
   <div class="column-margin">
 
     $for(by-author)$
@@ -81,16 +82,21 @@
       <a class="text-success" href="$slug$.pdf">Download PDF</a></label>
 
   </div>
+  $endif$
 
   <div class="mx-lg-3">
+    $if(abstract)$
     <label>$abstract-title$</label>
-    <div class="lh-lg fs-1 text-muted">$if(abstract)$$abstract$$else$--$endif$</div>
+    <div class="lh-lg fs-1 text-muted">$abstract$</div>
+    $endif$
 
+    $if(keywords)$
     <ul class="navbar-nav d-flex flex-row gap-1">
       <li class="nav-item fw-bold text-sans text-muted me-1">Keywords: </li>
       $for(keywords)$ <li class="nav-item text-sans">$it$;</span></li>
       $endfor$
     </ul>
-  </div>
+    $endif$
 
+  </div>
 </header>

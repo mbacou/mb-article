@@ -20,7 +20,6 @@ contributes:
       reference-location: margin
       citations-hover: true
       footnotes-hover: false
-      bibliography: references.bib
       
       abstract-title: Abstract
       description-title: Summary

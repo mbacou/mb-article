@@ -22,6 +22,7 @@ website:
     show-item-context: true  
 
 highlight-style: a11y-light
+bibliography: references.bib
 
 format:
   mb-article-html:
