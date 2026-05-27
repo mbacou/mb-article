@@ -33,7 +33,7 @@ $gray-900: tint-color($gray, 10%);
 
 $body-color: $gray-800;
 $body-bg: $light;
-$link-color: $gray;
+$link-color: inherit;
 $link-hover-color: $gray;
 $text-muted: rgba($body-color, .80);
 $code-color: inherit;
@@ -72,7 +72,7 @@ $h5-font-size: calc($font-size-base +  5px);  // 22px
 $h6-font-size: calc($font-size-base -  4px);
 
 $font-sizes: (
-  0: 1.25em,
+  0: 2em,
   1: calc($font-size-base - 0px),
   2: calc($font-size-base - 1px),
   3: calc($font-size-base - 2px),
@@ -172,7 +172,7 @@ $nav-link-hover-color: $gray;
 $nav-link-hover-bg: rgba($primary, .1);
 $nav-link-font-family: $font-family-sans-serif;
 $nav-link-font-size: $code-font-size;
-$nav-link-font-weight: 400;
+$nav-link-font-weight: 500;
 $nav-link-padding-x: 1rem;
 $nav-link-padding-y: 0;
 $nav-tabs-border-color: $border-color;
