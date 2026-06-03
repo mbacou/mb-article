@@ -114,7 +114,7 @@ $input-border-color: $border-color;
 $input-disabled-bg: darken($input-bg, 4%);
 $input-group-addon-bg: $shaded;
 $input-btn-font-family: $font-family-sans-serif;
-$input-btn-font-size: $code-font-size;
+$input-btn-font-size: calc($code-font-size + 2px);
 
 $jumbotron-bg: $shaded;
 $breadcrumb-active-color: $body-color;
