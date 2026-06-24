@@ -4,7 +4,7 @@
   <!-- Fixed article meta -->
   <div class="mb-meta mt-2 mt-md-3 mb-3">
 
-    <p>$date-modified$<i class="bi bi-clock ms-1"></i></p>
+    <p class="fs-0">$date-modified$ <i class="bi bi-clock ms-1"></i></p>
 
     $if(description)$
     <div class="lh-sm fs-2 text-muted"><em>$description$</em></div>
@@ -16,6 +16,7 @@
   $if(toc-title)$
   <label class="text-primary">$toc-title$</label>
   $table-of-contents$
+  $endif$
 
   <!-- Back to top -->
   <div class="d-flex flex-column text-sans pt-1 lh-sm fs-5 border-grid mb-4">
@@ -24,7 +25,6 @@
     <a class="mt-1 border-grid pt-1 text-muted" href="#mb-title-block">Back
       to top <i class="bi bi-arrow-up ms-1"></i></a>
   </div>
-  $endif$
 
   <div class="d-none d-lg-block mt-auto">
     <!-- Optional sidebar logo -->
@@ -33,7 +33,7 @@
     $endif$
     <!-- Copyright -->
     $if(copyright)$
-    <div id="mb-copyright" class="lh-sm fs-3 text-muted my-2">
+    <div id="mb-copyright" class="lh-sm fs-2 text-muted my-2">
     </div>
     $endif$
   </div>

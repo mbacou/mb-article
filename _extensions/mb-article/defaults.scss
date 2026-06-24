@@ -45,9 +45,18 @@ $font-weight-bold: 500;
 
 $font-size-root: 14px !default;
 $font-size-sm: .9em;
-$font-size-lg: 1.5em;
+$font-size-lg: 1.25em;
 $sub-sup-font-size: calc($font-size-base - 5px);
 $lead-font-size: 1.5em;
+
+$font-sizes: (
+  0: 1.15em,
+  1: calc($font-size-base - 0px),
+  2: calc($font-size-base - 1px),
+  3: calc($font-size-base - 2px),
+  4: calc($font-size-base - 3px),
+  5: calc($font-size-base - 4px)
+);
 
 $spacer: 2rem;  // 2*15px in _quarto.yml
 $spacers: (
@@ -68,23 +77,14 @@ $h2-font-size: calc($font-size-base + 11px);  // 30px
 $h3-font-size: calc($font-size-base +  9px);  // 26px
 $h4-font-size: calc($font-size-base +  7px);  // 24px
 $h5-font-size: calc($font-size-base +  5px);  // 22px
-$h6-font-size: calc($font-size-base -  4px);
-
-$font-sizes: (
-  0: 1.15em,
-  1: calc($font-size-base - 0px),
-  2: calc($font-size-base - 1px),
-  3: calc($font-size-base - 2px),
-  4: calc($font-size-base - 3px),
-  5: calc($font-size-base - 4px)
-);
+$h6-font-size: calc($font-size-base -  5px);
 
 $enable-rounded: true;
 $enable-negative-margins: true;
 
 $border-color: $gray-600;
 $border-radius-sm: 0;
-$border-radius: .25rem;
+$border-radius: 0;
 $border-radius-lg: .5rem;
 $border-width: 1px;
 $hr-border-color: $border-color;
@@ -124,7 +124,7 @@ $form-label-margin-top: 0rem;
 $form-label-margin-bottom: 0.5rem;
 $form-label-color: $gray-500;
 $form-label-font-size: $h6-font-size;
-$form-label-font-weight: 500;
+$form-label-font-weight: 400;
 $list-group-bg: $input-bg;
 $list-group-border-color: $input-border-color;
 $list-group-hover-bg: lighten($component-active-bg, 20%);
@@ -219,6 +219,10 @@ label, .label, #toc-title, #quarto-appendix h2, h6, .h6 {
   text-transform: uppercase;
   line-height: 1.75rem;
   padding-bottom: .25rem;
+}
+#toc-title {
+  font-size: $font-size-base;
+  font-weight: 500;
 }
 mark, .mark {
   color: inherit;
@@ -386,7 +390,7 @@ figcaption, .column-margin figcaption, .margin-caption {
   padding: 0;
   margin: .5rem 0 1rem 0;
 }
-.aside, .column-margin, .column-sidebar {
+.column-margin, .column-sidebar {
   font-family: $font-family-base;
   font-size: $font-size-sm;
   color: $text-muted;

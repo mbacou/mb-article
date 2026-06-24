@@ -1,6 +1,6 @@
 title: mb-article
 author: Melanie Bacou
-version: 1.9.4
+version: 1.9.5
 quarto-required: ">=1.8.1"
 contributes:
   formats:

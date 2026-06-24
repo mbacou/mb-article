@@ -10,6 +10,7 @@
     <div class="d-flex justify-content-end">
       <div class="p-1 text-bg-primary"></div>
       <div class="p-1 text-bg-secondary"></div>
+      <div class="p-1 text-bg-tertiary"></div>
       <div class="p-1 text-bg-info"></div>
       <div class="p-1 text-bg-success"></div>
       <div class="p-1 text-bg-warning"></div>
@@ -26,7 +27,7 @@
 
   <ul class="navbar-nav d-flex flex-row gap-3 text-sans text-uppercase">
     $for(categories)$
-    <li class="nav-item fs-2 text-primary fw-bold">$it$</li>
+    <li class="nav-item fs-3 text-primary fw-bold">$it$</li>
     $endfor$
   </ul>
 
@@ -48,7 +49,7 @@
   <div class="column-margin">
 
     $for(by-author)$
-    <p class="lh-sm fs-0">$title-meta-author.html()$
+    <p class="lh-sm fs-0 mb-3">$title-meta-author.html()$
       $if(by-author.affiliations)$
       $for(by-author.affiliations)$
       <br />
@@ -60,25 +61,25 @@
     </p>
     $endfor$
 
-    <label class="mt-3">First published</label>
-    <p class="lh-sm text-body">$date$</p>
+    <label>First published</label>
+    <p class="lh-lg text-body">$date$</p>
 
     $if(status)$
     <label>Status</label>
-    <p class="lh-lg fs-1 text-body">$status$</p>
+    <p class="lh-lg text-body">$status$</p>
     $endif$
 
     $if(thanks)$
     <label>Credits</label>
-    <p class="lh-lg fs-1 text-body">$thanks$</p>
+    <p class="lh-lg text-body">$thanks$</p>
     $endif$
 
     $if(license)$
     <label>Reuse</label>
-    <p id="mb-reuse" class="lh-lg fs-1 text-body"></p>
+    <p id="mb-reuse" class="lh-lg text-body"></p>
     $endif$
 
-    <a role="button" class="btn btn-success mb-2 text-uppercase" href="$slug$.pdf"><i
+    <a role="button" class="btn btn-success mb-2 text-uppercase fs-1" href="$slug$.pdf"><i
         class="bi bi-file-pdf"></i> Download PDF</a>
 
   </div>
