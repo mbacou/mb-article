@@ -14,7 +14,7 @@ author:
     linkedin: mbacou 
     email: author-1@mail.com
     orcid: 0000-0003-1810-6820
-    affiliation: My Affiliation 1    
+    affiliation: My Affiliation 1
   - name: Author-2
     email: author-2@mail.com
     orcid: 0000-0003-1810-6819

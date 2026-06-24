@@ -44,10 +44,10 @@ $headings-font-weight: 400;
 $font-weight-bold: 500;
 
 $font-size-root: 14px !default;
-$font-size-sm: calc($font-size-base - 2px);
-$font-size-lg: calc($font-size-base + 2px);
+$font-size-sm: .9em;
+$font-size-lg: 1.5em;
 $sub-sup-font-size: calc($font-size-base - 5px);
-$lead-font-size: 2rem;
+$lead-font-size: 1.5em;
 
 $spacer: 2rem;  // 2*15px in _quarto.yml
 $spacers: (
@@ -71,7 +71,7 @@ $h5-font-size: calc($font-size-base +  5px);  // 22px
 $h6-font-size: calc($font-size-base -  4px);
 
 $font-sizes: (
-  0: 2em,
+  0: 1.15em,
   1: calc($font-size-base - 0px),
   2: calc($font-size-base - 1px),
   3: calc($font-size-base - 2px),
