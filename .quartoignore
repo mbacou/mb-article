@@ -1,0 +1,6 @@
+# Exclude specific files
+template.png
+references.bib
+
+# Exclude entire directories
+docs/
