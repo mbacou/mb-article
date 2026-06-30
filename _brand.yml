@@ -7,14 +7,14 @@ meta:
 
 color:
   palette:
+    brick:     "#D47979"
+    purple:    "#8D46C1"
     teal:      "#8E8467"
     indigo:    "#79799C"
     blue:      "#00839E"
     cyan:      "#05D5FF"
     green:     "#73842A"
-    purple:    "#8D46C1"
     pink:      "#C6A5E8"
-    brick:     "#D47979"
     red:       "#B54D4D"
     orange:    "#A1713C"
     yellow:    "#E0D1A4"
@@ -23,7 +23,7 @@ color:
     dark:      "#003946"
     grid:      "#e7e2da"
 
-  foreground:  gray     # gray is BS gray-800 in this template
+  foreground:  gray     # fg = gray-800 in BS theme, all gray shades are derived
   background:  light
   primary:     brick
   secondary:   purple
