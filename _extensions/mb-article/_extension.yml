@@ -1,20 +1,20 @@
 title: mb-article
 author: Melanie Bacou
-version: 1.9.5
+version: 1.9.6
 quarto-required: ">=1.8.1"
 contributes:
-  listings: mb-listing.ejs.md
   formats:
     html:
       date-format: medium
       date-modified: last-modified
+      anchor-sections: false
       search: true
       smooth-scroll: true
       link-external-icon: false
       link-external-newwindow: true
 
       tbl-cap-location: bottom
-      fig-cap-location: margin
+      fig-cap-location: bottom
       fig-numbering: true
       citation: true
       citation-location: document
@@ -26,9 +26,10 @@ contributes:
       description-title: Summary
       appendix-style: plain
 
-      lightbox: false 
+      lightbox: true
       fig-dpi: 120
       fig-format: svg
+      out-height: "40rem"
 
       code-copy: true
       code-overflow: wrap

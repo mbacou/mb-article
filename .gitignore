@@ -11,3 +11,5 @@ _assets
 src/
 
 **/*.quarto_ipynb
+
+/.luarc.json

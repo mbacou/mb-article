@@ -1,9 +1,9 @@
 meta:
   name: Mel B. Labs
-  logo: quarto.ico
+  logo: assets/mb-square.svg
   link:
-    home: https://mbacou.github.io/mb-article
-    github: https://github.com/mbacou/mb-article
+    home: https://mbacou.github.io/mb-labs
+    github: https://github.com/mbacou/mb-labs
 
 color:
   palette:
@@ -18,12 +18,12 @@ color:
     red:       "#B54D4D"
     orange:    "#A1713C"
     yellow:    "#E0D1A4"
-    gray:      "#212120"
+    gray:      "#4d4d4d"
     light:     "#FCFAF5"
     dark:      "#003946"
     grid:      "#e7e2da"
 
-  foreground:  gray
+  foreground:  gray     # gray is BS gray-800 in this template
   background:  light
   primary:     brick
   secondary:   purple
@@ -49,12 +49,11 @@ typography:
 
   base: 
     family: Crimson Text
-    size: 19px
-    line-height: 28/19
+    size: 20px
   headings: Caveat
   monospace: 
     family: Iosevka Charon Mono
-    size: 13px
+    size: 14px
   
  
 

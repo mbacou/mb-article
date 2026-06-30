@@ -27,6 +27,14 @@ keywords:
   - keyword 1
   - keyword 2
   - keyword 3
+format-links:
+  - format: typst
+    text: "Download PDF"
+    icon: "file-pdf"
+    target: "_blank"
+  - text: "Download Dataset"
+    href: "https://example.com"
+    icon: "download"
 
 abstract: |
   Abstract text -- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
@@ -56,11 +64,11 @@ aside -- A note placed in the page margin with CSS classes .aside.note.text-seri
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+
 ::: {.aside .note .danger}
 aside -- A note placed in the page margin with CSS classes `.aside.note.danger`.
 :::
-
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 
 **More Information**
 
@@ -97,15 +105,15 @@ No additional changes to font definitions aside from using **Crimson Pro** and *
 
 [^2]: **Iosevka Charon** is a quasi-proportional font excellent for technical writing and dense UI. These font families are unique derivatives of [Iosevka](https://github.com/jul-sh/iosevka-charon) (an open source font project) by be5invis.
 
+Here are **bold**, *italic*, and <small>smaller</small> text spans. Here are ^superscript^ and ~subscript~ characters, and ~~strikethrough~~ notes. Standard Bootstrap semantic colors with e.g. [.text-info]{.text-info} provide accented text. In addition this theme uses [.text-muted]{.text-muted} to de-emphasize content such as post metadata, margin notes, and captioning, as well as [.text-serif]{.text-serif} for the occasional Serif font.
+
+## Heading 2
+
 ::: {.aside}
 ![Example](logo.svg){.rounded-circle .lightbox}
 
 A rounded image with `.rounded-circle.lightbox` placed in the margin.
 :::
-
-Here are **bold**, *italic*, and <small>smaller</small> text spans. Here are ^superscript^ and ~subscript~ characters, and ~~strikethrough~~ notes. Standard Bootstrap semantic colors with e.g. [.text-info]{.text-info} provide accented text. In addition this theme uses [.text-muted]{.text-muted} to de-emphasize content such as post metadata, margin notes, and captioning, as well as [.text-serif]{.text-serif} for the occasional Serif font.
-
-## Heading 2
 
 > Quoted citation   
 > Over multiples lines.   
@@ -208,7 +216,7 @@ ggplot(
   )
 
 # Or using base R plot
-col = sapply((20 + 15 * 6:1) / 100, function(x) pal("purple", alpha = x))
+col <- sapply((20 + 15 * 6:1) / 100, function(x) pal("purple", alpha = x))
 plot(mpg ~ factor(carb), data = mtcars, col = col)
 axes(
   c(3, 4),
@@ -218,7 +226,7 @@ axes(
   xlab = "X label",
   ylab = "Y label"
 )
-legend(1:6, fill = col, border = NA)
+legend(legend=1:6, fill = col, border = NA)
 
 brand_off()
 ```

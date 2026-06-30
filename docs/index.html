@@ -95,16 +95,18 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-4f7c0e5da25649d9d1266b2eb28ceaf6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4f7c0e5da25649d9d1266b2eb28ceaf6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-4f7c0e5da25649d9d1266b2eb28ceaf6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0a947954d826b08af1222557bbe45fd5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-6f116d9c07d43ff8b78ffb00d5760ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-0a947954d826b08af1222557bbe45fd5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-9796b9e27f8a77e9ab975d581f7d60b7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-e05d2f55eb2f6e096741ed99874a1e2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-9796b9e27f8a77e9ab975d581f7d60b7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -153,10 +155,10 @@ div.csl-indent {
     <nav id="TOC" role="doc-toc" class="d-flex flex-column justify-content-around h-100 pt-5 px-2 toc-active" data-toc-expanded="99">
 
   <!-- Fixed article meta -->
-  <div class="mb-meta mt-2 mt-md-3 mb-3">
+  <div class="mb-meta mt-2 mt-md-4 mb-3">
 
-    <p class="fs-0">Jun 24, 2026 <i class="bi bi-clock ms-1"></i></p>
-
+        <p class="fs-0">Jun 30, 2026 <i class="bi bi-clock ms-1"></i></p>
+    
         <div class="lh-sm fs-2 text-muted"><em><p><strong>mb-article</strong> is a Quarto extension for HTML formats with an opinionated academic design and simplified navigational elements.</p></em></div>
     
   </div>
@@ -177,20 +179,21 @@ div.csl-indent {
   <li><a href="#figures-plots" id="toc-figures-plots" class="nav-link" data-scroll-target="#figures-plots">Figures &amp; Plots</a></li>
   <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables">Tables</a></li>
   </ul>
-  
+
   <!-- Back to top -->
-  <div class="d-flex flex-column text-sans pt-1 lh-sm fs-5 border-grid mb-4">
-    <a href="#quarto-appendix">References <i class="bi bi-link-45deg ms-1"></i></a>
-    <a href="#citation">How to cite <i class="bi bi-share ms-1"></i></a>
-    <a class="mt-1 border-grid pt-1 text-muted" href="#mb-title-block">Back
+  <div class="d-flex flex-column text-sans pt-1 lh-sm fs-5 mb-4 border-grid">
+        <a href="#quarto-appendix">References <i class="bi bi-link-45deg ms-1"></i></a>
+            <a href="#citation">How to cite <i class="bi bi-share ms-1"></i></a>
+        <a class="mt-1 border-grid pt-1 text-muted" href="#mb-title-block">Back
       to top <i class="bi bi-arrow-up ms-1"></i></a>
   </div>
-
+  
   <div class="d-none d-lg-block mt-auto">
     <!-- Optional sidebar logo -->
-        <a href=""><img src="logo.svg" alt="Logo" class="mb-logo img-fluid"></a>
+        <a href="./"><img src="logo.svg" alt="" class="mb-logo img-fluid"></a>
         <!-- Copyright -->
         <div id="mb-copyright" class="lh-sm fs-2 text-muted my-2">
+      true
     </div>
       </div>
 
@@ -211,7 +214,7 @@ div.csl-indent {
 
     <!-- logo -->
       <div class="d-lg-none mb-n1">
-      <a href="./"><img src="logo.svg" alt="logo" class="mb-header-logo"></a>
+      <a href="./"><img src="logo.svg" alt="" class="mb-header-logo"></a>
     </div>
     
     <!-- left links -->
@@ -296,33 +299,32 @@ div.csl-indent {
   </div>
 </header>
 
-<header id="mb-title-block" class="bg-light py-2 page-columns page-full">
+<header id="mb-title-block" class="bg-light py-2 mb-3 page-columns page-full">
 
-  <ul class="navbar-nav d-flex flex-row gap-3 text-sans text-uppercase">
-        <li class="nav-item fs-2 text-primary fw-bold">cat-1</li>
-        <li class="nav-item fs-2 text-primary fw-bold">cat-2</li>
-        <li class="nav-item fs-2 text-primary fw-bold">cat-3</li>
-      </ul>
-
-  
-
-   <div class="no-row-height column-margin column-container"><ul class="navbar-nav d-flex flex-row gap-3 my-1">
-    <li class="nav-item">
-      <label><i class="bi bi-square"></i>
-        Draft</label>
+  <ul class="navbar-nav d-flex flex-row align-items-start gap-2 text-sans text-uppercase ">
+        <li class="nav-item pt-2 fs-3 text-primary fw-bold">cat-1</li>
+        <li class="nav-item pt-2 fs-3 text-primary fw-bold">cat-2</li>
+        <li class="nav-item pt-2 fs-3 text-primary fw-bold">cat-3</li>
+        <li class="nav-item px-2 mb-2 secondary ms-auto">
+      <span>Draft
+        ☐
+      </span>
     </li>
-    <li class="nav-item">
-      <label><i class="bi bi-square"></i>
-        Frozen</label>
+    <li class="nav-item px-2 mb-2 secondary">
+      <span>Frozen
+        ☐
+      </span>
     </li>
-  </ul></div><p class="title display-7">mb-article HTML Format for Quarto</p> 
+  </ul>
+
+   <p class="title display-7">mb-article HTML Format for Quarto</p> 
   <p class="subtitle lead"> A 3-column academic format for Quarto posts and articles </p>
 
     
   
   <div class="no-row-height column-margin column-container"><div class="">
 
-        <p class="lh-sm fs-0 mb-3"><a href="https://orcid.org/0000-0003-1810-6820">
+        <p class="lh-sm fs-0 mb-3 text-body"><a href="https://orcid.org/0000-0003-1810-6820">
   <i class="bi bi-person-circle me-1"></i></a>
 
 
@@ -335,10 +337,10 @@ div.csl-indent {
 
                   <br>
       
-        <em class="ms-3 fs-2">My Affiliation 1</em>
+        <em class="ms-3 fs-2 text-muted">My Affiliation 1</em>
         
                 </p>
-        <p class="lh-sm fs-0 mb-3"><a href="https://orcid.org/0000-0003-1810-6819">
+        <p class="lh-sm fs-0 mb-3 text-body"><a href="https://orcid.org/0000-0003-1810-6819">
   <i class="bi bi-person-circle me-1"></i></a>
 
 
@@ -351,24 +353,23 @@ div.csl-indent {
 
                   <br>
       
-        <em class="ms-3 fs-2">My Affiliation 2</em>
+        <em class="ms-3 fs-2 text-muted">My Affiliation 2</em>
         
                 </p>
     
-    <label>First published</label>
-    <p class="lh-lg text-body">Nov 12, 2025</p>
-
+        <label>Project</label>
+    <p class="lh-lg text-secondary fw-bold">Special acknowledgments and funding sources</p>
+    
         <label>Status</label>
     <p class="lh-lg text-body">DRAFT waiting for review</p>
     
-        <label>Credits</label>
-    <p class="lh-lg text-body">Special acknowledgments and funding sources</p>
+        <label>First published</label>
+    <p class="lh-lg text-body">Nov 12, 2025</p>
     
         <label>Reuse</label>
     <p id="mb-reuse" class="lh-lg text-body"></p>
     
-    <a role="button" class="btn btn-success mb-2 text-uppercase fs-1" href="mb-article.pdf"><i class="bi bi-file-pdf"></i> Download PDF</a>
-
+    
   </div></div><div class="mx-lg-3">
         <label>Abstract</label>
     <div class="lh-lg fs-1 text-muted"><p>Abstract text – Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>
@@ -381,8 +382,7 @@ div.csl-indent {
       
     </ul>
     
-  </div>
-</header>
+</div></header>
 
 
 <section id="installation" class="level1">
@@ -398,11 +398,11 @@ div.csl-indent {
 <div class="no-row-height column-margin column-container"><div class="note text-serif margin-aside">
 <p>aside – A note placed in the page margin with CSS classes .aside.note.text-serif.</p>
 </div></div><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 
 <div class="no-row-height column-margin column-container"><div class="note danger margin-aside">
 <p>aside – A note placed in the page margin with CSS classes <code>.aside.note.danger</code>.</p>
-</div></div><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-<p><strong>More Information</strong></p>
+</div></div><p><strong>More Information</strong></p>
 <p>You can learn more about controlling the appearance of HTML output under <a href="https://quarto.org/docs/output-formats/html-basics.html" class="url">Quarto Documentation</a>.</p>
 </section>
 <section id="brand-colors" class="level1">
@@ -444,25 +444,25 @@ Dark
 </div>
 <p>Bootstrap default line-height and font sizing typically work, but this format enforces a strict vertical rhythm whenever possible<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. I made sure to define all vertical spacing and padding as multiples of a standard line height of <code>$spacer</code>.</p>
 <div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;About <strong>vertical rhythm</strong> and why it matters for content readability, see <a href="https://hnldesign.hashnode.dev/setting-a-flexible-baseline-grid-in-css">Klaas Leussink</a> article on his personal blog.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;<strong>Iosevka Charon</strong> is a quasi-proportional font excellent for technical writing and dense UI. These font families are unique derivatives of <a href="https://github.com/jul-sh/iosevka-charon">Iosevka</a> (an open source font project) by be5invis.</p></div></div><p>No additional changes to font definitions aside from using <strong>Crimson Pro</strong> and <strong>Iosevka Charon Mon</strong> fonts<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> by default – but fonts are always customizable using a modified <code>_brand.yml</code> file.</p>
+<p>Here are <strong>bold</strong>, <em>italic</em>, and <small>smaller</small> text spans. Here are <sup>superscript</sup> and <sub>subscript</sub> characters, and <del>strikethrough</del> notes. Standard Bootstrap semantic colors with e.g.&nbsp;<span class="text-info">.text-info</span> provide accented text. In addition this theme uses <span class="text-muted">.text-muted</span> to de-emphasize content such as post metadata, margin notes, and captioning, as well as <span class="text-serif">.text-serif</span> for the occasional Serif font.</p>
+<section id="heading-2" class="level2 page-columns page-full">
+<h2 data-anchor-id="heading-2">Heading 2</h2>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="logo.svg" class="rounded-circle lightbox img-fluid figure-img"></p>
+<p><a href="logo.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Example"><img src="logo.svg" class="rounded-circle img-fluid figure-img" alt="Example"></a></p>
 <figcaption>Example</figcaption>
 </figure>
 </div>
 <p>A rounded image with <code>.rounded-circle.lightbox</code> placed in the margin.</p>
-</div></div><p>Here are <strong>bold</strong>, <em>italic</em>, and <small>smaller</small> text spans. Here are <sup>superscript</sup> and <sub>subscript</sub> characters, and <del>strikethrough</del> notes. Standard Bootstrap semantic colors with e.g.&nbsp;<span class="text-info">.text-info</span> provide accented text. In addition this theme uses <span class="text-muted">.text-muted</span> to de-emphasize content such as post metadata, margin notes, and captioning, as well as <span class="text-serif">.text-serif</span> for the occasional Serif font.</p>
-<section id="heading-2" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="heading-2">Heading 2</h2>
-<blockquote class="blockquote">
+</div></div><blockquote class="blockquote">
 <p>Quoted citation<br>
 Over multiples lines.<br>
 <span class="small">— From author</span></p>
 </blockquote>
 <section id="heading-3" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="heading-3">Heading 3</h3>
+<h3 data-anchor-id="heading-3">Heading 3</h3>
 <p>Sample paragraph content with list of items:</p>
 <ul>
 <li>List 1
@@ -483,15 +483,15 @@ Over multiples lines.<br>
 <hr>
 <p>And a paragraph of content after the rule.</p>
 <section id="heading-4" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="heading-4">Heading 4</h4>
+<h4 data-anchor-id="heading-4">Heading 4</h4>
 <p>By default citations (and cross-references) are read in from an external <code>index.bib</code> file, but this may be edited in the YAML front matter as usual. Each citation must have a key, composed of ‘@’ + the citation identifier from the database. For example here is a margin reference to <span class="citation" data-cites="xie2015">(<a href="#ref-xie2015" role="doc-biblioref">Xie 2015</a>)</span>.</p>
 <section id="heading-5" class="level5 page-columns page-full">
-<h5 class="anchored" data-anchor-id="heading-5">Heading 5</h5>
+<h5 data-anchor-id="heading-5">Heading 5</h5>
 <p>A longer footnote reference<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. Caption and footnote placement are controlled via config files <code>_quarto_yml</code> and/or <code>_metadata.yml</code>, or directly in the document YAML front matter.</p>
 <div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;Here’s a margin note with multiple paragraph blocks and a section header.</p>
-<h6 id="heading-6" class="anchored">Heading 6</h6>
+<h6 id="heading-6">Heading 6</h6>
 <p>With subsequent paragraphs indented to show that they belong to the previous footnote.</p></div></div><section id="heading-6-label" class="level6">
-<h6 class="anchored" data-anchor-id="heading-6-label">Heading 6 (label)</h6>
+<h6 data-anchor-id="heading-6-label">Heading 6 (label)</h6>
 <p>Headers at level 6 are used as section dividers.</p>
 </section>
 </section>
@@ -527,7 +527,7 @@ Over multiples lines.<br>
 <div class="cell-output-display page-columns page-full">
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
-<p class="page-columns page-full"><img src="index_files/figure-html/unnamed-chunk-1-1.svg" class="img-fluid figure-img column-page-right"></p>
+<p class="page-columns page-full"><a href="index_files/figure-html/unnamed-chunk-1-1.svg" class="lightbox page-columns page-full" data-gallery="quarto-lightbox-gallery-2" title="A sample dynamic graph"><img src="index_files/figure-html/unnamed-chunk-1-1.svg" class="img-fluid figure-img column-page-right" alt="A sample dynamic graph"></a></p>
 <figcaption>A sample dynamic graph</figcaption>
 </figure>
 </div>
@@ -553,13 +553,13 @@ Over multiples lines.<br>
 <div class="cell-output-display page-columns page-full">
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
-<p class="page-columns page-full"><img src="index_files/figure-html/unnamed-chunk-2-1.svg" class="img-fluid figure-img column-page-right"></p>
+<p class="page-columns page-full"><a href="index_files/figure-html/unnamed-chunk-2-1.svg" class="lightbox page-columns page-full" data-gallery="quarto-lightbox-gallery-3" title="A sample dynamic graph"><img src="index_files/figure-html/unnamed-chunk-2-1.svg" class="img-fluid figure-img column-page-right" alt="A sample dynamic graph"></a></p>
 <figcaption>A sample dynamic graph</figcaption>
 </figure>
 </div>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Or using base R plot</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>col <span class="ot">=</span> <span class="fu">sapply</span>((<span class="dv">20</span> <span class="sc">+</span> <span class="dv">15</span> <span class="sc">*</span> <span class="dv">6</span><span class="sc">:</span><span class="dv">1</span>) <span class="sc">/</span> <span class="dv">100</span>, <span class="cf">function</span>(x) <span class="fu">pal</span>(<span class="st">"purple"</span>, <span class="at">alpha =</span> x))</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>col <span class="ot">&lt;-</span> <span class="fu">sapply</span>((<span class="dv">20</span> <span class="sc">+</span> <span class="dv">15</span> <span class="sc">*</span> <span class="dv">6</span><span class="sc">:</span><span class="dv">1</span>) <span class="sc">/</span> <span class="dv">100</span>, <span class="cf">function</span>(x) <span class="fu">pal</span>(<span class="st">"purple"</span>, <span class="at">alpha =</span> x))</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mpg <span class="sc">~</span> <span class="fu">factor</span>(carb), <span class="at">data =</span> mtcars, <span class="at">col =</span> col)</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">axes</span>(</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">4</span>),</span>
@@ -569,11 +569,11 @@ Over multiples lines.<br>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"X label"</span>,</span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="st">"Y label"</span></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">fill =</span> col, <span class="at">border =</span> <span class="cn">NA</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">legend=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">fill =</span> col, <span class="at">border =</span> <span class="cn">NA</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display page-columns page-full">
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
-<p class="page-columns page-full"><img src="index_files/figure-html/unnamed-chunk-2-2.svg" class="img-fluid figure-img column-page-right"></p>
+<p class="page-columns page-full"><a href="index_files/figure-html/unnamed-chunk-2-2.svg" class="lightbox page-columns page-full" data-gallery="quarto-lightbox-gallery-4" title="A sample dynamic graph"><img src="index_files/figure-html/unnamed-chunk-2-2.svg" class="img-fluid figure-img column-page-right" alt="A sample dynamic graph"></a></p>
 <figcaption>A sample dynamic graph</figcaption>
 </figure>
 </div>
@@ -849,13 +849,6 @@ Quarto.”</span> November 12. <a href="https://doi.org/123.4567">https://doi.or
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -1307,6 +1300,38 @@ Quarto.”</span> November 12. <a href="https://doi.org/123.4567">https://doi.or
 <!-- Quarto TOC Actions -->
 <div class="mb-toc-actions bg-shaded border-grid d-flex justify-content-center gap-3 text-sans text-muted lh-sm py-2">
 </div>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

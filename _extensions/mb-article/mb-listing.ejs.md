@@ -4,7 +4,7 @@
     <div class="d-flex flex-md-row border-bottom">
       <div>
       <a href="<%- item.path %>">
-      <img src="<%- item.thumbnail %>" alt="<%- item.description %>" class="img-fluid"/></a>
+      <img src="<%- item.image %>" alt="<%- item.description %>" class="img-fluid"/></a>
       </div>
       <div>
         <h3><a href="<%- item.path %>"><%= item.title %></a></h3>
@@ -18,10 +18,10 @@
       <div>
         <p>
           <%= item.date %><br />
-          <% for (const it of item.authors) %>
+          <% for (const it of item.author) %>
           <%= it.name %><br />
           <% } %>
-          <%= item.reading-time %><br />
+          <%= item['reading-time']  %><br />
         </p>
       </div>
     </div>

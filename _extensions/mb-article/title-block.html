@@ -23,22 +23,24 @@
   </div>
 </header>
 
-<header id="mb-title-block" class="bg-light py-2">
+<header id="mb-title-block" class="bg-light py-2 mb-3">
 
-  <ul class="navbar-nav d-flex flex-row gap-3 text-sans text-uppercase">
+  <ul
+    class="navbar-nav d-flex flex-row align-items-start gap-2 text-sans text-uppercase ">
     $for(categories)$
-    <li class="nav-item fs-3 text-primary fw-bold">$it$</li>
+    <li class="nav-item pt-2 fs-3 text-primary fw-bold">$it$</li>
     $endfor$
-  </ul>
-
-  <ul class="column-margin navbar-nav d-flex flex-row gap-3 my-1">
-    <li class="nav-item">
-      <label><i class="bi bi-$if(draft)$check2-square$else$square$endif$"></i>
-        Draft</label>
+    <li
+      class="nav-item px-2 mb-2 $if(draft)$text-bg-secondary$else$secondary$endif$ ms-auto">
+      <span>Draft
+        $if(draft)$&#9745;$else$&#9744;$endif$
+      </span>
     </li>
-    <li class="nav-item">
-      <label><i class="bi bi-$if(freeze)$check2-square$else$square$endif$"></i>
-        Frozen</label>
+    <li
+      class="nav-item px-2 mb-2 $if(freeze)$text-bg-secondary$else$secondary$endif$">
+      <span>Frozen
+        $if(freeze)$&#9745;$else$&#9744;$endif$
+      </span>
     </li>
   </ul>
 
@@ -49,29 +51,31 @@
   <div class="column-margin">
 
     $for(by-author)$
-    <p class="lh-sm fs-0 mb-3">$title-meta-author.html()$
+    <p class="lh-sm fs-0 mb-3 text-body">$title-meta-author.html()$
       $if(by-author.affiliations)$
       $for(by-author.affiliations)$
       <br />
       $if(it.url)$<a href="$it.url$">$endif$
-        <em class="ms-3 fs-2">$it.name$</em>
+        <em class="ms-3 fs-2 text-muted">$it.name$</em>
         $if(it.url)$</a>$endif$
       $endfor$
       $endif$
     </p>
     $endfor$
 
-    <label>First published</label>
-    <p class="lh-lg text-body">$date$</p>
+    $if(thanks)$
+    <label>Project</label>
+    <p class="lh-lg text-secondary fw-bold">$thanks$</p>
+    $endif$
 
     $if(status)$
     <label>Status</label>
     <p class="lh-lg text-body">$status$</p>
     $endif$
 
-    $if(thanks)$
-    <label>Credits</label>
-    <p class="lh-lg text-body">$thanks$</p>
+    $if(date)$
+    <label>First published</label>
+    <p class="lh-lg text-body">$date$</p>
     $endif$
 
     $if(license)$
@@ -79,8 +83,12 @@
     <p id="mb-reuse" class="lh-lg text-body"></p>
     $endif$
 
-    <a role="button" class="btn btn-success mb-2 text-uppercase fs-1" href="$slug$.pdf"><i
-        class="bi bi-file-pdf"></i> Download PDF</a>
+    $if(format-links)$
+    $for(format-links)$
+    <a role="button" class="btn btn-success mb-2" href="$it.href$">
+      <i class="bi bi-$it.icon$"></i>$it.text$</a>
+    $endfor$
+    $endif$
 
   </div>
   $endif$
@@ -99,5 +107,4 @@
     </ul>
     $endif$
 
-  </div>
 </header>
