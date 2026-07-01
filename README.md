@@ -4,7 +4,11 @@ Responsive 3-column format for Quarto HTML documents and website projects. The f
 
 Colors and typography are controlled via `_brand.yml`. The default Bootstrap theme was modified slightly to improve vertical rythm. The 3-column page design is fully responsive.
 
-![Template](template.png)
+![Template, default](template-2.png)
+
+Standard Quarto document banner color and/or image remain available.
+
+![Template, with banner](template-1.png)
 
 ## Installing
 

@@ -8,8 +8,8 @@ project:
 
 website:
   title: "mb-article - Quarto Format"
-  favicon: favicon.svg
-  image: logo.svg
+  favicon: assets/favicon.svg
+  image: assets/logo.svg
   description: mb-article - Custom Quarto Format
   site-url: https://mbacou.github.io/mb-article
   repo-url: https://github.com/mbacou/mb-article
@@ -26,19 +26,22 @@ bibliography: references.bib
 
 format:
   mb-article-html:
-    logo: logo.svg
+    logo: assets/logo.svg
     logo-href: /
     license: CC BY-NC 4.0
-    copyright: © Mel B. Labs - a personal blog about statistics and spatial econometrics.
+    copyright: © 2026, Mel B. Labs.
     header:
       palette: true
       left:
-        - text: Menu Link 1
+        - text: Link 1
           icon: link
           href: index.qmd
-        - text: Menu Link 2
+        - text: Link 2
           icon: link
-          href: index.qmd       
+          href: index.qmd
+        - text: Link 3
+          icon: link
+          href: index.qmd            
       right: 
         - icon: github
           href: https://github.com/mbacou/mb-article

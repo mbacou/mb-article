@@ -11,7 +11,7 @@ $theme: 'mb-article';
 // Extra colors from _brand.yml
 $grid:  $brand-grid;      // gridline color
 
-// Use _brand.yml fonts
+// Use _brand.yml fonts, hack
 $font-family-sans-serif:  $font-family-monospace;
 $font-family-serif:       $headings-font-family;
 $headings-font-family:    $font-family-monospace;
@@ -20,6 +20,7 @@ $headings-font-family:    $font-family-monospace;
 $black: #000000;
 $white: #ffffff;
 
+// Define all gray shades based on $body-color
 $gray-100: tint-color($body-color, 70%);
 $gray-200: tint-color($body-color, 60%);
 $gray-300: tint-color($body-color, 50%);
@@ -44,7 +45,8 @@ $font-size-root: 14px !default;   // hardcoded to enforce vertical rythm
 $font-size-sm: .9em;
 $font-size-lg: 1.25em;
 $lead-font-size: 1.3em;
-$sub-sup-font-size: calc($font-size-base - 5px);
+$sub-sup-font-size: calc($font-size-base - 2px);
+$sub-sup-font-weight: 500;
 
 $font-sizes: (
   0: 1.1em,
@@ -79,7 +81,7 @@ $h6-font-size: calc($font-size-base -  5px);
 $enable-rounded: true;
 $enable-negative-margins: true;
 
-$border-color: $gray-800;
+$border-color: $body-color;
 $border-radius-sm: 0;
 $border-radius: .25rem;
 $border-radius-lg: .25rem;
@@ -124,9 +126,9 @@ $jumbotron-bg: $shaded;
 $breadcrumb-active-color: $body-color;
 $component-active-bg: rgba($primary, 12%);
 
+$form-label-color: $gray-300;        // Ligther
 $form-label-margin-top: 0rem;
 $form-label-margin-bottom: 0.5rem;
-$form-label-color: $gray-300;
 $form-label-font-size: $h6-font-size;
 $form-label-font-weight: 400;
 $list-group-bg: $input-bg;
@@ -135,9 +137,9 @@ $list-group-hover-bg: lighten($component-active-bg, 20%);
 $modal-content-bg: $input-bg;
 $modal-content-border-color: $border-color;
 
+$pagination-color: $input-color;
 $pagination-bg: $input-bg;
 $pagination-border-color: $border-color;
-$pagination-color: $input-color;
 $pagination-disabled-bg: $input-disabled-bg;
 $pagination-hover-color: $link-hover-color;
 $progress-bg: $input-bg;
@@ -149,8 +151,8 @@ $card-title-spacer-y: .5rem;
 $card-title-color: $headings-font-color;
 $card-bg: transparent;
 $card-cap-bg: $shaded;
-$card-border-width: 0;
 $card-border-color: $grid;
+$card-border-width: 0;
 $card-border-radius: $border-radius;
 
 $callout-margin-x: 0;

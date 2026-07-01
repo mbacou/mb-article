@@ -90,7 +90,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./favicon.svg" rel="icon" type="image/svg+xml">
+<link href="./assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -101,9 +101,9 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-4f7c0e5da25649d9d1266b2eb28ceaf6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9796b9e27f8a77e9ab975d581f7d60b7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e05d2f55eb2f6e096741ed99874a1e2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-9796b9e27f8a77e9ab975d581f7d60b7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ca4a23ac0cce39291371c8be9076a71b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-38ff663956f84b321ec6e399e3a2359c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ca4a23ac0cce39291371c8be9076a71b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -190,7 +190,7 @@ div.csl-indent {
   
   <div class="d-none d-lg-block mt-auto">
     <!-- Optional sidebar logo -->
-        <a href="./"><img src="logo.svg" alt="" class="mb-logo img-fluid"></a>
+        <a href="./"><img src="assets/logo.svg" alt="" class="mb-logo img-fluid"></a>
         <!-- Copyright -->
         <div id="mb-copyright" class="lh-sm fs-2 text-muted my-2">
       true
@@ -209,12 +209,11 @@ div.csl-indent {
 <!-- article title header -->
 <header id="mb-header" class="column-page-right sticky-top">
   <!-- mb-navbar -->
-  <nav class="d-flex align-items-end 
-  ">
+  <nav class="d-flex align-items-end border-bottom">
 
     <!-- logo -->
       <div class="d-lg-none mb-n1">
-      <a href="./"><img src="logo.svg" alt="" class="mb-header-logo"></a>
+      <a href="./"><img src="assets/logo.svg" alt="" class="mb-header-logo"></a>
     </div>
     
     <!-- left links -->
@@ -222,17 +221,25 @@ div.csl-indent {
 
           <li class="nav-item flex-fill">
         <a class="nav-link" href="./index.html">
-          <span class="menu-text">Menu Link 1</span></a>
+          <span class="menu-text">Link 1</span></a>
       </li>
           <li class="nav-item flex-fill">
         <a class="nav-link" href="./index.html">
-          <span class="menu-text">Menu Link 2</span></a>
+          <span class="menu-text">Link 2</span></a>
+      </li>
+          <li class="nav-item flex-fill">
+        <a class="nav-link" href="./index.html">
+          <span class="menu-text">Link 3</span></a>
       </li>
         </ul>
 
     <!-- left icons -->
     <ul class="navbar-nav d-flex d-md-none flex-row w-100">
 
+          <li class="nav-item flex-fill text-center">
+        <a class="nav-link" href="./index.html">
+          <i class="bi bi-link"></i></a>
+      </li>
           <li class="nav-item flex-fill text-center">
         <a class="nav-link" href="./index.html">
           <i class="bi bi-link"></i></a>
@@ -281,22 +288,9 @@ div.csl-indent {
       <div id="quarto-search"></div>
     
   </nav>
-  <div class="border-top  pt-4 " style="background: url(banner.svg);">
-
-    <!-- Optional brand color palette -->
-        <div class="d-flex justify-content-end">
-      <div class="p-1 text-bg-primary"></div>
-      <div class="p-1 text-bg-secondary"></div>
-      <div class="p-1 text-bg-tertiary"></div>
-      <div class="p-1 text-bg-info"></div>
-      <div class="p-1 text-bg-success"></div>
-      <div class="p-1 text-bg-warning"></div>
-      <div class="p-1 text-bg-danger"></div>
-      <div class="p-1 text-bg-light"></div>
-      <div class="p-1 text-bg-dark"></div>
-    </div>
+  <!-- Optional brand color palette -->
     
-  </div>
+  
 </header>
 
 <header id="mb-title-block" class="bg-light py-2 mb-3 page-columns page-full">
@@ -320,9 +314,13 @@ div.csl-indent {
    <p class="title display-7">mb-article HTML Format for Quarto</p> 
   <p class="subtitle lead"> A 3-column academic format for Quarto posts and articles </p>
 
+  <!-- Optional banner image -->
+    <div class="column-page-right" style="padding-top: 12rem; background: url('url(banner.svg)') center center / cover no-repeat fixed;">
+  </div>
+  
     
   
-  <div class="no-row-height column-margin column-container"><div class="">
+  <div class="no-row-height column-margin column-container"><div class="mt-4">
 
         <p class="lh-sm fs-0 mb-3 text-body"><a href="https://orcid.org/0000-0003-1810-6820">
   <i class="bi bi-person-circle me-1"></i></a>
@@ -825,7 +823,7 @@ Over multiples lines.<br>
 <div id="ref-xie2015" class="csl-entry" role="listitem">
 Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Chapman; Hall/CRC. <a href="https://yihui.name/knitr/">https://yihui.name/knitr/</a>.
 </div>
-</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© Mel B. Labs - a personal blog about statistics and spatial econometrics.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{2025,
+</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© 2026, Mel B. Labs.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{2025,
   author = {, Author-1 and , Author-2},
   title = {Mb-Article {HTML} {Format} for {Quarto}},
   date = {2025-11-12},

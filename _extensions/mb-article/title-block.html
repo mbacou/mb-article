@@ -2,28 +2,27 @@
 <header id="mb-header" class="column-page-right sticky-top">
   $header.html()$
 
-  <div class="border-top $if(title-block-banner)$ pt-4 $endif$"
-    $if(title-block-banner)$ style="background: $title-block-banner$;" $endif$>
-
-    <!-- Optional brand color palette -->
-    $if(header.palette)$
-    <div class="d-flex justify-content-end">
-      <div class="p-1 text-bg-primary"></div>
-      <div class="p-1 text-bg-secondary"></div>
-      <div class="p-1 text-bg-tertiary"></div>
-      <div class="p-1 text-bg-info"></div>
-      <div class="p-1 text-bg-success"></div>
-      <div class="p-1 text-bg-warning"></div>
-      <div class="p-1 text-bg-danger"></div>
-      <div class="p-1 text-bg-light"></div>
-      <div class="p-1 text-bg-dark"></div>
-    </div>
-    $endif$
-
+  <!-- Optional brand color palette -->
+  $if(header.palette)$
+  $if(title-block-banner)$$else$
+  <div class="d-flex justify-content-end">
+    <div class="p-1 text-bg-primary"></div>
+    <div class="p-1 text-bg-secondary"></div>
+    <div class="p-1 text-bg-tertiary"></div>
+    <div class="p-1 text-bg-info"></div>
+    <div class="p-1 text-bg-success"></div>
+    <div class="p-1 text-bg-warning"></div>
+    <div class="p-1 text-bg-danger"></div>
+    <div class="p-1 text-bg-light"></div>
+    <div class="p-1 text-bg-dark"></div>
   </div>
+  $endif$
+  $endif$
+
 </header>
 
-<header id="mb-title-block" class="bg-light py-2 mb-3">
+<header id="mb-title-block"
+  class="bg-$if(title-block-banner-color)$$title-block-banner-color$$else$light$endif$ py-2 mb-3">
 
   <ul
     class="navbar-nav d-flex flex-row align-items-start gap-2 text-sans text-uppercase ">
@@ -47,8 +46,15 @@
   $if(title)$ <p class="title">$title$</p> $endif$
   <p class="subtitle">$if(subtitle)$ $subtitle$ $endif$</p>
 
+  <!-- Optional banner image -->
+  $if(title-block-banner)$
+  <div class="column-page-right"
+    style="padding-top: 12rem; background: url('$title-block-banner$') center center / cover no-repeat fixed;">
+  </div>
+  $endif$
+
   $if(author)$
-  <div class="column-margin">
+  <div class="column-margin mt-4">
 
     $for(by-author)$
     <p class="lh-sm fs-0 mb-3 text-body">$title-meta-author.html()$
@@ -83,12 +89,10 @@
     <p id="mb-reuse" class="lh-lg text-body"></p>
     $endif$
 
-    $if(format-links)$
     $for(format-links)$
-    <a role="button" class="btn btn-success mb-2" href="$it.href$">
-      <i class="bi bi-$it.icon$"></i>$it.text$</a>
+    <a role="button" class="btn btn-success-subtle mb-2" href="$it.href$">
+      <i class="bi bi-$it.icon$"></i> $it.text$</a>
     $endfor$
-    $endif$
 
   </div>
   $endif$
