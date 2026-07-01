@@ -8,7 +8,6 @@ freeze: false
 thanks: Special acknowledgments and funding sources
 doi: "123.4567"
 status: DRAFT waiting for review
-title-block-banner: url(banner.svg)  
 author:
   - name: Author-1
     linkedin: mbacou 
@@ -110,7 +109,7 @@ Here are **bold**, *italic*, and <small>smaller</small> text spans. Here are ^su
 ## Heading 2
 
 ::: {.aside}
-![Example](logo.svg){.rounded-circle .lightbox}
+![Example](assets/logo.svg){.rounded-circle .lightbox}
 
 A rounded image with `.rounded-circle.lightbox` placed in the margin.
 :::
@@ -226,7 +225,7 @@ axes(
   xlab = "X label",
   ylab = "Y label"
 )
-legend(legend=1:6, fill = col, border = NA)
+legend(legend = 1:6, fill = col, border = NA)
 
 brand_off()
 ```

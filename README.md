@@ -20,16 +20,15 @@ This will install the extension and create an example `.qmd` file that you can u
 
 ## Using
 
-This format provides additional configuration options, as shown below (to be included in the document front matter or in a project-level `_quarto.yml` file per standard practices). This will display a minimum document header, as well as branding and footer in the left column (sidebar).
+This template provides additional format configuration options, as shown below (to be included in the document front matter or in a project-level `_quarto.yml` file per standard practices). This will display a minimum document header, as well as branding elements in the left column (sidebar).
 
 ```yaml
 format:
   mb-article-html:
       logo: logo.svg
       logo-href: ./
-      footer: |
-        <strong>Mel B. Labs</strong> -- a personal blog about statistics
-        and spatial econometrics.      
+      license: CC BY-NC 4.0
+      copyright: © 2026, Mel B. Labs.
       header:
         palette: true      // show Bootstrap semantic colors
         left:
